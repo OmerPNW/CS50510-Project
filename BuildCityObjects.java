@@ -16,8 +16,8 @@ public class BuildCityObjects {
 
 
     public static void main(String[] args){
-        String citiesCsvPath = "cities_3.csv";
-        String connectionCsvPath = "connections_3.csv";
+        String citiesCsvPath = "HW6_weather.csv";
+        String connectionCsvPath = "HW6_Data_City_Connections.csv";
 
 
         
@@ -71,22 +71,80 @@ public class BuildCityObjects {
 
     }
 
+
+    public static HashMap<String, City> twoWayBuildEx(Map<String, String[]> weatherData, Map<String, String[]> connectionData){
+        HashMap<String, City> cities = new HashMap<>();
+
+        for (Map.Entry<String, String[]> weatherEntry : weatherData.entrySet()) {
+                String key = StringStandardize.standardizeString(weatherEntry.getKey());
+                String[] values = weatherEntry.getValue();
+                int seaLevel;
+                try {
+                   seaLevel = Integer.parseInt(values[4]);
+                } catch(NumberFormatException ex) {
+                   seaLevel = 0;
+                }    
+                if (cities.get(key) == null) cities.put(key, new City(values[2], seaLevel, values[3]));
+            }
+        for (Map.Entry<String, String[]> connectionEntry : connectionData.entrySet()) {
+            String[] keySplits = connectionEntry.getKey().split(",");
+            String key = StringStandardize.standardizeString(keySplits[0]);
+            String[] connectionCity = connectionEntry.getValue();
+            City city = cities.get(key);
+            if (city != null){
+                String connectionCityKey = StringStandardize.standardizeString(connectionCity[2]);
+                boolean isPresent = false;
+                for (CityConnectionStruct c : city.connections){
+                    if (c.name.equals(connectionCityKey)) isPresent=true;
+                }
+                if (!isPresent) city.connections.add(new CityConnectionStruct(connectionCityKey, Float.parseFloat(connectionCity[3]), Integer.parseInt(connectionCity[4])));
+
+                // create back connection as well
+                if (cities.get(connectionCityKey) == null){
+                    String[] values = weatherData.get(connectionCityKey);
+                    final int seaLevel = Integer.parseInt(values[4]) ;
+                    cities.put(key, new City(values[2], seaLevel, values[3]));
+                }
+                City backConnCity = cities.get(connectionCityKey);
+                for (CityConnectionStruct c : backConnCity.connections){
+                    if (c.name.equals(key)) isPresent=true;
+                }
+                if (!isPresent) backConnCity.connections.add(new CityConnectionStruct(connectionCityKey, Float.parseFloat(connectionCity[3]), Integer.parseInt(connectionCity[4])));
+
+            }
+        }
+        return cities;
+
+    }
+
     public static HashMap<String, City> twoWayBuild(Map<String, String[]> weatherData, Map<String, String[]> connectionData){
         HashMap<String, City> cities = oneWayBuild(weatherData, connectionData);
         for (Map.Entry<String, City> cityEntry : cities.entrySet()) {
                 String key = cityEntry.getKey();
                 String name = key.split(",")[0];
                 City city = cityEntry.getValue();
-                if (city.connections.size() < 1){
-                    for (Map.Entry<String, City> connectCityEntry : cities.entrySet()) {
-                        City connectCity = connectCityEntry.getValue();
-                        for ( CityConnectionStruct cityConnectionStruct: connectCity.connections){
-                            if (name.equals(cityConnectionStruct.name)){
-                                city.connections.add(cityConnectionStruct);
-                            }
+                for (CityConnectionStruct c: city.connections){
+                    City connCity = cities.get(c.name);
+                    if (connCity != null){
+                        boolean isPresent = false;
+                        for (CityConnectionStruct backConnC : connCity.connections){
+                            if (backConnC.name.equals(key)) isPresent = true;
+                        }
+                        if (!isPresent){
+                            connCity.connections.add(new CityConnectionStruct(key, c.distance, c.timeTaken));
                         }
                     }
                 }
+                // if (city.connections.size() < 1){
+                //     for (Map.Entry<String, City> connectCityEntry : cities.entrySet()) {
+                //         City connectCity = connectCityEntry.getValue();
+                //         for ( CityConnectionStruct cityConnectionStruct: connectCity.connections){
+                //             if (name.equals(cityConnectionStruct.name)){
+                //                 city.connections.add(cityConnectionStruct);
+                //             }
+                //         }
+                //     }
+                // }
             }
 
         return cities;
@@ -119,7 +177,11 @@ public class BuildCityObjects {
                 return false;
             }
             // System.out.println(cityNames);
+
+            // System.out.println(cityNames);
         }
+        // System.out.println(cityNames);
+        // System.out.println(cities.keySet());
 
         if (cityNames.size() == cities.size()){
             return true;
