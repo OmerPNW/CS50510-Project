@@ -180,9 +180,10 @@ public class BuildCityObjects {
 
             // System.out.println(cityNames);
         }
-        // System.out.println(cityNames);
-        // System.out.println(cities.keySet());
-
+        System.out.println(cityNames);
+        System.out.println(cities.keySet());
+        System.out.println(cityNames.size());
+        System.out.println(cities.keySet().size());
         if (cityNames.size() == cities.size()){
             return true;
         }

@@ -30,6 +30,7 @@ public class LDP {
             for (String[] weatherFields : weatherRecords) {
                 String key = StringStandardize.standardizeString(weatherFields[1]); // City
                 if (key.equals("")){
+                    // System.out.println("skipping");
                     continue ; // skip empty row
                 }
                 if (!isNumber(weatherFields[2]) || !isNumber(weatherFields[4])){
@@ -60,7 +61,12 @@ public class LDP {
             List<String[]> connectionRecords = connectionReader.readAll();
             for (String[] connectionFields : connectionRecords) {
                 String key = StringStandardize.standardizeString(connectionFields[1]) + "," + StringStandardize.standardizeString(connectionFields[2]); // City + Destination City
+                if (key.equals(",")){
+                    // System.out.println("skipping");
+                    continue ; // skip empty row
+                }
                 if (!isNumber(connectionFields[3]) || !isNumber(connectionFields[4])){
+                    System.out.println(key);
                     throw new Exception("Encountered non numeric data in a numeric column in Connections Data");
                 }
                 connectionData.put(key, connectionFields);
@@ -117,14 +123,15 @@ public class LDP {
     }
 
     public static void main(String[] args){
-        String weatherCsvPath = "cities_3.csv";
-        String connectionCsvPath = "connections_3.csv";
+        String citiesCsvPath = "HW6_weather.csv";
+        String connectionCsvPath = "HW6_Data_City_Connections.csv";
+
         String outputCsvPath = "output.csv";
         try{
-            Map<String, String[]> weatherData = loadIndividualCityData(weatherCsvPath);
+            Map<String, String[]> weatherData = loadIndividualCityData(citiesCsvPath);
             Map<String, String[]> connectionData = loadCityConnectionData(connectionCsvPath);
 
-            saveInnerJoinCsv(outputCsvPath, weatherData, connectionData);
+            // saveInnerJoinCsv(outputCsvPath, weatherData, connectionData);
         }
         catch(Exception e){
             e.printStackTrace();
