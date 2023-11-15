@@ -9,14 +9,32 @@ import java.util.List;
 import java.util.Map;
 
 public class LDP {
-    public static Map<String, String[]> loadIndividualCityData(String csvPath) throws IOException{
+
+    final static String[] inorderCityHeaders = {"State", "Source_city", "Postal Code", "Weather", "Sea_level/m"} ;
+    final static String[] inorderConnectionsHeaders = {"State", "City", "Destination", "Distance/km", "Time Taken/min"} ;
+
+    public static Map<String, String[]> loadIndividualCityData(String csvPath) throws IOException, Exception{
         Map<String, String[]> weatherData = new HashMap<>();
         try (CSVReader weatherReader = new CSVReader(new FileReader(csvPath))){
-            weatherReader.readNext();
-            // Parse weather CSV and store in a map
+            String[] headers = weatherReader.readNext(); // no need to have header data itself
+            for( int i=0; i< inorderCityHeaders.length; i++){
+                if (!StringStandardize.standardizeString(headers[i]).equals(StringStandardize.standardizeString(inorderCityHeaders[i]))){
+                    System.out.println("CSV headers not as expected");
+                    throw new Exception("CSV headers not as expected");
+                }
+            }            // Parse weather CSV and store in a map
             List<String[]> weatherRecords = weatherReader.readAll();
+            if (weatherRecords == null || weatherRecords.size() == 0) {
+                throw new Exception("Weather data not found");
+            }
             for (String[] weatherFields : weatherRecords) {
-                String key = weatherFields[1]; // City
+                String key = StringStandardize.standardizeString(weatherFields[1]); // City
+                if (key.equals("")){
+                    continue ; // skip empty row
+                }
+                if (!isNumber(weatherFields[2]) || !isNumber(weatherFields[4])){
+                    throw new Exception("Encountered non numeric data in a numeric column in City Data");
+                }
                 weatherData.put(key, weatherFields);
             }
             weatherReader.close();
@@ -28,15 +46,23 @@ public class LDP {
         return weatherData;
     }
 
-    public static Map<String, String[]> loadCityConnectionData(String csvPath) throws IOException{
+    public static Map<String, String[]> loadCityConnectionData(String csvPath) throws IOException, Exception{
         Map<String, String[]> connectionData = new HashMap<>();
         try (CSVReader connectionReader = new CSVReader(new FileReader(csvPath))){
-            connectionReader.readNext(); // no need to have header data itself
-
+            String[] headers = connectionReader.readNext(); // no need to have header data itself
+            for( int i=0; i< inorderConnectionsHeaders.length; i++){
+                if (!StringStandardize.standardizeString(headers[i]).equals(StringStandardize.standardizeString(inorderConnectionsHeaders[i]))){
+                    System.out.println("CSV headers not as expected: Found " + headers[i] + "   Expected : " + inorderConnectionsHeaders[i]);
+                    throw new Exception("CSV headers not as expected");
+                }
+            }
             // Parse weather CSV and store in a map
             List<String[]> connectionRecords = connectionReader.readAll();
             for (String[] connectionFields : connectionRecords) {
-                String key = connectionFields[1] + "," + connectionFields[2]; // City + Destination City
+                String key = StringStandardize.standardizeString(connectionFields[1]) + "," + StringStandardize.standardizeString(connectionFields[2]); // City + Destination City
+                if (!isNumber(connectionFields[3]) || !isNumber(connectionFields[4])){
+                    throw new Exception("Encountered non numeric data in a numeric column in Connections Data");
+                }
                 connectionData.put(key, connectionFields);
             }
             connectionReader.close();
@@ -58,7 +84,7 @@ public class LDP {
             // Perform inner join and write to output CSV
             for (Map.Entry<String, String[]> connectionEntry : connectionData.entrySet()) {
                 String[] keySplits = connectionEntry.getKey().split(",");
-                String key = keySplits[0];
+                String key = StringStandardize.standardizeString(keySplits[0]);
                 // System.out.println(key);
                 if (weatherData.containsKey(key)) {
                     String[] connectionFields = connectionEntry.getValue();
@@ -76,9 +102,23 @@ public class LDP {
             e.printStackTrace();
         }
     }
+
+
+    public static boolean isNumber(String s) {
+        try { 
+            Float.parseFloat(s); 
+        } catch(NumberFormatException e) { 
+            return false; 
+        } catch(NullPointerException e) {
+            return false;
+        }
+        // only got here if we didn't return false
+        return true;
+    }
+
     public static void main(String[] args){
-        String weatherCsvPath = "weather.csv";
-        String connectionCsvPath = "travel.csv";
+        String weatherCsvPath = "cities_3.csv";
+        String connectionCsvPath = "connections_3.csv";
         String outputCsvPath = "output.csv";
         try{
             Map<String, String[]> weatherData = loadIndividualCityData(weatherCsvPath);

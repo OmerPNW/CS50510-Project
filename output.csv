@@ -1,0 +1,475 @@
+"State","City","Postal Code","Weather","Sea level height","Destination City","Distance","Time taken"
+"North Dakota","Devils Lake","58301","8 November 12 am to 8 November 3 am : Cold, Light Winds
+8 November 3 am to 8 November 5 am : Light Fog, Light Winds, Cold
+8 November 5 am to 8 November 6 am : Light Rain, Light Fog, Light Winds, Cold
+8 November 6 am to 8 November 7 am : Light Fog, Light Winds, Cold
+8 November 7 am to 8 November 8 am : Heavy Fog, Light Winds, Cold
+8 November 8 am to 8 November 9 am : Light Fog, Light Winds, Cold
+8 November 9 am to 8 November 5 pm : Light Winds, Cold
+8 November 5 pm to 8 November 7 pm : Light Rain, Light Winds, Cold
+8 November 7 pm to 9 November 4 am : Cold, Clear, Light Winds
+9 November 4 am to 9 November 5 am : Cold, Light Rain, Heavy Winds
+9 November 5 am to 9 November 8 am : Cold, Light Winds
+9 November 8 am to 9 November 9 am : Light Snow, Light Winds, Cold, Light Fog
+9 November 9 am to 9 November 12 pm : Cold, Light Winds
+9 November 12 pm to 9 November 2 pm : Light Snow, Light Fog, Light Winds, Cold
+9 November 2 pm to 9 November 3 pm : Light Fog, Cold, Light Winds
+9 November 3 pm to 9 November 7 pm : Light Snow, Light Fog, Light Winds, Cold
+9 November 7 pm to 9 November 11 pm : Light Snow, Light Winds, Cold
+9 November 11 pm to 10 November 12 am : Clear, Cold, Light Winds","438","Minot","195","110"
+"North Dakota","Grand Forks","58203","8 November 12 am to 8 November 2 am : Cold, Light Winds, Clear
+8 November 2 am to 8 November 5 am : Cold, Light Winds, Light Fog
+8 November 5 am to 8 November 6 am : Cold, Light Winds, Light Rain, Light Fog
+8 November 6 am to 8 November 10 am : Cold, Light Winds, Light Fog
+8 November 10 am to 8 November 5 pm : Light Winds, Cold
+8 November  5 pm to 8 November 7 pm : Light Rain, Light Winds, Cold
+8 November 7 pm to 9 November 4 am : Cold, Light Winds
+9 November 4 am to 9 November 5 am : Light Rain, Heavy Winds, Cold
+9 November 5 am to 9 November 8 am : Light Winds, Cold
+9 November 8 am to 9 November 9 am : Light Snow, Light Fog, Light Winds, Cold
+9 November 9 am to 9 November 12 pm : Cold, Light Winds
+9 November 12 pm to 9 November 2 pm : Cold, Light Snow, Light Fog, Light Winds
+9 November 2 pm to 9 November 3 pm : Cold, Light Fog, Light Winds
+9 November 3 pm to 9 November 7 pm : Cold, Light Snow, Light Fog, Light Winds
+9 November 7 pm to 9 November 11 pm : Cold, Light Snow, Light Winds
+9 November 11 pm to 10 November 12 am : Cold, Light Winds","253","Fargo","130","90"
+"North Dakota","Bismarck","58501","8 November 12 am to 8 November 2 am: Cold, Light Snow, Light Fog
+8 November 2 am to 8 November 5 am : Cold, Clear
+8 November 5 am to 8 November 11 am : Cold, Light Winds
+8 November 11 am to 8 November 5 pm : Cold, Heavy Winds
+8 November 5 pm to 8 November 11 pm : Cold, Light Winds
+8 November 11 pm to 9 November 2 am : Clear, Cold
+9 November 2 am to 9 November 7 am : Light Winds, Cold, Clear
+9 November 7 am to 9 November 8 am : Light Snow, Light Fog, Light Winds, Cold
+9 November 8 am to 10 November 12 am : Clear, Cold, Light Winds","520","Bowman","281","170"
+"North Dakota","Bismarck","58501","8 November 12 am to 8 November 2 am: Cold, Light Snow, Light Fog
+8 November 2 am to 8 November 5 am : Cold, Clear
+8 November 5 am to 8 November 11 am : Cold, Light Winds
+8 November 11 am to 8 November 5 pm : Cold, Heavy Winds
+8 November 5 pm to 8 November 11 pm : Cold, Light Winds
+8 November 11 pm to 9 November 2 am : Clear, Cold
+9 November 2 am to 9 November 7 am : Light Winds, Cold, Clear
+9 November 7 am to 9 November 8 am : Light Snow, Light Fog, Light Winds, Cold
+9 November 8 am to 10 November 12 am : Clear, Cold, Light Winds","520","Pierre","330","210"
+"North Dakota","Jamestown","58401","8 November 12 am to 8 November 5 am : Cold, Light Winds
+8 November 5 am to 8 November 6 am : Cold, Light Winds, Light Fog
+8 November 6 am to 8 November 7 am : Cold, Light Winds
+8 November 7 am to 8 November 9 am : Light Winds, Cold, Light Fog
+8 November 8 am to 8 November 2 pm : Light Winds, Cold
+8 November 2 pm to 8 November 3 pm : Cold, Heavy Winds
+8 November 3 pm to 9 November 11 am : Cold, Light Winds
+9 November 11 am to 9 November 1 pm : Light Snow, Heavy Winds, Cold
+9 November 1 pm to 9 November 2 pm : Light Snow, Light Fog, Cold, Light Winds
+9 November 2 pm to 9 November 3 pm : Light Winds, Cold
+9 November 3 pm to 9 November 4 pm : Light Winds, Light Snow, Cold
+9 November 4 pm to 9 November 5 pm : Light Winds, Light Snow, Light Fog, Cold
+9 November 5 pm to 10 November 12 am : Cold, Light Winds  ","458","Fargo","155","110"
+"North Dakota","Jamestown","58401","8 November 12 am to 8 November 5 am : Cold, Light Winds
+8 November 5 am to 8 November 6 am : Cold, Light Winds, Light Fog
+8 November 6 am to 8 November 7 am : Cold, Light Winds
+8 November 7 am to 8 November 9 am : Light Winds, Cold, Light Fog
+8 November 8 am to 8 November 2 pm : Light Winds, Cold
+8 November 2 pm to 8 November 3 pm : Cold, Heavy Winds
+8 November 3 pm to 9 November 11 am : Cold, Light Winds
+9 November 11 am to 9 November 1 pm : Light Snow, Heavy Winds, Cold
+9 November 1 pm to 9 November 2 pm : Light Snow, Light Fog, Cold, Light Winds
+9 November 2 pm to 9 November 3 pm : Light Winds, Cold
+9 November 3 pm to 9 November 4 pm : Light Winds, Light Snow, Cold
+9 November 4 pm to 9 November 5 pm : Light Winds, Light Snow, Light Fog, Cold
+9 November 5 pm to 10 November 12 am : Cold, Light Winds  ","458","New Town","358","220"
+"North Dakota","Fargo","58103","8 November 12 am to 8 November 5 am : Clear, Cold, Light Winds
+8 November 5 am to 8 November 6 am : Clear, Cold, Light Fog, Light Winds
+8 November 6 am to 8 November 7 am : Clear, Cold, Light Winds
+8 November 7 am to 8 November 9 am : Clear, Cold, Light Winds, Light Fog
+8 November 9 am to 8 November 2 pm : Cold, Light Winds
+8 November 2 pm to 8 November 3 pm : Cold, Heavy Winds
+8 November 3 pm to 9 November 8 am : Cold, Clear, Light Winds
+9 November 8 am to 9 November 11 am : Cold, Heavy Winds
+9 November 11 am to 9 November 2 pm : Light Snow, Light Winds, Cold
+9 November 2 pm to 9 November 3 pm : Cold, Clear, Light Winds
+9 November 3 pm to 9 November 4 pm : Cold, Light Snow, Light Winds
+9 November 4 pm to 9 November 5 pm : Cold, Light Snow, Light Winds, Light Fog
+9 November 5 pm to 10 November 12 am : Cold, Clear, Light Winds ","276","St Cloud","277","190"
+"North Dakota","Minot","58701","8 November 12 am to 8 November 5 am : Cold, Light Winds
+8 November 5 am to 8 November 6 am : Cold, Light Winds, Light Rain
+8 November 6 am to 8 November 8 am : Cold, Light Winds
+8 November 8 am to 8 Novemberber 9 am : Cold, Light Snow, Light Winds
+8 November 9 am to 8 November 11 am : Cold, Light Winds
+8 November 11 am to 8 November 7 pm : Heavy Winds, Light Rain, Cold
+8 November 7 pm to 8 November 8 pm : Cold, Light Snow, Heavy Winds
+8 November 8 pm to 8 November 10 pm: Cold, Light Snow, Light Winds
+8 November 10 pm to 9 November 2 am : Cold, Clear, Light Winds
+9 November 2 am to 9 November 3 am : Cold, Light Rain, Light Winds
+9 November 3 am to 9 November 4 am : Cold, Light Snow, Light Winds
+9 November 4 am to 9 November 9 am : Light Winds, Cold
+9 November 9 am to 9 November 11 am : Light Snow, Heavy Winds, Cold
+9 November 11 am to 9 November 2 pm : Clear, Cold, Heavy Winds
+9 November 2 pm to 9 November 3 pm : Light Snow, Light Winds, Cold
+9 November 3 pm to 9 November 9 pm : Cold, Light Winds
+9 November 9 pm to 10 November 12 am : Light Snow, Light Winds, Light fog, Cold","470","Bismarck","178","130"
+"North Dakota","Fargo","58103","8 November 12 am to 8 November 5 am : Clear, Cold, Light Winds
+8 November 5 am to 8 November 6 am : Clear, Cold, Light Fog, Light Winds
+8 November 6 am to 8 November 7 am : Clear, Cold, Light Winds
+8 November 7 am to 8 November 9 am : Clear, Cold, Light Winds, Light Fog
+8 November 9 am to 8 November 2 pm : Cold, Light Winds
+8 November 2 pm to 8 November 3 pm : Cold, Heavy Winds
+8 November 3 pm to 9 November 8 am : Cold, Clear, Light Winds
+9 November 8 am to 9 November 11 am : Cold, Heavy Winds
+9 November 11 am to 9 November 2 pm : Light Snow, Light Winds, Cold
+9 November 2 pm to 9 November 3 pm : Cold, Clear, Light Winds
+9 November 3 pm to 9 November 4 pm : Cold, Light Snow, Light Winds
+9 November 4 pm to 9 November 5 pm : Cold, Light Snow, Light Winds, Light Fog
+9 November 5 pm to 10 November 12 am : Cold, Clear, Light Winds ","276","Jamestown","155","100"
+"North Dakota","Jamestown","58401","8 November 12 am to 8 November 5 am : Cold, Light Winds
+8 November 5 am to 8 November 6 am : Cold, Light Winds, Light Fog
+8 November 6 am to 8 November 7 am : Cold, Light Winds
+8 November 7 am to 8 November 9 am : Light Winds, Cold, Light Fog
+8 November 8 am to 8 November 2 pm : Light Winds, Cold
+8 November 2 pm to 8 November 3 pm : Cold, Heavy Winds
+8 November 3 pm to 9 November 11 am : Cold, Light Winds
+9 November 11 am to 9 November 1 pm : Light Snow, Heavy Winds, Cold
+9 November 1 pm to 9 November 2 pm : Light Snow, Light Fog, Cold, Light Winds
+9 November 2 pm to 9 November 3 pm : Light Winds, Cold
+9 November 3 pm to 9 November 4 pm : Light Winds, Light Snow, Cold
+9 November 4 pm to 9 November 5 pm : Light Winds, Light Snow, Light Fog, Cold
+9 November 5 pm to 10 November 12 am : Cold, Light Winds  ","458","Aberdeen","166","110"
+"North Dakota","Bowman","58623","8 November 12 am to 8 November 9 am : Cold, Light Winds
+8 November 9 am to 8 November 4 pm : Cold, Heavy Winds, Clear
+8 November 4 pm to 9 November 3 am : Cold, Clear, Light Winds
+9 November 3 am to 9 November 4 am : Cold, Light Winds, Light Snow
+9 November 4 am to 9 November 5 am : Cold, Light Winds
+9 November 5 am to 9 November 6 am : Cold, Heavy Snow, Light Fog, Light Winds
+9 November 6 am to 9 November 7 am : Cold, Light Winds
+9 November 7 am to 9 November 8 am : Cold, Light Snow, Heavy Winds
+9 November 8 am to 9 November 7 pm : Cold, Light Winds
+9 November 7 pm to 10 November 12 am : Very Cold, Clear ","903","Mobridge","262","170"
+"North Dakota","New Town","58763","8 November 12 am to 8 November 3 am : Cold, Light Winds
+8 November 3 am to 8 November 4 am : Cold, Light Winds, Light Fog
+8 November 4 am to 8 November 7 am : Cold, Light Rain, Light Winds
+8 November 7 am to 8 November 8 am : Cold, Light Winds
+8 November 8 am to 8 November 7 pm : Cold, Heavy Winds
+8 November 7 pm to 8 November 8 pm : Cold, Light Fog, Light Snow, Light Winds
+8 November 8 pm to 9 November 9 pm : Light Winds, Cold
+9 November 9 pm to 10 November 12 am : Cold","587","Bismarck","239","160"
+"North Dakota","Minot","58701","8 November 12 am to 8 November 5 am : Cold, Light Winds
+8 November 5 am to 8 November 6 am : Cold, Light Winds, Light Rain
+8 November 6 am to 8 November 8 am : Cold, Light Winds
+8 November 8 am to 8 Novemberber 9 am : Cold, Light Snow, Light Winds
+8 November 9 am to 8 November 11 am : Cold, Light Winds
+8 November 11 am to 8 November 7 pm : Heavy Winds, Light Rain, Cold
+8 November 7 pm to 8 November 8 pm : Cold, Light Snow, Heavy Winds
+8 November 8 pm to 8 November 10 pm: Cold, Light Snow, Light Winds
+8 November 10 pm to 9 November 2 am : Cold, Clear, Light Winds
+9 November 2 am to 9 November 3 am : Cold, Light Rain, Light Winds
+9 November 3 am to 9 November 4 am : Cold, Light Snow, Light Winds
+9 November 4 am to 9 November 9 am : Light Winds, Cold
+9 November 9 am to 9 November 11 am : Light Snow, Heavy Winds, Cold
+9 November 11 am to 9 November 2 pm : Clear, Cold, Heavy Winds
+9 November 2 pm to 9 November 3 pm : Light Snow, Light Winds, Cold
+9 November 3 pm to 9 November 9 pm : Cold, Light Winds
+9 November 9 pm to 10 November 12 am : Light Snow, Light Winds, Light fog, Cold","470","Devils Lake","195","120"
+"North Dakota","Devils Lake","58301","8 November 12 am to 8 November 3 am : Cold, Light Winds
+8 November 3 am to 8 November 5 am : Light Fog, Light Winds, Cold
+8 November 5 am to 8 November 6 am : Light Rain, Light Fog, Light Winds, Cold
+8 November 6 am to 8 November 7 am : Light Fog, Light Winds, Cold
+8 November 7 am to 8 November 8 am : Heavy Fog, Light Winds, Cold
+8 November 8 am to 8 November 9 am : Light Fog, Light Winds, Cold
+8 November 9 am to 8 November 5 pm : Light Winds, Cold
+8 November 5 pm to 8 November 7 pm : Light Rain, Light Winds, Cold
+8 November 7 pm to 9 November 4 am : Cold, Clear, Light Winds
+9 November 4 am to 9 November 5 am : Cold, Light Rain, Heavy Winds
+9 November 5 am to 9 November 8 am : Cold, Light Winds
+9 November 8 am to 9 November 9 am : Light Snow, Light Winds, Cold, Light Fog
+9 November 9 am to 9 November 12 pm : Cold, Light Winds
+9 November 12 pm to 9 November 2 pm : Light Snow, Light Fog, Light Winds, Cold
+9 November 2 pm to 9 November 3 pm : Light Fog, Cold, Light Winds
+9 November 3 pm to 9 November 7 pm : Light Snow, Light Fog, Light Winds, Cold
+9 November 7 pm to 9 November 11 pm : Light Snow, Light Winds, Cold
+9 November 11 pm to 10 November 12 am : Clear, Cold, Light Winds","438","Grand Forks","144","100"
+"North Dakota","Grand Forks","58203","8 November 12 am to 8 November 2 am : Cold, Light Winds, Clear
+8 November 2 am to 8 November 5 am : Cold, Light Winds, Light Fog
+8 November 5 am to 8 November 6 am : Cold, Light Winds, Light Rain, Light Fog
+8 November 6 am to 8 November 10 am : Cold, Light Winds, Light Fog
+8 November 10 am to 8 November 5 pm : Light Winds, Cold
+8 November  5 pm to 8 November 7 pm : Light Rain, Light Winds, Cold
+8 November 7 pm to 9 November 4 am : Cold, Light Winds
+9 November 4 am to 9 November 5 am : Light Rain, Heavy Winds, Cold
+9 November 5 am to 9 November 8 am : Light Winds, Cold
+9 November 8 am to 9 November 9 am : Light Snow, Light Fog, Light Winds, Cold
+9 November 9 am to 9 November 12 pm : Cold, Light Winds
+9 November 12 pm to 9 November 2 pm : Cold, Light Snow, Light Fog, Light Winds
+9 November 2 pm to 9 November 3 pm : Cold, Light Fog, Light Winds
+9 November 3 pm to 9 November 7 pm : Cold, Light Snow, Light Fog, Light Winds
+9 November 7 pm to 9 November 11 pm : Cold, Light Snow, Light Winds
+9 November 11 pm to 10 November 12 am : Cold, Light Winds","253","Devils Lake","144","100"
+"North Dakota","Bismarck","58501","8 November 12 am to 8 November 2 am: Cold, Light Snow, Light Fog
+8 November 2 am to 8 November 5 am : Cold, Clear
+8 November 5 am to 8 November 11 am : Cold, Light Winds
+8 November 11 am to 8 November 5 pm : Cold, Heavy Winds
+8 November 5 pm to 8 November 11 pm : Cold, Light Winds
+8 November 11 pm to 9 November 2 am : Clear, Cold
+9 November 2 am to 9 November 7 am : Light Winds, Cold, Clear
+9 November 7 am to 9 November 8 am : Light Snow, Light Fog, Light Winds, Cold
+9 November 8 am to 10 November 12 am : Clear, Cold, Light Winds","520","New Town","239","160"
+"North Dakota","Bismarck","58501","8 November 12 am to 8 November 2 am: Cold, Light Snow, Light Fog
+8 November 2 am to 8 November 5 am : Cold, Clear
+8 November 5 am to 8 November 11 am : Cold, Light Winds
+8 November 11 am to 8 November 5 pm : Cold, Heavy Winds
+8 November 5 pm to 8 November 11 pm : Cold, Light Winds
+8 November 11 pm to 9 November 2 am : Clear, Cold
+9 November 2 am to 9 November 7 am : Light Winds, Cold, Clear
+9 November 7 am to 9 November 8 am : Light Snow, Light Fog, Light Winds, Cold
+9 November 8 am to 10 November 12 am : Clear, Cold, Light Winds","520","Devils Lake","289","180"
+"North Dakota","Minot","58701","8 November 12 am to 8 November 5 am : Cold, Light Winds
+8 November 5 am to 8 November 6 am : Cold, Light Winds, Light Rain
+8 November 6 am to 8 November 8 am : Cold, Light Winds
+8 November 8 am to 8 Novemberber 9 am : Cold, Light Snow, Light Winds
+8 November 9 am to 8 November 11 am : Cold, Light Winds
+8 November 11 am to 8 November 7 pm : Heavy Winds, Light Rain, Cold
+8 November 7 pm to 8 November 8 pm : Cold, Light Snow, Heavy Winds
+8 November 8 pm to 8 November 10 pm: Cold, Light Snow, Light Winds
+8 November 10 pm to 9 November 2 am : Cold, Clear, Light Winds
+9 November 2 am to 9 November 3 am : Cold, Light Rain, Light Winds
+9 November 3 am to 9 November 4 am : Cold, Light Snow, Light Winds
+9 November 4 am to 9 November 9 am : Light Winds, Cold
+9 November 9 am to 9 November 11 am : Light Snow, Heavy Winds, Cold
+9 November 11 am to 9 November 2 pm : Clear, Cold, Heavy Winds
+9 November 2 pm to 9 November 3 pm : Light Snow, Light Winds, Cold
+9 November 3 pm to 9 November 9 pm : Cold, Light Winds
+9 November 9 pm to 10 November 12 am : Light Snow, Light Winds, Light fog, Cold","470","Jamestown","274","170"
+"North Dakota","Bowman","58623","8 November 12 am to 8 November 9 am : Cold, Light Winds
+8 November 9 am to 8 November 4 pm : Cold, Heavy Winds, Clear
+8 November 4 pm to 9 November 3 am : Cold, Clear, Light Winds
+9 November 3 am to 9 November 4 am : Cold, Light Winds, Light Snow
+9 November 4 am to 9 November 5 am : Cold, Light Winds
+9 November 5 am to 9 November 6 am : Cold, Heavy Snow, Light Fog, Light Winds
+9 November 6 am to 9 November 7 am : Cold, Light Winds
+9 November 7 am to 9 November 8 am : Cold, Light Snow, Heavy Winds
+9 November 8 am to 9 November 7 pm : Cold, Light Winds
+9 November 7 pm to 10 November 12 am : Very Cold, Clear ","903","Bismarck","285","172"
+"North Dakota","Bowman","58623","8 November 12 am to 8 November 9 am : Cold, Light Winds
+8 November 9 am to 8 November 4 pm : Cold, Heavy Winds, Clear
+8 November 4 pm to 9 November 3 am : Cold, Clear, Light Winds
+9 November 3 am to 9 November 4 am : Cold, Light Winds, Light Snow
+9 November 4 am to 9 November 5 am : Cold, Light Winds
+9 November 5 am to 9 November 6 am : Cold, Heavy Snow, Light Fog, Light Winds
+9 November 6 am to 9 November 7 am : Cold, Light Winds
+9 November 7 am to 9 November 8 am : Cold, Light Snow, Heavy Winds
+9 November 8 am to 9 November 7 pm : Cold, Light Winds
+9 November 7 pm to 10 November 12 am : Very Cold, Clear ","903","Minot","402","250"
+"North Dakota","Devils Lake","58301","8 November 12 am to 8 November 3 am : Cold, Light Winds
+8 November 3 am to 8 November 5 am : Light Fog, Light Winds, Cold
+8 November 5 am to 8 November 6 am : Light Rain, Light Fog, Light Winds, Cold
+8 November 6 am to 8 November 7 am : Light Fog, Light Winds, Cold
+8 November 7 am to 8 November 8 am : Heavy Fog, Light Winds, Cold
+8 November 8 am to 8 November 9 am : Light Fog, Light Winds, Cold
+8 November 9 am to 8 November 5 pm : Light Winds, Cold
+8 November 5 pm to 8 November 7 pm : Light Rain, Light Winds, Cold
+8 November 7 pm to 9 November 4 am : Cold, Clear, Light Winds
+9 November 4 am to 9 November 5 am : Cold, Light Rain, Heavy Winds
+9 November 5 am to 9 November 8 am : Cold, Light Winds
+9 November 8 am to 9 November 9 am : Light Snow, Light Winds, Cold, Light Fog
+9 November 9 am to 9 November 12 pm : Cold, Light Winds
+9 November 12 pm to 9 November 2 pm : Light Snow, Light Fog, Light Winds, Cold
+9 November 2 pm to 9 November 3 pm : Light Fog, Cold, Light Winds
+9 November 3 pm to 9 November 7 pm : Light Snow, Light Fog, Light Winds, Cold
+9 November 7 pm to 9 November 11 pm : Light Snow, Light Winds, Cold
+9 November 11 pm to 10 November 12 am : Clear, Cold, Light Winds","438","Jamestown","159","100"
+"North Dakota","Grand Forks","58203","8 November 12 am to 8 November 2 am : Cold, Light Winds, Clear
+8 November 2 am to 8 November 5 am : Cold, Light Winds, Light Fog
+8 November 5 am to 8 November 6 am : Cold, Light Winds, Light Rain, Light Fog
+8 November 6 am to 8 November 10 am : Cold, Light Winds, Light Fog
+8 November 10 am to 8 November 5 pm : Light Winds, Cold
+8 November  5 pm to 8 November 7 pm : Light Rain, Light Winds, Cold
+8 November 7 pm to 9 November 4 am : Cold, Light Winds
+9 November 4 am to 9 November 5 am : Light Rain, Heavy Winds, Cold
+9 November 5 am to 9 November 8 am : Light Winds, Cold
+9 November 8 am to 9 November 9 am : Light Snow, Light Fog, Light Winds, Cold
+9 November 9 am to 9 November 12 pm : Cold, Light Winds
+9 November 12 pm to 9 November 2 pm : Cold, Light Snow, Light Fog, Light Winds
+9 November 2 pm to 9 November 3 pm : Cold, Light Fog, Light Winds
+9 November 3 pm to 9 November 7 pm : Cold, Light Snow, Light Fog, Light Winds
+9 November 7 pm to 9 November 11 pm : Cold, Light Snow, Light Winds
+9 November 11 pm to 10 November 12 am : Cold, Light Winds","253","Crookston","40.7","30"
+"North Dakota","Bismarck","58501","8 November 12 am to 8 November 2 am: Cold, Light Snow, Light Fog
+8 November 2 am to 8 November 5 am : Cold, Clear
+8 November 5 am to 8 November 11 am : Cold, Light Winds
+8 November 11 am to 8 November 5 pm : Cold, Heavy Winds
+8 November 5 pm to 8 November 11 pm : Cold, Light Winds
+8 November 11 pm to 9 November 2 am : Clear, Cold
+9 November 2 am to 9 November 7 am : Light Winds, Cold, Clear
+9 November 7 am to 9 November 8 am : Light Snow, Light Fog, Light Winds, Cold
+9 November 8 am to 10 November 12 am : Clear, Cold, Light Winds","520","Minot","178","130"
+"North Dakota","Minot","58701","8 November 12 am to 8 November 5 am : Cold, Light Winds
+8 November 5 am to 8 November 6 am : Cold, Light Winds, Light Rain
+8 November 6 am to 8 November 8 am : Cold, Light Winds
+8 November 8 am to 8 Novemberber 9 am : Cold, Light Snow, Light Winds
+8 November 9 am to 8 November 11 am : Cold, Light Winds
+8 November 11 am to 8 November 7 pm : Heavy Winds, Light Rain, Cold
+8 November 7 pm to 8 November 8 pm : Cold, Light Snow, Heavy Winds
+8 November 8 pm to 8 November 10 pm: Cold, Light Snow, Light Winds
+8 November 10 pm to 9 November 2 am : Cold, Clear, Light Winds
+9 November 2 am to 9 November 3 am : Cold, Light Rain, Light Winds
+9 November 3 am to 9 November 4 am : Cold, Light Snow, Light Winds
+9 November 4 am to 9 November 9 am : Light Winds, Cold
+9 November 9 am to 9 November 11 am : Light Snow, Heavy Winds, Cold
+9 November 11 am to 9 November 2 pm : Clear, Cold, Heavy Winds
+9 November 2 pm to 9 November 3 pm : Light Snow, Light Winds, Cold
+9 November 3 pm to 9 November 9 pm : Cold, Light Winds
+9 November 9 pm to 10 November 12 am : Light Snow, Light Winds, Light fog, Cold","470","Bowman","402","250"
+"North Dakota","Bismarck","58501","8 November 12 am to 8 November 2 am: Cold, Light Snow, Light Fog
+8 November 2 am to 8 November 5 am : Cold, Clear
+8 November 5 am to 8 November 11 am : Cold, Light Winds
+8 November 11 am to 8 November 5 pm : Cold, Heavy Winds
+8 November 5 pm to 8 November 11 pm : Cold, Light Winds
+8 November 11 pm to 9 November 2 am : Clear, Cold
+9 November 2 am to 9 November 7 am : Light Winds, Cold, Clear
+9 November 7 am to 9 November 8 am : Light Snow, Light Fog, Light Winds, Cold
+9 November 8 am to 10 November 12 am : Clear, Cold, Light Winds","520","Jamestown","164","110"
+"North Dakota","Jamestown","58401","8 November 12 am to 8 November 5 am : Cold, Light Winds
+8 November 5 am to 8 November 6 am : Cold, Light Winds, Light Fog
+8 November 6 am to 8 November 7 am : Cold, Light Winds
+8 November 7 am to 8 November 9 am : Light Winds, Cold, Light Fog
+8 November 8 am to 8 November 2 pm : Light Winds, Cold
+8 November 2 pm to 8 November 3 pm : Cold, Heavy Winds
+8 November 3 pm to 9 November 11 am : Cold, Light Winds
+9 November 11 am to 9 November 1 pm : Light Snow, Heavy Winds, Cold
+9 November 1 pm to 9 November 2 pm : Light Snow, Light Fog, Cold, Light Winds
+9 November 2 pm to 9 November 3 pm : Light Winds, Cold
+9 November 3 pm to 9 November 4 pm : Light Winds, Light Snow, Cold
+9 November 4 pm to 9 November 5 pm : Light Winds, Light Snow, Light Fog, Cold
+9 November 5 pm to 10 November 12 am : Cold, Light Winds  ","458","Minot","274","170"
+"North Dakota","Bowman","58623","8 November 12 am to 8 November 9 am : Cold, Light Winds
+8 November 9 am to 8 November 4 pm : Cold, Heavy Winds, Clear
+8 November 4 pm to 9 November 3 am : Cold, Clear, Light Winds
+9 November 3 am to 9 November 4 am : Cold, Light Winds, Light Snow
+9 November 4 am to 9 November 5 am : Cold, Light Winds
+9 November 5 am to 9 November 6 am : Cold, Heavy Snow, Light Fog, Light Winds
+9 November 6 am to 9 November 7 am : Cold, Light Winds
+9 November 7 am to 9 November 8 am : Cold, Light Snow, Heavy Winds
+9 November 8 am to 9 November 7 pm : Cold, Light Winds
+9 November 7 pm to 10 November 12 am : Very Cold, Clear ","903","New Town","272","170"
+"North Dakota","Jamestown","58401","8 November 12 am to 8 November 5 am : Cold, Light Winds
+8 November 5 am to 8 November 6 am : Cold, Light Winds, Light Fog
+8 November 6 am to 8 November 7 am : Cold, Light Winds
+8 November 7 am to 8 November 9 am : Light Winds, Cold, Light Fog
+8 November 8 am to 8 November 2 pm : Light Winds, Cold
+8 November 2 pm to 8 November 3 pm : Cold, Heavy Winds
+8 November 3 pm to 9 November 11 am : Cold, Light Winds
+9 November 11 am to 9 November 1 pm : Light Snow, Heavy Winds, Cold
+9 November 1 pm to 9 November 2 pm : Light Snow, Light Fog, Cold, Light Winds
+9 November 2 pm to 9 November 3 pm : Light Winds, Cold
+9 November 3 pm to 9 November 4 pm : Light Winds, Light Snow, Cold
+9 November 4 pm to 9 November 5 pm : Light Winds, Light Snow, Light Fog, Cold
+9 November 5 pm to 10 November 12 am : Cold, Light Winds  ","458","Bismarck","164","110"
+"North Dakota","New Town","58763","8 November 12 am to 8 November 3 am : Cold, Light Winds
+8 November 3 am to 8 November 4 am : Cold, Light Winds, Light Fog
+8 November 4 am to 8 November 7 am : Cold, Light Rain, Light Winds
+8 November 7 am to 8 November 8 am : Cold, Light Winds
+8 November 8 am to 8 November 7 pm : Cold, Heavy Winds
+8 November 7 pm to 8 November 8 pm : Cold, Light Fog, Light Snow, Light Winds
+8 November 8 pm to 9 November 9 pm : Light Winds, Cold
+9 November 9 pm to 10 November 12 am : Cold","587","Bowman","272","170"
+"North Dakota","Jamestown","58401","8 November 12 am to 8 November 5 am : Cold, Light Winds
+8 November 5 am to 8 November 6 am : Cold, Light Winds, Light Fog
+8 November 6 am to 8 November 7 am : Cold, Light Winds
+8 November 7 am to 8 November 9 am : Light Winds, Cold, Light Fog
+8 November 8 am to 8 November 2 pm : Light Winds, Cold
+8 November 2 pm to 8 November 3 pm : Cold, Heavy Winds
+8 November 3 pm to 9 November 11 am : Cold, Light Winds
+9 November 11 am to 9 November 1 pm : Light Snow, Heavy Winds, Cold
+9 November 1 pm to 9 November 2 pm : Light Snow, Light Fog, Cold, Light Winds
+9 November 2 pm to 9 November 3 pm : Light Winds, Cold
+9 November 3 pm to 9 November 4 pm : Light Winds, Light Snow, Cold
+9 November 4 pm to 9 November 5 pm : Light Winds, Light Snow, Light Fog, Cold
+9 November 5 pm to 10 November 12 am : Cold, Light Winds  ","458","Devils Lake","159","100"
+"North Dakota","New Town","58763","8 November 12 am to 8 November 3 am : Cold, Light Winds
+8 November 3 am to 8 November 4 am : Cold, Light Winds, Light Fog
+8 November 4 am to 8 November 7 am : Cold, Light Rain, Light Winds
+8 November 7 am to 8 November 8 am : Cold, Light Winds
+8 November 8 am to 8 November 7 pm : Cold, Heavy Winds
+8 November 7 pm to 8 November 8 pm : Cold, Light Fog, Light Snow, Light Winds
+8 November 8 pm to 9 November 9 pm : Light Winds, Cold
+9 November 9 pm to 10 November 12 am : Cold","587","Minot","119","90"
+"North Dakota","Bowman","58623","8 November 12 am to 8 November 9 am : Cold, Light Winds
+8 November 9 am to 8 November 4 pm : Cold, Heavy Winds, Clear
+8 November 4 pm to 9 November 3 am : Cold, Clear, Light Winds
+9 November 3 am to 9 November 4 am : Cold, Light Winds, Light Snow
+9 November 4 am to 9 November 5 am : Cold, Light Winds
+9 November 5 am to 9 November 6 am : Cold, Heavy Snow, Light Fog, Light Winds
+9 November 6 am to 9 November 7 am : Cold, Light Winds
+9 November 7 am to 9 November 8 am : Cold, Light Snow, Heavy Winds
+9 November 8 am to 9 November 7 pm : Cold, Light Winds
+9 November 7 pm to 10 November 12 am : Very Cold, Clear ","903","Rapid City","264","160"
+"North Dakota","Devils Lake","58301","8 November 12 am to 8 November 3 am : Cold, Light Winds
+8 November 3 am to 8 November 5 am : Light Fog, Light Winds, Cold
+8 November 5 am to 8 November 6 am : Light Rain, Light Fog, Light Winds, Cold
+8 November 6 am to 8 November 7 am : Light Fog, Light Winds, Cold
+8 November 7 am to 8 November 8 am : Heavy Fog, Light Winds, Cold
+8 November 8 am to 8 November 9 am : Light Fog, Light Winds, Cold
+8 November 9 am to 8 November 5 pm : Light Winds, Cold
+8 November 5 pm to 8 November 7 pm : Light Rain, Light Winds, Cold
+8 November 7 pm to 9 November 4 am : Cold, Clear, Light Winds
+9 November 4 am to 9 November 5 am : Cold, Light Rain, Heavy Winds
+9 November 5 am to 9 November 8 am : Cold, Light Winds
+9 November 8 am to 9 November 9 am : Light Snow, Light Winds, Cold, Light Fog
+9 November 9 am to 9 November 12 pm : Cold, Light Winds
+9 November 12 pm to 9 November 2 pm : Light Snow, Light Fog, Light Winds, Cold
+9 November 2 pm to 9 November 3 pm : Light Fog, Cold, Light Winds
+9 November 3 pm to 9 November 7 pm : Light Snow, Light Fog, Light Winds, Cold
+9 November 7 pm to 9 November 11 pm : Light Snow, Light Winds, Cold
+9 November 11 pm to 10 November 12 am : Clear, Cold, Light Winds","438","Bismarck","289","180"
+"North Dakota","Grand Forks","58203","8 November 12 am to 8 November 2 am : Cold, Light Winds, Clear
+8 November 2 am to 8 November 5 am : Cold, Light Winds, Light Fog
+8 November 5 am to 8 November 6 am : Cold, Light Winds, Light Rain, Light Fog
+8 November 6 am to 8 November 10 am : Cold, Light Winds, Light Fog
+8 November 10 am to 8 November 5 pm : Light Winds, Cold
+8 November  5 pm to 8 November 7 pm : Light Rain, Light Winds, Cold
+8 November 7 pm to 9 November 4 am : Cold, Light Winds
+9 November 4 am to 9 November 5 am : Light Rain, Heavy Winds, Cold
+9 November 5 am to 9 November 8 am : Light Winds, Cold
+9 November 8 am to 9 November 9 am : Light Snow, Light Fog, Light Winds, Cold
+9 November 9 am to 9 November 12 pm : Cold, Light Winds
+9 November 12 pm to 9 November 2 pm : Cold, Light Snow, Light Fog, Light Winds
+9 November 2 pm to 9 November 3 pm : Cold, Light Fog, Light Winds
+9 November 3 pm to 9 November 7 pm : Cold, Light Snow, Light Fog, Light Winds
+9 November 7 pm to 9 November 11 pm : Cold, Light Snow, Light Winds
+9 November 11 pm to 10 November 12 am : Cold, Light Winds","253","Thief River Falls","82.7","60"
+"North Dakota","Fargo","58103","8 November 12 am to 8 November 5 am : Clear, Cold, Light Winds
+8 November 5 am to 8 November 6 am : Clear, Cold, Light Fog, Light Winds
+8 November 6 am to 8 November 7 am : Clear, Cold, Light Winds
+8 November 7 am to 8 November 9 am : Clear, Cold, Light Winds, Light Fog
+8 November 9 am to 8 November 2 pm : Cold, Light Winds
+8 November 2 pm to 8 November 3 pm : Cold, Heavy Winds
+8 November 3 pm to 9 November 8 am : Cold, Clear, Light Winds
+9 November 8 am to 9 November 11 am : Cold, Heavy Winds
+9 November 11 am to 9 November 2 pm : Light Snow, Light Winds, Cold
+9 November 2 pm to 9 November 3 pm : Cold, Clear, Light Winds
+9 November 3 pm to 9 November 4 pm : Cold, Light Snow, Light Winds
+9 November 4 pm to 9 November 5 pm : Cold, Light Snow, Light Winds, Light Fog
+9 November 5 pm to 10 November 12 am : Cold, Clear, Light Winds ","276","Grand Forks","130","85"
+"North Dakota","Minot","58701","8 November 12 am to 8 November 5 am : Cold, Light Winds
+8 November 5 am to 8 November 6 am : Cold, Light Winds, Light Rain
+8 November 6 am to 8 November 8 am : Cold, Light Winds
+8 November 8 am to 8 Novemberber 9 am : Cold, Light Snow, Light Winds
+8 November 9 am to 8 November 11 am : Cold, Light Winds
+8 November 11 am to 8 November 7 pm : Heavy Winds, Light Rain, Cold
+8 November 7 pm to 8 November 8 pm : Cold, Light Snow, Heavy Winds
+8 November 8 pm to 8 November 10 pm: Cold, Light Snow, Light Winds
+8 November 10 pm to 9 November 2 am : Cold, Clear, Light Winds
+9 November 2 am to 9 November 3 am : Cold, Light Rain, Light Winds
+9 November 3 am to 9 November 4 am : Cold, Light Snow, Light Winds
+9 November 4 am to 9 November 9 am : Light Winds, Cold
+9 November 9 am to 9 November 11 am : Light Snow, Heavy Winds, Cold
+9 November 11 am to 9 November 2 pm : Clear, Cold, Heavy Winds
+9 November 2 pm to 9 November 3 pm : Light Snow, Light Winds, Cold
+9 November 3 pm to 9 November 9 pm : Cold, Light Winds
+9 November 9 pm to 10 November 12 am : Light Snow, Light Winds, Light fog, Cold","470","New Town","119","85"
+"North Dakota","New Town","58763","8 November 12 am to 8 November 3 am : Cold, Light Winds
+8 November 3 am to 8 November 4 am : Cold, Light Winds, Light Fog
+8 November 4 am to 8 November 7 am : Cold, Light Rain, Light Winds
+8 November 7 am to 8 November 8 am : Cold, Light Winds
+8 November 8 am to 8 November 7 pm : Cold, Heavy Winds
+8 November 7 pm to 8 November 8 pm : Cold, Light Fog, Light Snow, Light Winds
+8 November 8 pm to 9 November 9 pm : Light Winds, Cold
+9 November 9 pm to 10 November 12 am : Cold","587","Jamestown","358","220"

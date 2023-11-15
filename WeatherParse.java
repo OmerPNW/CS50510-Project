@@ -34,6 +34,7 @@ public class WeatherParse {
         for (String line : lines) {
             String[] parts = line.split(":");
             if (parts.length != 2) {
+                
                 continue; // Skip invalid lines
             }
 

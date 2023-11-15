@@ -5,71 +5,27 @@ import java.util.TreeMap;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-class CityConnectionStruct {
-    final String name;
-    final float distance;
-    final int timeTaken;
-    CityConnectionStruct(String name, float distance, int timeTaken){
-        this.name = name;
-        this.distance = distance;
-        this.timeTaken = timeTaken;
-
-    }
-
-    public void printObject(){
-        System.out.println("Connection Info");
-        System.out.println(name);
-        System.out.println(distance);
-        System.out.println(timeTaken);
-    }
-}
-
-class City {
-    final int seaLevel;
-    final String postCode;
-    final TreeMap<Long, List<String>> weatherData;
-    LinkedList<CityConnectionStruct> connections;
-
-    City(String postCode, int seaLevel, String weatherDataString){
-        this.seaLevel = seaLevel;
-        this.postCode = postCode;
-        this.weatherData = WeatherParse.parseWeatherData(weatherDataString);
-        this.connections = new LinkedList<>();
-
-    }
-
-    public void printObject(){
-        System.out.println("Post Code : " + this.postCode);
-        System.out.println("Sea Level : " + String.valueOf(this.seaLevel));
-        System.out.println("Weather Conditions");
-        for (Map.Entry<Long, List<String>> entry : weatherData.entrySet()) {
-            long timestamp = entry.getKey();
-            List<String> conditions = entry.getValue();
-            System.out.println("Timestamp: " + timestamp);
-            System.out.println("Weather Conditions: " + conditions);
-        }
-        System.out.println("City Connections");
-        for (CityConnectionStruct connection: connections){
-            connection.printObject();
-        }
-        System.out.println();
-        System.out.println();
-        System.out.println();
-
-    }
-}
-
-
 
 public class BuildCityObjects {
+
+    // flags
+    private static final boolean checkOuterCityDisconnectedFlag = false;
+
+
+
+
+
     public static void main(String[] args){
-        String weatherCsvPath = "weather_2.csv";
-        String connectionCsvPath = "travel_2.csv";
+        String citiesCsvPath = "cities_3.csv";
+        String connectionCsvPath = "connections_3.csv";
+
+
+        
         Map<String, String[]> weatherData;
         Map<String, String[]> connectionData;
         HashMap<String, City> cities = new HashMap<>();
         try{
-            weatherData = LDP.loadIndividualCityData(weatherCsvPath);
+            weatherData = LDP.loadIndividualCityData(citiesCsvPath);
             connectionData = LDP.loadCityConnectionData(connectionCsvPath);
             cities = twoWayBuild(weatherData, connectionData);
 
@@ -91,23 +47,24 @@ public class BuildCityObjects {
         HashMap<String, City> cities = new HashMap<>();
 
         for (Map.Entry<String, String[]> weatherEntry : weatherData.entrySet()) {
-                String key = weatherEntry.getKey();
+                String key = StringStandardize.standardizeString(weatherEntry.getKey());
                 String[] values = weatherEntry.getValue();
                 int seaLevel;
                 try {
-                   seaLevel = Integer.parseInt(values[5]);
+                   seaLevel = Integer.parseInt(values[4]);
                 } catch(NumberFormatException ex) {
                    seaLevel = 0;
                 }                
-                cities.put(key, new City(values[3], seaLevel, values[4]));
+                cities.put(key, new City(values[2], seaLevel, values[3]));
             }
         for (Map.Entry<String, String[]> connectionEntry : connectionData.entrySet()) {
             String[] keySplits = connectionEntry.getKey().split(",");
-            String key = keySplits[0];
+            String key = StringStandardize.standardizeString(keySplits[0]);
             String[] connectionCity = connectionEntry.getValue();
             City city = cities.get(key);
             if (city != null){
-                city.connections.add(new CityConnectionStruct(connectionCity[2], Float.parseFloat(connectionCity[3]), Integer.parseInt(connectionCity[4])));
+                city.connections.add(new CityConnectionStruct(StringStandardize.standardizeString(connectionCity[2]),
+                 Float.parseFloat(connectionCity[3]), Integer.parseInt(connectionCity[4])));
             }
         }
         return cities;
@@ -157,7 +114,7 @@ public class BuildCityObjects {
                     }
                 }
             }
-            else{
+            else if (checkOuterCityDisconnectedFlag){
                 System.out.println("City not in records");
                 return false;
             }
@@ -170,5 +127,60 @@ public class BuildCityObjects {
         else {
             return false;
         }
+    }
+}
+
+class CityConnectionStruct {
+    final String name;
+    final float distance;
+    final int timeTaken;
+    CityConnectionStruct(String name, float distance, int timeTaken){
+        this.name = name;
+        this.distance = distance;
+        this.timeTaken = timeTaken;
+
+    }
+
+    public void printObject(){
+        System.out.println("Connection Info");
+        System.out.println(name);
+        System.out.println(distance);
+        System.out.println(timeTaken);
+    }
+}
+
+class City {
+    final int seaLevel;
+    final String postCode;
+    final TreeMap<Long, List<String>> weatherData;
+    LinkedList<CityConnectionStruct> connections;
+
+
+    City(String postCode, int seaLevel, String weatherDataString){
+        this.seaLevel = seaLevel;
+        this.postCode = postCode;
+        this.weatherData = WeatherParse.parseWeatherData(weatherDataString);
+        this.connections = new LinkedList<>();
+
+    }
+
+    public void printObject(){
+        System.out.println("Post Code : " + this.postCode);
+        System.out.println("Sea Level : " + String.valueOf(this.seaLevel));
+        System.out.println("Weather Conditions");
+        for (Map.Entry<Long, List<String>> entry : weatherData.entrySet()) {
+            long timestamp = entry.getKey();
+            List<String> conditions = entry.getValue();
+            System.out.println("Timestamp: " + timestamp);
+            System.out.println("Weather Conditions: " + conditions);
+        }
+        System.out.println("City Connections");
+        for (CityConnectionStruct connection: connections){
+            connection.printObject();
+        }
+        System.out.println();
+        System.out.println();
+        System.out.println();
+
     }
 }
