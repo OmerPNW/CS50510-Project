@@ -42,7 +42,6 @@ Houston,Matthew Paul Williams
 Austin,Matthew Paul Williams
 San Antonio,Matthew Paul Williams
 Corpus Christi,Matthew Paul Williams
-Fort Davis,Matthew Paul Williams
 Lubbock,Matthew Paul Williams
 Texarkana,Matthew Paul Williams
 Port Arthur,Matthew Paul Williams
@@ -50,7 +49,6 @@ Port Lavaca,Matthew Paul Williams
 Port Isabel,Sai Kumar Bella
 Waco,Sai Kumar Bella
 College Station,Sai Kumar Bella
-El Paso,Sai Kumar Bella
 Fredericksburg,Sai Kumar Bella
 San Angelo,Sai Kumar Bella
 Laredo,Sai Kumar Bella
