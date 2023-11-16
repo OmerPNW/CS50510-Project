@@ -1,0 +1,150 @@
+City,Student ID
+Bismarck,Muhammad Omer Raza
+Minot,Muhammad Omer Raza
+Devils Lake,Muhammad Omer Raza
+Jamestown,Muhammad Omer Raza
+Fargo,Muhammad Omer Raza
+Grand Forks,Muhammad Omer Raza
+Bowman,Muhammad Omer Raza
+New Town,Muhammad Omer Raza
+Pierre,Sahith Krishna Palla
+Mobridge,Sahith Krishna Palla
+Aberdeen,Sahith Krishna Palla
+Mitchell,Sahith Krishna Palla
+Sioux Falls,Sahith Krishna Palla
+Rapid City,Sahith Krishna Palla
+Watertown,Sahith Krishna Palla
+Ainsworth,Mohammed Farhan Ahmed
+Omaha,Mohammed Farhan Ahmed
+Columbus,Mohammed Farhan Ahmed
+Lincoln,Mohammed Farhan Ahmed
+Lexington,Mohammed Farhan Ahmed
+Hyannis,Mohammed Farhan Ahmed
+WaKeeney,Mohammed Zakiuddin
+Dodge City,Mohammed Zakiuddin
+Salina,Mohammed Zakiuddin
+Wichita,Mohammed Zakiuddin
+Topeka,Mohammed Zakiuddin
+Garden City,Mohammed Zakiuddin
+Manhattan,Mohammed Zakiuddin
+Elk City,Naga Harshitha Kovvuri 
+Cleveland,Naga Harshitha Kovvuri 
+Oklahoma City,Naga Harshitha Kovvuri 
+Norman,Naga Harshitha Kovvuri 
+McAlester,Naga Harshitha Kovvuri 
+Antlers,Naga Harshitha Kovvuri 
+Tulsa,Naga Harshitha Kovvuri 
+Ponca City,Naga Harshitha Kovvuri 
+Muskogee,Naga Harshitha Kovvuri 
+Amarillo,Matthew Paul Williams
+Dallas,Matthew Paul Williams
+Houston,Matthew Paul Williams
+Austin,Matthew Paul Williams
+San Antonio,Matthew Paul Williams
+Corpus Christi,Matthew Paul Williams
+Fort Davis,Matthew Paul Williams
+Lubbock,Matthew Paul Williams
+Texarkana,Matthew Paul Williams
+Port Arthur,Matthew Paul Williams
+Port Lavaca,Matthew Paul Williams
+Port Isabel,Sai Kumar Bella
+Waco,Sai Kumar Bella
+College Station,Sai Kumar Bella
+El Paso,Sai Kumar Bella
+Fredericksburg,Sai Kumar Bella
+San Angelo,Sai Kumar Bella
+Laredo,Sai Kumar Bella
+Del Rio,Sai Kumar Bella
+Tyler,Sai Kumar Bella
+Wichita Falls,Sai Kumar Bella
+Galveston,Sai Kumar Bella
+Alexandria,Nidita Pasapula
+Lake Charles,Nidita Pasapula
+Lafayette,Nidita Pasapula
+New Orleans,Nidita Pasapula
+Baton Rouge,Nidita Pasapula
+Monroe,Nidita Pasapula
+Shreveport,Nidita Pasapula
+Meridian,Praneeth Varma Vallabhu
+Jackson,Praneeth Varma Vallabhu
+Biloxi,Praneeth Varma Vallabhu
+Columbus,Praneeth Varma Vallabhu
+Southhaven,Praneeth Varma Vallabhu
+Hattiesburg,Praneeth Varma Vallabhu
+Oxford,Praneeth Varma Vallabhu
+Mobile,Rishika Goud Muddapuram
+Montgomery,Rishika Goud Muddapuram
+Dothan,Rishika Goud Muddapuram
+Birmingham,Rishika Goud Muddapuram
+Huntsville,Rohit Kumar Redd Kovvuri
+Florence,Rohit Kumar Redd Kovvuri
+Tuscaloosa,Rohit Kumar Redd Kovvuri
+Auburn,Rohit Kumar Redd Kovvuri
+Kingsport,Rui Zhang
+Nashville,Rui Zhang
+Knoxville,Rui Zhang
+Chattanooga,Rui Zhang
+Clarksville,Rui Zhang
+Columbia,Rui Zhang
+Dyersburg,Rui Zhang
+Memphis,Rui Zhang
+Hot Springs,Sahdev Nikinkumar Patel
+Jonesboro,Sahdev Nikinkumar Patel
+West Memphis,Sahdev Nikinkumar Patel
+Fayetteville,Sahdev Nikinkumar Patel
+Little Rock,Sahdev Nikinkumar Patel
+Conway,Sahdev Nikinkumar Patel
+Texarkana,Sahdev Nikinkumar Patel
+Jacksonville,Sahdev Nikinkumar Patel
+Fort Smith,Sahdev Nikinkumar Patel
+Branson,Nithin Kumar Reddy Mamidala
+Jefferson City,Nithin Kumar Reddy Mamidala
+Springfield,Nithin Kumar Reddy Mamidala
+Columbia,Nithin Kumar Reddy Mamidala
+St Joseph,Nithin Kumar Reddy Mamidala
+Kirksville,Nithin Kumar Reddy Mamidala
+Kansas City,Nithin Kumar Reddy Mamidala
+Cape Girardeau,Nithin Kumar Reddy Mamidala
+St. Louis,Nithin Kumar Reddy Mamidala
+Chicago,Sai Deepthi Jammula
+Quincy,Sai Deepthi Jammula
+Rock Island,Sai Deepthi Jammula
+Rockford,Sai Deepthi Jammula
+Peoria,Sai Deepthi Jammula
+Springfield,Sai Deepthi Jammula
+Champaign,Sai Deepthi Jammula
+Carbondale,Sai Deepthi Jammula
+Milwaukee,Naga Niharika Sreekurmam
+Appleton,Naga Niharika Sreekurmam
+Madison,Naga Niharika Sreekurmam
+Wisconsin Dells,Naga Niharika Sreekurmam
+Eau Claire,Naga Niharika Sreekurmam
+Green Bay,Naga Niharika Sreekurmam
+Superior,Naga Niharika Sreekurmam
+Wausau,Naga Niharika Sreekurmam
+Davenport,Mourya Teja Veeramachaneni
+Cedar Rapids,Mourya Teja Veeramachaneni
+Des Moines,Mourya Teja Veeramachaneni
+Fort Dodge,Mourya Teja Veeramachaneni
+Mason City,Mourya Teja Veeramachaneni
+Sioux City,Mourya Teja Veeramachaneni
+Burlington,Mourya Teja Veeramachaneni
+Waterloo,Mourya Teja Veeramachaneni
+St Cloud,Rahman Mohammad
+Minneapolis,Rahman Mohammad
+Thief River Falls,Rahman Mohammad
+Duluth,Rahman Mohammad
+St Paul,Rahman Mohammad
+Rochester,Rahman Mohammad
+Bemidji,Rahman Mohammad
+Crookston,Rahman Mohammad
+Kingsport,Rui Zhang
+NashVille,Rui Zhang
+Collierville,Rui Zhang
+Knoxville,Rui Zhang
+Chattanooga,Rui Zhang
+Clarksville,Rui Zhang
+Franklin,Rui Zhang
+Columbia,Rui Zhang
+Dyersburg,Rui Zhang
+Memphis,Rui Zhang

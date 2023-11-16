@@ -1,10 +1,12 @@
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.Year;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
+
 
 public class WeatherParse {
     public static void main(String[] args) {
@@ -25,7 +27,7 @@ public class WeatherParse {
         }
     }
 
-    public static TreeMap<Long, List<String>> parseWeatherData(String weatherData) {
+    public static TreeMap<Long, List<String>> parseWeatherData (String weatherData) {
 
         TreeMap<Long, List<String>> weatherDataMap = new TreeMap<>();
         
@@ -52,7 +54,6 @@ public class WeatherParse {
                 Date startDate = parseWeatherDateTime(startTime);
 
                 long startEpoch = startDate.getTime();
-                
                 weatherDataMap.computeIfAbsent(startEpoch, arrayList -> new ArrayList<>()).addAll(parseConditions(conditions));
             } catch (ParseException e) {
                 e.printStackTrace();
@@ -95,6 +96,8 @@ public class WeatherParse {
 
     public static Date parseWeatherDateTime(String weatherDateTime) throws ParseException{
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd MMMM hh a");
-        return dateFormat.parse(weatherDateTime);
+        Date date = dateFormat.parse(weatherDateTime);
+        date.setYear(Year.now().getValue() - 1900);
+        return date;
     }
 }

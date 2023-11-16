@@ -2,11 +2,17 @@ import java.util.Map;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.TreeMap;
+import java.util.logging.FileHandler;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 
 
 public class BuildCityObjects {
+
 
     // flags
     private static final boolean checkOuterCityDisconnectedFlag = false;
@@ -15,11 +21,26 @@ public class BuildCityObjects {
 
 
 
-    public static void main(String[] args){
+    public static void main(String[] args) throws IOException{
         String citiesCsvPath = "HW6_weather.csv";
         String connectionCsvPath = "HW6_Data_City_Connections.csv";
 
+        // Create a FileHandler that writes log messages to a file
+        FileHandler fileHandlerInfo = new FileHandler("info.log");
+        FileHandler fileHandleError = new FileHandler("error.log");
 
+        // Set the log level (e.g., INFO)
+        fileHandlerInfo.setLevel(Level.INFO);
+        fileHandleError.setLevel(Level.SEVERE);
+
+        // Add the FileHandler to the logger
+        // logger.addHandler(fileHandlerInfo);
+        // logger.addHandler(fileHandleError);
+        CustomRecordFormatter formatter = new CustomRecordFormatter();  
+        // If issue with using formatter from then uncomment this line and comment the above
+        // SimpleFormatter formatter = new SimpleFormatter();
+        fileHandlerInfo.setFormatter(formatter);
+        fileHandleError.setFormatter(formatter);
         
         Map<String, String[]> weatherData;
         Map<String, String[]> connectionData;
@@ -34,7 +55,7 @@ public class BuildCityObjects {
             //     city.getValue().printObject();
             // }
 
-            System.out.println(checkConnectivity(cities));
+            // System.out.println(checkConnectivity(cities));
 
         }
         catch(Exception e){
@@ -55,7 +76,7 @@ public class BuildCityObjects {
                 } catch(NumberFormatException ex) {
                    seaLevel = 0;
                 }                
-                cities.put(key, new City(values[2], seaLevel, values[3]));
+                cities.put(key, new City(values[1],values[0], values[2], seaLevel, values[3]));
             }
         for (Map.Entry<String, String[]> connectionEntry : connectionData.entrySet()) {
             String[] keySplits = connectionEntry.getKey().split(",");
@@ -84,7 +105,7 @@ public class BuildCityObjects {
                 } catch(NumberFormatException ex) {
                    seaLevel = 0;
                 }    
-                if (cities.get(key) == null) cities.put(key, new City(values[2], seaLevel, values[3]));
+                if (cities.get(key) == null) cities.put(key, new City(values[1],values[0], values[2], seaLevel, values[3]));
             }
         for (Map.Entry<String, String[]> connectionEntry : connectionData.entrySet()) {
             String[] keySplits = connectionEntry.getKey().split(",");
@@ -103,7 +124,7 @@ public class BuildCityObjects {
                 if (cities.get(connectionCityKey) == null){
                     String[] values = weatherData.get(connectionCityKey);
                     final int seaLevel = Integer.parseInt(values[4]) ;
-                    cities.put(key, new City(values[2], seaLevel, values[3]));
+                    cities.put(key, new City(values[1],values[0], values[2], seaLevel, values[3]));
                 }
                 City backConnCity = cities.get(connectionCityKey);
                 for (CityConnectionStruct c : backConnCity.connections){
@@ -121,7 +142,6 @@ public class BuildCityObjects {
         HashMap<String, City> cities = oneWayBuild(weatherData, connectionData);
         for (Map.Entry<String, City> cityEntry : cities.entrySet()) {
                 String key = cityEntry.getKey();
-                String name = key.split(",")[0];
                 City city = cityEntry.getValue();
                 for (CityConnectionStruct c: city.connections){
                     City connCity = cities.get(c.name);
@@ -135,16 +155,6 @@ public class BuildCityObjects {
                         }
                     }
                 }
-                // if (city.connections.size() < 1){
-                //     for (Map.Entry<String, City> connectCityEntry : cities.entrySet()) {
-                //         City connectCity = connectCityEntry.getValue();
-                //         for ( CityConnectionStruct cityConnectionStruct: connectCity.connections){
-                //             if (name.equals(cityConnectionStruct.name)){
-                //                 city.connections.add(cityConnectionStruct);
-                //             }
-                //         }
-                //     }
-                // }
             }
 
         return cities;
@@ -153,13 +163,13 @@ public class BuildCityObjects {
 
     // Verification check that all cities have a path from one to another
     // cities must not be of size 0
-    public static boolean checkConnectivity(HashMap<String, City> cities){
+    public static boolean checkConnectivity(HashMap<String, City> cities, Logger logger){
 
         ArrayList<String> cityNames = new ArrayList<>();
         ArrayList<String> queue = new ArrayList<>();
         String cityKey = cities.entrySet().iterator().next().getKey();
         queue.add(cityKey);
-
+        logger.info("----VERIFYING CONNECTIVITY-----");
         while (queue.size() > 0){
             String dequeueKey = queue.remove(0);
             City city = cities.get(dequeueKey);
@@ -173,23 +183,34 @@ public class BuildCityObjects {
                 }
             }
             else if (checkOuterCityDisconnectedFlag){
-                System.out.println("City not in records");
+                logger.info("City not in records : " + dequeueKey );
                 return false;
             }
             // System.out.println(cityNames);
 
             // System.out.println(cityNames);
         }
-        System.out.println(cityNames);
-        System.out.println(cities.keySet());
-        System.out.println(cityNames.size());
-        System.out.println(cities.keySet().size());
+        // System.out.println(cityNames);
+        // System.out.println(cities.keySet());
+        // System.out.println(cityNames.size());
+        // System.out.println(cities.keySet().size());
         if (cityNames.size() == cities.size()){
+            logger.info("Completed. All cities have path to each other!!!");
+            logger.info("-----END-----");
             return true;
         }
         else {
+            ArrayList<String> difference = new ArrayList<>(cities.keySet()) ;
+            difference.removeAll(cityNames);
+
+            logger.info("Some set of cities are cut off from the other set of cities." +" Total cities are " + cities.size()+ 
+            ".\n Connected cities start from " + cityNames.get(0) +". The cities reachable from this starting point though any path are " + cityNames.size()
+            + "\n" + "Unreachable cities are " + difference );
+            
+            logger.info("-----END-----\n");
             return false;
         }
+
     }
 }
 
@@ -204,22 +225,26 @@ class CityConnectionStruct {
 
     }
 
-    public void printObject(){
-        System.out.println("Connection Info");
-        System.out.println(name);
-        System.out.println(distance);
-        System.out.println(timeTaken);
+    public void printObject(Logger logger){
+        logger.info("---Connection Info---");
+        logger.info("Connected City Name : "+ name);
+        logger.info("Distance (forward) in km :" + String.valueOf(distance));
+        logger.info("Avg time taken (forward) in min :" + timeTaken);
     }
 }
 
 class City {
+    final String name;
+    final String state;
     final int seaLevel;
     final String postCode;
     final TreeMap<Long, List<String>> weatherData;
     LinkedList<CityConnectionStruct> connections;
 
 
-    City(String postCode, int seaLevel, String weatherDataString){
+    City(String name, String state, String postCode, int seaLevel, String weatherDataString){
+        this.name = name;
+        this.state = state;
         this.seaLevel = seaLevel;
         this.postCode = postCode;
         this.weatherData = WeatherParse.parseWeatherData(weatherDataString);
@@ -227,23 +252,28 @@ class City {
 
     }
 
-    public void printObject(){
-        System.out.println("Post Code : " + this.postCode);
-        System.out.println("Sea Level : " + String.valueOf(this.seaLevel));
-        System.out.println("Weather Conditions");
+    public void printObject(Logger logger){
+        logger.info("----CITY INFO ----");
+        logger.info("Name : "+ this.name);
+        logger.info("State : "+ this.state);
+        logger.info("Post Code : " + this.postCode);
+        logger.info("Sea Level in m: " + String.valueOf(this.seaLevel));
+        logger.info("Weather Conditions");
+        logger.info("--Weather Conditions --");
         for (Map.Entry<Long, List<String>> entry : weatherData.entrySet()) {
             long timestamp = entry.getKey();
             List<String> conditions = entry.getValue();
-            System.out.println("Timestamp: " + timestamp);
-            System.out.println("Weather Conditions: " + conditions);
+            logger.info("Date : " + new Date(timestamp));
+            logger.info("Weather Conditions: " + conditions);
         }
-        System.out.println("City Connections");
+        logger.info("--End Weather Conditions--");
+        logger.info("City Connections");
         for (CityConnectionStruct connection: connections){
-            connection.printObject();
+            connection.printObject(logger);
         }
-        System.out.println();
-        System.out.println();
-        System.out.println();
-
+        logger.info("----END-----");
+        logger.info("");
+        logger.info("");
+        logger.info("");
     }
 }
