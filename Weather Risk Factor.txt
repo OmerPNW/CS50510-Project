@@ -1,0 +1,23 @@
+Condition,Risk(Normalized scale of 2-10),"Time Risk(Normalized scale of 1-20, but can be more for extreme values)"
+Clear,0,0
+Overcast,0,0
+Rain,0,1
+Light Rain,0,1
+Heavy Rain,4,6
+Light Rains,0,1
+Heavy Rains,4,6
+Urban Flooding,30,30
+Light Snow,2,4
+Heavy Snow,8,8
+Hail,40,10
+Black Ice,10,10
+Light Fog,2,2
+Heavy Fog,6,14
+Light Winds,2,2
+Heavy Winds,3,2
+Light Wind,2,2
+Heavy Wind,3,2
+Hot,0,0
+Very Hot,1,1
+Cold,0,0
+Very Cold,1,1
