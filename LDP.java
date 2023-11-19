@@ -190,8 +190,8 @@ public class LDP {
                     logger.warning("Empty .Found row with no city name in row "+ String.valueOf(rowNum + 1) + ". Skipping");
                     continue ; // skip empty row
                 }
-                final String cityName = StringStandardize.standardizeString(fields[0]);
-                cityToStudent.put(cityName, key);
+                final String studentName = StringStandardize.standardizeString(fields[1]);
+                cityToStudent.put(key, studentName);
             }
             return cityToStudent;
 

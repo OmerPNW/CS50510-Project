@@ -2,6 +2,7 @@ import java.util.Map;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.TreeMap;
+import java.util.logging.ConsoleHandler;
 import java.util.logging.FileHandler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -16,9 +17,6 @@ public class BuildCityObjects {
 
     // flags
     private static final boolean checkOuterCityDisconnectedFlag = false;
-
-
-
 
 
     public static void main(String[] args) throws IOException{
@@ -212,6 +210,31 @@ public class BuildCityObjects {
         }
 
     }
+    public static void printAdjacencyList(HashMap<String, City> cityMap){
+        int totalCities = 0;
+        int totalConnections = 0;
+        for (Map.Entry<String, City> cityEntry: cityMap.entrySet()){
+            City city = cityEntry.getValue();
+            totalCities +=1;
+            System.out.println();
+            System.out.println("####");
+            System.out.print(city.name + " ( " + city.state + " ) :");
+            for (CityConnectionStruct cityConnectionStruct : city.connections){
+                if (cityMap.get(cityConnectionStruct.name)!= null){
+                    String connCityState = cityMap.get(cityConnectionStruct.name).state ;
+                    if (connCityState.equals(city.state)) System.out.print(" --- " + cityConnectionStruct.distance   + " km ---> " + cityConnectionStruct.name + " ,");
+                    else System.out.print(" --- " + cityConnectionStruct.distance   + " km ---> " + cityConnectionStruct.name + "(" + connCityState + ") ," );
+                }
+            }
+            totalConnections += city.connections.size();
+
+        }
+        System.out.println();
+        System.out.println("Total Cities are : " + totalCities);
+        System.out.println("Total Connections are : " + totalConnections + " Theoretical max (directed) are " + (totalCities * totalCities - totalCities));
+        System.out.println("Avg connections per city are : " + (totalConnections * 1.0f/totalCities));
+
+    }
 }
 
 class CityConnectionStruct {
@@ -225,11 +248,16 @@ class CityConnectionStruct {
 
     }
 
+    public void printString(String message, Logger logger){
+        if (logger == null) System.out.println(message);
+        else logger.info(message);
+    }
+
     public void printObject(Logger logger){
-        logger.info("---Connection Info---");
-        logger.info("Connected City Name : "+ name);
-        logger.info("Distance (forward) in km :" + String.valueOf(distance));
-        logger.info("Avg time taken (forward) in min :" + timeTaken);
+        printString("---Connection Info---", logger);
+        printString("Connected City Name : "+ name, logger);
+        printString("Distance (forward) in km :" + String.valueOf(distance), logger);
+        printString("Avg time taken (forward) in min :" + timeTaken, logger);
     }
 }
 
@@ -252,28 +280,39 @@ class City {
 
     }
 
+
+    public void printString(String message, Logger logger){
+        if (logger == null) System.out.println(message);
+        else logger.info(message);
+    }
+
+
     public void printObject(Logger logger){
-        logger.info("----CITY INFO ----");
-        logger.info("Name : "+ this.name);
-        logger.info("State : "+ this.state);
-        logger.info("Post Code : " + this.postCode);
-        logger.info("Sea Level in m: " + String.valueOf(this.seaLevel));
-        logger.info("Weather Conditions");
-        logger.info("--Weather Conditions --");
+        printString("----CITY INFO ----", logger);
+        printString("Name : "+ this.name, logger);
+        printString("State : "+ this.state, logger);
+        printString("Post Code : " + this.postCode, logger);
+        printString("Sea Level in m: " + String.valueOf(this.seaLevel), logger);
+        printString("Weather Conditions", logger);
+        printString("--Weather Conditions --", logger);
         for (Map.Entry<Long, List<String>> entry : weatherData.entrySet()) {
             long timestamp = entry.getKey();
             List<String> conditions = entry.getValue();
-            logger.info("Date : " + new Date(timestamp));
-            logger.info("Weather Conditions: " + conditions);
+            printString("Date : " + new Date(timestamp), logger);
+            printString("Weather Conditions: " + conditions, logger);
         }
-        logger.info("--End Weather Conditions--");
-        logger.info("City Connections");
+        printString("--End Weather Conditions--", logger);
+        printString("City Connections", logger);
         for (CityConnectionStruct connection: connections){
             connection.printObject(logger);
         }
-        logger.info("----END-----");
-        logger.info("");
-        logger.info("");
-        logger.info("");
+        printString("----END-----", logger);
+        printString("", logger);
+        printString("", logger);
+        printString("", logger);
+    }
+
+    public void printObject(){
+        printObject(null);
     }
 }

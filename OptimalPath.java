@@ -1,5 +1,6 @@
 import java.io.IOException;
 import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -19,9 +20,9 @@ public class OptimalPath {
     private static int costCalculationCriteria = 0 ;
 
 
-    private static int riskThreshold = 100 ;
+    private static int riskThreshold = Integer.MAX_VALUE ;
     private static int riskFactorScale = 20;
-    // km per litre of an average US car (Sorry Matt XD)
+    // km per litre of an average US car (Sorry Matt XD) even tho the name literally says "mile"age
     private static float gasMileage = 10.9f;
     
 
@@ -117,16 +118,17 @@ public class OptimalPath {
             }
         }
 
-
         // TODO: use haversteins distance based on lat/lng . Coz google will show road distance(including slope), and 
-        // not just ground level distance
+        // not just ground level distance // also distance grad to be modified as its simply adding sea level difference lol
+        // can have sealevel diff/dist * sea level diff(as proportionality is scaled by grad diff/steepness)
         float distanceGradient = (cityObject.seaLevel- cityMap.get(ccs.name).seaLevel) / (ccs.distance * 1000) ; 
         long timeTaken = (long)(ccs.timeTaken * 60 * 1000 * (1 + totalTimeRisk * 1.0f / riskFactorScale));
 
         // just distance based
         if (costCalculationCriteria == 0){
-            float distance = ccs.distance * (1 + distanceGradient);
-            return new CostStruct(distance, totalSafetyRisk, startTime + timeTaken);
+            // just distance based for now so commenting below
+            //float distance = ccs.distance * (1 + distanceGradient);
+            return new CostStruct(ccs.distance, totalSafetyRisk, startTime + timeTaken);
         }
         // just time based
         else if (costCalculationCriteria == 1){
@@ -173,6 +175,7 @@ public class OptimalPath {
         Map<String, CostStruct> gScore = path.gScore;
         float totalDistance = 0;
         int totalTimeTaken = 0;
+        int totalPerceivedRisk = 0;
 
 
         for (int i=1; i < cityNames.size(); i++){
@@ -193,8 +196,12 @@ public class OptimalPath {
                     System.out.println("Time start is " + new Date(currentTime));
                     System.out.println("Time taken is " + timeTaken + " min");
                     System.out.println("Time of arrival is " + new Date(gScore.get(destinationCity).startTime));
+                    int riskVal = (gScore.get(destinationCity).risk - gScore.get(sourceCity).risk);
+                    System.out.println("Perceived risk due to weather" + WeatherParse.getNearestWeather(startTime, citiesDS.get(sourceCity).weatherData) 
+                     + " is " + riskVal);
                     totalTimeTaken += timeTaken;
                     totalDistance += c.distance;
+                    totalPerceivedRisk += riskVal;
                     System.out.println();
                     break;
                 }
@@ -210,8 +217,12 @@ public class OptimalPath {
         System.out.println();
         System.out.println("Total Distance is " + totalDistance + " km");
         System.out.println("Total Time taken is " + totalTimeTaken + " min");
+        System.out.println("Total Perceived risk is " + totalPerceivedRisk);
+
 
     } 
+
+
 
     public static void main(String[] args) throws IOException{
 
@@ -230,28 +241,53 @@ public class OptimalPath {
             HashMap<String, City> citiesDS = BuildCityObjects.twoWayBuild(weatherData, connectionData);
             DateFormat df = new SimpleDateFormat("MM/dd/yyyy HH:mm");
             String inputCommand = "";
+            Scanner myObj = null;
             while (!inputCommand.equals("quit")){
-                System.out.println("Please input command (quit / visualize / path)");
-                Scanner myObj = new Scanner(System.in);  // Create a Scanner object
+                System.out.println("Please input command (visualize / path / quit)");
+                myObj = new Scanner(System.in);  // Create a Scanner object
                 inputCommand = StringStandardize.standardizeString(myObj.nextLine());
                 if (inputCommand.equals("path")){
                     System.out.println("Please Enter source city");
-                    myObj = new Scanner(System.in);
                     String sourceCity = StringStandardize.standardizeString(myObj.nextLine());
+                    if (citiesDS.get(sourceCity) == null){
+                        System.out.println("Source city not in our repertoire. Rewinding!!!" );
+                        continue;
+                    }
                     System.out.println("Please Enter Destination City");
-                    myObj = new Scanner(System.in);
                     String destinationCity = StringStandardize.standardizeString(myObj.nextLine());
+                    if (citiesDS.get(destinationCity) == null){
+                        System.out.println("Destination city not in our repertoire. Rewinding!!!" );
+                        continue;
+                    }
                     System.out.println("Please Enter Start time in format : MM/dd/yyyy HH:mm"); // e.g 11/08/2023 12:00 any other date in this format is fine but we collected weather data for 8-9 Nov inclusive
-                    myObj = new Scanner(System.in);
-                    long startTime = df.parse(myObj.nextLine()).getTime();
+                    long startTime = 0;
+                    try {
+                        startTime = df.parse(myObj.nextLine()).getTime();
+                    }
+                    catch(ParseException pe){
+                        System.out.println("Date Format not adhering to specified format. E.g is 11/08/2023 23:44. Rewinding !!!");
+                    }
                     WrapperOutput path = findOptimalPath( citiesDS, weatherRiskMap, sourceCity, destinationCity, startTime);
                     printPathInfo(path, citiesDS, weatherRiskMap);
                 }
-                else {
-                    System.out.println("Construction underway");
-                }
+                else if (inputCommand.equals("visualize")){
+                    System.out.println("Full details : (y) ?");
+                    String response = StringStandardize.standardizeString(myObj.nextLine());
+                    if (response.equals("y")) {
+                        for (HashMap.Entry<String, City> city : citiesDS.entrySet()){
+                            city.getValue().printObject();
+                        }
+                    }
+                    else BuildCityObjects.printAdjacencyList(citiesDS);
+                    System.out.println();
+                    System.out.println();
 
+                }
+                else {
+                    System.out.println("Unknown Command");
+                }
             }
+            myObj.close();
         }
 
 
