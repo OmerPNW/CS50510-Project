@@ -174,7 +174,7 @@ public class OptimalPath {
         List<String> cityNames = path.cityNames;
         Map<String, CostStruct> gScore = path.gScore;
         float totalDistance = 0;
-        int totalTimeTaken = 0;
+        float totalTimeTaken = 0;
         int totalPerceivedRisk = 0;
 
 
@@ -192,10 +192,10 @@ public class OptimalPath {
                     System.out.print("Distance is ");
                     System.out.print(c.distance);
                     System.out.println( " km");
-                    float timeTaken = (gScore.get(destinationCity).startTime - currentTime)/(1000 * 60);
+                    float timeTaken = (gScore.get(destinationCity).startTime - currentTime)/(1000 * 60f);
                     System.out.println("Time start is " + new Date(currentTime));
-                    System.out.println("Time taken is " + timeTaken + " min");
-                    System.out.println("Time of arrival is " + new Date(gScore.get(destinationCity).startTime));
+                    System.out.println("Expected Time taken is " + timeTaken + " min");
+                    System.out.println("ETA is " + new Date(gScore.get(destinationCity).startTime));
                     int riskVal = (gScore.get(destinationCity).risk - gScore.get(sourceCity).risk);
                     System.out.println("Perceived risk due to weather" + WeatherParse.getNearestWeather(startTime, citiesDS.get(sourceCity).weatherData) 
                      + " is " + riskVal);
