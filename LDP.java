@@ -14,7 +14,7 @@ public class LDP {
     static Logger logger = Logger.getLogger(LDP.class.getName());
     
 
-    final static String[] inorderCityHeaders = {"State", "Source_city", "Postal Code", "Weather", "Sea_level/m"} ;
+    final static String[] inorderCityHeaders = {"State", "Source_city", "Postal Code", "Weather", "Sea_level/m", "Latitude / degrees(Optional)", "Longitude / degrees(Optional)"} ;
     final static String[] inorderConnectionsHeaders = {"State", "City", "Destination", "Distance/km", "Time Taken/min"} ;
 
     public static Map<String, String[]> loadIndividualCityData(String csvPath) throws IOException, Exception{
@@ -40,6 +40,7 @@ public class LDP {
             // Read and process each row
             int rowNum = 0;
             while (scanner.hasNextLine()) {
+                rowNum += 1;
                 String row = scanner.nextLine();
                 long count_quotes = row.chars().filter(ch -> ch == '"').count();
                 while (count_quotes % 2 != 0){
@@ -75,7 +76,7 @@ public class LDP {
                 if (!isNumber(weatherFields[2]) || !isNumber(weatherFields[4])){
 
                     logger.severe("Encountered non numeric data in a numeric column in City Data at row " + String.valueOf(rowNum + 1));
-
+                    logger.severe(weatherFields[2] + " "+ weatherFields[4]+ " "+  weatherFields[5] + " "+ weatherFields[6]);
 
 
                     return null;

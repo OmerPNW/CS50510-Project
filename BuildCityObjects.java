@@ -2,7 +2,6 @@ import java.util.Map;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.TreeMap;
-import java.util.logging.ConsoleHandler;
 import java.util.logging.FileHandler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -69,12 +68,27 @@ public class BuildCityObjects {
                 String key = StringStandardize.standardizeString(weatherEntry.getKey());
                 String[] values = weatherEntry.getValue();
                 int seaLevel;
+                float lat;
+                float lngt;
                 try {
                    seaLevel = Integer.parseInt(values[4]);
+
                 } catch(NumberFormatException ex) {
-                   seaLevel = 0;
-                }                
-                cities.put(key, new City(values[1],values[0], values[2], seaLevel, values[3]));
+                    
+                    seaLevel = 0;
+
+                    ex.printStackTrace();
+                }
+                try {
+                   lat = Float.parseFloat(values[5]);
+                   lngt = Float.parseFloat(values[6]);
+                } catch(NumberFormatException ex) {
+                    
+                    lat = -400;
+                    lngt = -400;
+                    System.out.println("No lat lng found. Assuming invalid vals");
+                }                      
+                cities.put(key, new City(values[1],values[0], values[2], seaLevel, values[3], lat, lngt));
             }
         for (Map.Entry<String, String[]> connectionEntry : connectionData.entrySet()) {
             String[] keySplits = connectionEntry.getKey().split(",");
@@ -84,52 +98,6 @@ public class BuildCityObjects {
             if (city != null){
                 city.connections.add(new CityConnectionStruct(StringStandardize.standardizeString(connectionCity[2]),
                  Float.parseFloat(connectionCity[3]), Integer.parseInt(connectionCity[4])));
-            }
-        }
-        return cities;
-
-    }
-
-
-    public static HashMap<String, City> twoWayBuildEx(Map<String, String[]> weatherData, Map<String, String[]> connectionData){
-        HashMap<String, City> cities = new HashMap<>();
-
-        for (Map.Entry<String, String[]> weatherEntry : weatherData.entrySet()) {
-                String key = StringStandardize.standardizeString(weatherEntry.getKey());
-                String[] values = weatherEntry.getValue();
-                int seaLevel;
-                try {
-                   seaLevel = Integer.parseInt(values[4]);
-                } catch(NumberFormatException ex) {
-                   seaLevel = 0;
-                }    
-                if (cities.get(key) == null) cities.put(key, new City(values[1],values[0], values[2], seaLevel, values[3]));
-            }
-        for (Map.Entry<String, String[]> connectionEntry : connectionData.entrySet()) {
-            String[] keySplits = connectionEntry.getKey().split(",");
-            String key = StringStandardize.standardizeString(keySplits[0]);
-            String[] connectionCity = connectionEntry.getValue();
-            City city = cities.get(key);
-            if (city != null){
-                String connectionCityKey = StringStandardize.standardizeString(connectionCity[2]);
-                boolean isPresent = false;
-                for (CityConnectionStruct c : city.connections){
-                    if (c.name.equals(connectionCityKey)) isPresent=true;
-                }
-                if (!isPresent) city.connections.add(new CityConnectionStruct(connectionCityKey, Float.parseFloat(connectionCity[3]), Integer.parseInt(connectionCity[4])));
-
-                // create back connection as well
-                if (cities.get(connectionCityKey) == null){
-                    String[] values = weatherData.get(connectionCityKey);
-                    final int seaLevel = Integer.parseInt(values[4]) ;
-                    cities.put(key, new City(values[1],values[0], values[2], seaLevel, values[3]));
-                }
-                City backConnCity = cities.get(connectionCityKey);
-                for (CityConnectionStruct c : backConnCity.connections){
-                    if (c.name.equals(key)) isPresent=true;
-                }
-                if (!isPresent) backConnCity.connections.add(new CityConnectionStruct(connectionCityKey, Float.parseFloat(connectionCity[3]), Integer.parseInt(connectionCity[4])));
-
             }
         }
         return cities;
@@ -266,18 +234,24 @@ class City {
     final String state;
     final int seaLevel;
     final String postCode;
+    final float lat;
+    final float lngt;
     final TreeMap<Long, List<String>> weatherData;
     LinkedList<CityConnectionStruct> connections;
 
 
-    City(String name, String state, String postCode, int seaLevel, String weatherDataString){
+    City(String name, String state, String postCode, int seaLevel, String weatherDataString, float lat, float lngt){
         this.name = name;
         this.state = state;
         this.seaLevel = seaLevel;
         this.postCode = postCode;
+        this.lat = lat;
+        this.lngt = lngt;
         this.weatherData = WeatherParse.parseWeatherData(weatherDataString);
         this.connections = new LinkedList<>();
-
+    }
+    City(String name, String state, String postCode, int seaLevel, String weatherDataString){
+        this(name, state, postCode, seaLevel, weatherDataString,-400, -400);
     }
 
 

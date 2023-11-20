@@ -112,10 +112,10 @@ public class OptimalPath {
                 totalSafetyRisk += risks.get(0);
                 totalTimeRisk += risks.get(1); 
             }
-            else{
-                System.out.println("Weather Condition not Found. Assuming no risk for ");
-                System.out.println(currentCityWeather.get(i));
-            }
+            // else{
+            //     System.out.println("Weather Condition not Found. Assuming no risk for ");
+            //     System.out.println(currentCityWeather.get(i));
+            // }
         }
 
         // TODO: use haversteins distance based on lat/lng . Coz google will show road distance(including slope), and 
@@ -283,7 +283,8 @@ public class OptimalPath {
                     System.out.println();
 
                 }
-                else {
+
+                else if (!inputCommand.equals("quit")){
                     System.out.println("Unknown Command");
                 }
             }
