@@ -156,7 +156,7 @@ Wisconsin,Wausau,Eau Claire,162,95
 Wisconsin,Wausau,Green Bay,157,94
 Wisconsin,Wausau,Superior,377,217
 Wisconsin,milwaukee, Naperville,168,109
-Wisconsin,  Eau Claire, minneapolis,149,93
+Wisconsin,eau claire, minneapolis,149,93
 Wisconsin,Madison, Dubuque,148,94
 ,,,,
 ,,,,
