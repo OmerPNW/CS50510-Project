@@ -1,0 +1,1410 @@
+State,Source_city,Postal_Code ,Weather,Sea_level / m,Latitude / degrees(Optional),Longitude / degrees(Optional)
+North Dakota,Bismarck,58501,"8 November 12 am to 8 November 2 am: Cold, Light Snow, Light Fog
+8 November 2 am to 8 November 5 am : Cold, Clear
+8 November 5 am to 8 November 11 am : Cold, light winds
+8 November 11 am to 8 November 5 pm : Cold, Heavy winds
+8 November 5 pm to 8 November 11 pm : Cold, light winds
+8 November 11 pm to 9 November 2 am : Clear, Cold
+9 November 2 am to 9 November 7 am : light winds, Cold, Clear
+9 November 7 am to 9 November 8 am : Light Snow, Light Fog, light winds, Cold
+9 November 8 am to 10 November 12 am : Clear, Cold, light winds",520,46.825905,-100.778275
+North Dakota,Minot,58701,"8 November 12 am to 8 November 5 am : Cold, light winds
+8 November 5 am to 8 November 6 am : Cold, light winds, Light Rain
+8 November 6 am to 8 November 8 am : Cold, light winds
+8 November 8 am to 8 Novemberber 9 am : Cold, Light Snow, light winds
+8 November 9 am to 8 November 11 am : Cold, light winds
+8 November 11 am to 8 November 7 pm : Heavy winds, Light Rain, Cold
+8 November 7 pm to 8 November 8 pm : Cold, Light Snow, Heavy winds
+8 November 8 pm to 8 November 10 pm: Cold, Light Snow, light winds
+8 November 10 pm to 9 November 2 am : Cold, Clear, light winds
+9 November 2 am to 9 November 3 am : Cold, Light Rain, light winds
+9 November 3 am to 9 November 4 am : Cold, Light Snow, light winds
+9 November 4 am to 9 November 9 am : light winds, Cold
+9 November 9 am to 9 November 11 am : Light Snow, Heavy winds, Cold
+9 November 11 am to 9 November 2 pm : Clear, Cold, Heavy winds
+9 November 2 pm to 9 November 3 pm : Light Snow, light winds, Cold
+9 November 3 pm to 9 November 9 pm : Cold, light winds
+9 November 9 pm to 10 November 12 am : Light Snow, light winds, Light fog, Cold",470,48.230164,-101.291199
+North Dakota,Devils Lake,58301,"8 November 12 am to 8 November 3 am : Cold, light winds
+8 November 3 am to 8 November 5 am : Light Fog, light winds, Cold
+8 November 5 am to 8 November 6 am : Light Rain, Light Fog, light winds, Cold
+8 November 6 am to 8 November 7 am : Light Fog, light winds, Cold
+8 November 7 am to 8 November 8 am : Heavy Fog, light winds, Cold
+8 November 8 am to 8 November 9 am : Light Fog, light winds, Cold
+8 November 9 am to 8 November 5 pm : light winds, Cold
+8 November 5 pm to 8 November 7 pm : Light Rain, light winds, Cold
+8 November 7 pm to 9 November 4 am : Cold, Clear, light winds
+9 November 4 am to 9 November 5 am : Cold, Light Rain, Heavy winds
+9 November 5 am to 9 November 8 am : Cold, light winds
+9 November 8 am to 9 November 9 am : Light Snow, light winds, Cold, Light Fog
+9 November 9 am to 9 November 12 pm : Cold, light winds
+9 November 12 pm to 9 November 2 pm : Light Snow, Light Fog, light winds, Cold
+9 November 2 pm to 9 November 3 pm : Light Fog, Cold, light winds
+9 November 3 pm to 9 November 7 pm : Light Snow, Light Fog, light winds, Cold
+9 November 7 pm to 9 November 11 pm : Light Snow, light winds, Cold
+9 November 11 pm to 10 November 12 am : Clear, Cold, light winds",438,48.111767,-98.863274
+North Dakota,Jamestown,58401,"8 November 12 am to 8 November 5 am : Cold, light winds
+8 November 5 am to 8 November 6 am : Cold, light winds, Light Fog
+8 November 6 am to 8 November 7 am : Cold, light winds
+8 November 7 am to 8 November 9 am : light winds, Cold, Light Fog
+8 November 8 am to 8 November 2 pm : light winds, Cold
+8 November 2 pm to 8 November 3 pm : Cold, Heavy winds
+8 November 3 pm to 9 November 11 am : Cold, light winds
+9 November 11 am to 9 November 1 pm : Light Snow, Heavy winds, Cold
+9 November 1 pm to 9 November 2 pm : Light Snow, Light Fog, Cold, light winds
+9 November 2 pm to 9 November 3 pm : light winds, Cold
+9 November 3 pm to 9 November 4 pm : light winds, Light Snow, Cold
+9 November 4 pm to 9 November 5 pm : light winds, Light Snow, Light Fog, Cold
+9 November 5 pm to 10 November 12 am : Cold, light winds  ",458,46.9105,-98.708534
+North Dakota,Fargo,58103,"8 November 12 am to 8 November 5 am : Clear, Cold, light winds
+8 November 5 am to 8 November 6 am : Clear, Cold, Light Fog, light winds
+8 November 6 am to 8 November 7 am : Clear, Cold, light winds
+8 November 7 am to 8 November 9 am : Clear, Cold, light winds, Light Fog
+8 November 9 am to 8 November 2 pm : Cold, light winds
+8 November 2 pm to 8 November 3 pm : Cold, Heavy winds
+8 November 3 pm to 9 November 8 am : Cold, Clear, light winds
+9 November 8 am to 9 November 11 am : Cold, Heavy winds
+9 November 11 am to 9 November 2 pm : Light Snow, light winds, Cold
+9 November 2 pm to 9 November 3 pm : Cold, Clear, light winds
+9 November 3 pm to 9 November 4 pm : Cold, Light Snow, light winds
+9 November 4 pm to 9 November 5 pm : Cold, Light Snow, light winds, Light Fog
+9 November 5 pm to 10 November 12 am : Cold, Clear, light winds ",276,46.8772,-96.789803
+North Dakota,Grand Forks,58203,"8 November 12 am to 8 November 2 am : Cold, light winds, Clear
+8 November 2 am to 8 November 5 am : Cold, light winds, Light Fog
+8 November 5 am to 8 November 6 am : Cold, light winds, Light Rain, Light Fog
+8 November 6 am to 8 November 10 am : Cold, light winds, Light Fog
+8 November 10 am to 8 November 5 pm : light winds, Cold
+8 November  5 pm to 8 November 7 pm : Light Rain, light winds, Cold
+8 November 7 pm to 9 November 4 am : Cold, light winds
+9 November 4 am to 9 November 5 am : Light Rain, Heavy winds, Cold
+9 November 5 am to 9 November 8 am : light winds, Cold
+9 November 8 am to 9 November 9 am : Light Snow, Light Fog, light winds, Cold
+9 November 9 am to 9 November 12 pm : Cold, light winds
+9 November 12 pm to 9 November 2 pm : Cold, Light Snow, Light Fog, light winds
+9 November 2 pm to 9 November 3 pm : Cold, Light Fog, light winds
+9 November 3 pm to 9 November 7 pm : Cold, Light Snow, Light Fog, light winds
+9 November 7 pm to 9 November 11 pm : Cold, Light Snow, light winds
+9 November 11 pm to 10 November 12 am : Cold, light winds",253,47.9253,-96.789803
+North Dakota,Bowman,58623,"8 November 12 am to 8 November 9 am : Cold, light winds
+8 November 9 am to 8 November 4 pm : Cold, Heavy winds, Clear
+8 November 4 pm to 9 November 3 am : Cold, Clear, light winds
+9 November 3 am to 9 November 4 am : Cold, light winds, Light Snow
+9 November 4 am to 9 November 5 am : Cold, light winds
+9 November 5 am to 9 November 6 am : Cold, Heavy Snow, Light Fog, light winds
+9 November 6 am to 9 November 7 am : Cold, light winds
+9 November 7 am to 9 November 8 am : Cold, Light Snow, Heavy winds
+9 November 8 am to 9 November 7 pm : Cold, light winds
+9 November 7 pm to 10 November 12 am : Very Cold, Clear ",903,46.1831,-103.3949
+North Dakota,New Town,58763,"8 November 12 am to 8 November 3 am : Cold, light winds
+8 November 3 am to 8 November 4 am : Cold, light winds, Light Fog
+8 November 4 am to 8 November 7 am : Cold, Light Rain, light winds
+8 November 7 am to 8 November 8 am : Cold, light winds
+8 November 8 am to 8 November 7 pm : Cold, Heavy winds
+8 November 7 pm to 8 November 8 pm : Cold, Light Fog, Light Snow, light winds
+8 November 8 pm to 9 November 9 pm : light winds, Cold
+9 November 9 pm to 10 November 12 am : Cold",587,47.9808,-102.490181
+South Dakota,Pierre,57501,"8 November 12 am  to 8 November 3 am : light winds, Cold 
+8 November 3 am to 8 November 8 am : light winds 
+8 November 8 am to 8 November 5 pm : Clear, Cold, Heavy winds
+8 November 5 pm to 9 November 12 am : Clear, Cold,light winds
+9 November 12 am to 9 November 8 am : Cold, light winds
+9 November 8 am to 9 November 5 pm : Cold, High Winds
+9 November 5 pm to 10 November 12 am : Cold, Clear",518,44.5674025,-100.3107765
+South Dakota,Mobridge,57601,"8 November 12 am to 8 November 7 am : light winds, Cold
+8 November 7 am to 8 November 3 pm : Clear, Cold, Heavy winds
+8 November 3 pm to 9 November 12 am : Cold, light winds
+9 November 12 am to 9 November 9 am: Clear, Cold, light winds
+9 November 9 am to 9 November 2 pm : Cold, Heavy winds
+9 November 2 pm to 10 November 12 am : Cold, light winds",506,45.3777143,-100.9223433
+South Dakota,Aberdeen,57401,"8 November 12 am  to 8 November 1 pm : light winds, Cold
+8 November 1 pm to 8 November 2 pm : Cold, Heavy winds 
+8 November 2 pm to 9 November 12 am : Clear, Cold, light winds
+9 November 12 am to 10 November 12 am : Cold, light winds",396,43.452947,-103.9566383
+South Dakota,Murdo,57559,"8 November 12 am  to 8 November 9 am : light winds, Cold
+8 November 9 am to 8 November 3 pm : Clear, Cold, Heavy winds
+8 November 3 pm to 9 November 12 am : light winds, Cold
+9 November 12 am to 9 November 9 am : Cold, light winds
+9 November 9 am to 9 November 2 pm : Cold, Heavy winds
+9 November 2 pm to 10 November 12 am : Cold, light winds",707,43.8971506,-101.0831369
+South Dakota,Mitchell,57301,"8 November 12 am  to 8 November 1 pm : light winds, Cold
+8 November 1 pm to 8 November 4 pm : Cold, Heavy winds
+8 November 4 pm to 9 November 12 am : light winds, Cold
+9 November 12 am to 10 November 12 am : Cold, light winds
+",396,43.7183647,-98.187725
+South Dakota,Sioux Falls,57101,"8 November 12 am to 8 November 1 pm : light winds, Cold
+8 November 1 pm to 8 November 4 pm : Cold, Heavy winds
+8 November 2 pm to 9 November 12 am : Clear, Cold, light winds
+9 November 12 am to 10 November 12 am : Clear, Cold, light winds",446,43.5147976,-96.7847953
+South Dakota,Vermillion,57069,"8 November 12 am  to 8 November 2 pm : light winds, Cold
+8 November 2 pm to 8 November 4 pm : Cold, Heavy winds 
+8 November 4 pm to 9 November 12 am : light winds, Cold
+9 November 12 am to 9 November 3 pm : Cold, light winds
+9 November 3 pm to 9 November 4 pm : Cold, Heavy winds
+9 November 4 pm to 10 November 12 am : Cold, light winds",372,42.8364687,-97.1673872
+South Dakota,Rapid City,57701,"8 November 12 am  to 8 November 8 am : light winds, Cold
+8 November 8 am to 8 November 2 pm : Cold, Heavy winds
+8 November 2 pm to 9 November 12 am : light winds, Cold
+9 November 12 am to 9 November 10 am : Cold, light winds
+9 November 10 am to 9 November 12 pm : Cold, Heavy winds
+9 November 12 pm to 10 November 12 am : Cold, light winds",976,44.1277665,-103.3586928
+South Dakota,Watertown,57201,"8 November 12 am  to 8 November 1 pm : light winds, Cold
+8 November 1 pm to 8 November 4 pm : Cold, Heavy winds 
+8 November 4 pm to 9 November 12 am : light winds, Cold
+9 November 12 am to 9 November 12 pm : Cold, light winds
+9 November 12 pm to 9 November 1 pm : Cold, Heavy winds
+9 November 12 pm to 10 November 12 am : Cold, light winds
+",527,44.9512615,-97.2706641
+Nebraska,Ainsworth,69210,"8 November 12 am to 8 November 2 am : Clear, Cold
+8 November 2 am to 8 November 4 am : Clear, Cold, light winds
+8 November 4 am to 8 November 9 am : Cold, Clear
+8 November 9 am to 8 November 7 pm : Clear, Cold, light winds
+8 November 7 pm to 9 November 10 am : Clear, Cold
+9 November 10 am to 9 November 7 pm : Clear, Cold, light winds
+9 November 7 pm to 10 November 12 am :Cold, Clear",769,42.545,-99.8615
+Nebraska,Omaha,68007,"8 November 12 am to 8 November 9 am : Clear, Cold
+8 November 9 am to 8 November 11 am : Clear, Cold, light winds
+8 November 11 am to 8 November 4 pm :  light winds, Clear
+8 November 4 pm to 9 November 1 am : Clear, Cold, light winds
+9 November 1 am to 9 November 10 am: Clear, Cold 
+9 November 10 am to 9 November 1 pm: Clear, Cold, light winds
+9 November 1 pm to 9 November 5 pm: Clear, light winds
+9 November 5 pm to 9 November 10 pm: Clear, light winds, Cold
+9 November 10 pm to 10 November 12 am: Clear, Cold",323,41.2565,-95.9345
+Nebraska,O'Neil,68973,"8 November 12 am to 8 November 2 am : Clear, Cold, light winds
+8 November 2 am to 8 November 4 am :  Clear, Cold  
+8 November 4 am to 8 November 3 pm : Clear, Low Winds, Cold
+8 November 3 pm to 8 November 5 pm :  Cold, Clear, Heavy winds
+8 November 5 pm to 9 November 4 pm : Clear, Cold, light winds
+9 November 4 pm to 9 November 5 pm: Cold, Clear, Heavy winds
+9 November 5 pm to 10 November 12 am : Clear, Cold, light winds",610,42.4577,-98.6479
+Nebraska,Columbus,68601,"8 November 12 am to 8 November 1 am :Cold, Clear
+8 November 1 am to 8 November 11 am :   Cold, Clear, light winds  
+8 November 11 am to 8 November 2 pm : Clear, light winds
+8 November 2 pm to 8 November 5 pm :  Cold, Heavy winds
+8 November 5 pm to 8 November 10 pm : Clear, Cold, light winds
+8 November 10 pm to 9 November 11 am : Clear, Cold
+9 November 11 am to 9 November 12 pm : Clear, Cold, light winds
+9 November 12 pm to 9 November 5 pm : Clear, light winds
+9 November 5 pm to 9 November 8 pm : Clear, Cold, light winds
+9 November 8 pm to 10 November 12 am : Clear, Cold
+
+",441,41.4303,-97.3594
+Nebraska,Lincoln,68501,"8 November 12 am to 8 November 2 am :Cold, Clear
+8 November 2 am to 8 November 11 am : Clear, light winds, Cold 
+8 November 11 am to 8 November 2 pm : Clear, light winds
+8 November 2 pm to 8 November 5 pm :  Clear, Heavy winds
+8 November 5 pm to 8 November  10 pm : Cold, light winds, Clear
+8 November 10 pm to 9 November 11 am: Clear, Cold
+9 November 11 am to 9 November 5 pm: Clear, light winds
+9 November 5 pm to 9 November 8 pm: Cold, Clear, light winds
+9 November 8 pm to 10 November 12 am: Clear, Cold",366,40.8136,-96.681679
+Nebraska,Lexington,68850,"8 November 12 am to 8 November 12 pm :Cold, Clear, light winds
+8 November 12 pm to 8 November 2 pm : Clear, light winds 
+8 November 2 pm to 9 November 3 am : Cold, Clear, light winds
+9 November 3 am to 9 November 8 am :  Clear, Cold
+9 November 8 am to 9 November 7 pm : Clear, Cold, light winds
+9 November 7 pm to 10 November 12 am: Clear, Cold",729,40.7808,-99.7415
+Nebraska,Hyannis,69350,"8 November 12 am to 8 November 3 am :Clear, Cold, light winds
+8 November 3 am to 8 November 5 am : Cold, Clear  
+8 November 5 am to 8 November 6 pm : Cold, Clear, light winds
+8 November 6 pm to 9 November 9 am :  Clear, Cold
+9 November 9 am to 9 November 6 pm : Clear, Cold, light winds
+9 November 6 pm to 9 November 10 pm: Clear, Cold
+9 November 10 pm to 10 November 12 am: Clear, Very Cold",1145,42.0005,-101.7618
+Nebraska,Grand Island,68801,"8 November 12 am to 8 November 12 pm : Cold, Clear, light winds
+8 November 12 pm to 8 November 3 pm : Clear, Light winds  
+8 November 3 pm to 9 November 3 pm : Light Winds, Clear
+8 November 3 pm to 9 November 6 pm :  Clear, light winds
+8 November 6 pm to 9 November 9 pm : Clear, Cold, light winds
+9 November 9 pm to 10 November 12 am: Clear, Cold",570,40.9264,-98.342
+Kansas,WaKeeney,50003,"8 November 12 am to 8 November 1 am : Cold, Light Fog 
+8 November 1 am to 8 November 2 am : Cold, light winds, Light Fog
+8 November 2 am to 8 November 5 am : Heavy Fog, Cold, Light winds
+8 November 5 am to 8 November 11 am : Light Fog, Light winds, Cold
+8 November 11 am to 8 November 4 pm : Light winds, Clear
+8 November 4 pm to 8 November 7 pm : Clear, Heavy winds
+8 November 7 pm to 9 November 8 am : Clear, Light winds, Cold
+9 November 8 am to 9 November 1 pm : Clear, Cold
+9 November 1 pm to 9 November 5 pm : Clear, Light winds
+9 November 5 pm to 10 November 12 am : Clear, Cold",746,39.024467,-99.881972
+Kansas,Dodge City,67672,"8 November 12 am to 8 November 5 am : Clear, Cold, Light winds 
+8 November 5 am to 8 November 10 am : Cold, Light winds, Light Fog
+8 November 10 am to 8 November 12 pm : Clear, Cold, Light winds
+8 November 12 pm to 8 November 7pm: Clear, Light winds
+8 November 7 pm to 9 November 8 am: Clear,Cold
+9 November 8 am to 10 November 12 am: Clear, Light winds, Cold",780,37.753098,-100.024872
+Kansas,Salina,67401,"8 November 12 am to 8 November 5 am : Clear, Cold, Light winds 
+8 November 5 am to 8 November 10 am : Cold, Light winds, Light Fog
+8 November 10 am to 8 November 12 pm : Clear, Cold, Light winds
+8 November 12 pm to 8 November 7pm: Clear, Light winds
+8 November 7 pm to 9 November 8 am: Clear, Cold
+9 November 8 am to 10 November 12 am: Clear, Light winds, Cold
+",373,38.8402805,-97.6114237
+Kansas,Wichita,67202,"8 November 12 am to 8 November 5 am : Clear, Light winds 
+8 November 5 am to 8 November 11 am : Cold, Light winds, Clear
+8 November 11 am to 8 November 9 pm : Clear, Light winds
+8 November 9 pm to 9 November 7 pm: Clear, Light winds, Cold
+9 November 7 pm to 10 November 12 am: Clear, Cold
+
+
+",397,37.697948,-97.314835
+Kansas,Topeka,66605,"8 November 12 am to 8 November 1 am : Cold, Clear 
+8 November 1 am to 8 November 2 am : Cold, Light Fog
+8 November 2 am to 8 November 8 am : Cold, Heavy Fog
+8 November 8 am to 8 November 11 am: Light Fog, Light winds, Cold
+8 November 11 am to 8 November 7 pm: Clear, Light winds
+8 November 7 pm to 9 November 3 am: Clear, Cold, Light winds
+9 November 3 am to 9 November 4 pm: Clear, Cold
+9 November 4 pm to 9 November 5 pm: Clear
+9 November 5 pm to 10 November 12 am: Clear, Cold",286,39.056198,-95.695312
+Kansas,Garden City,67846,"8 November 12 am to 8 November 3 am : Cold,Clear, Light winds 
+8 November 3 am to 8 November 9 am : Cold, Light winds, Light Fog
+8 November 9 am to 8 November 3 pm : Clear, Heavy winds
+8 November 3 pm to 8 November 7 pm: Clear, Light winds
+8 November 7 pm to 9 November 8 am: Clear, Cold, Light winds
+9 November 8 am to 9 November 11 pm: Clear,Cold
+9 November 11 pm to 10 November 12 am: Clear,Cold, Light winds",862,37.971691,-100.872665
+Kansas,Manhattan,66502,"8 November 12 am to 8 November 1 am : Cold, Heavy Fog 
+8 November 1 am to 8 November 2 am : Cold, Clear
+8 November 2 am to 8 November 8 am : Cold, Heavy Fog
+8 November 8 am to 8 November 11 am: Clear, Light winds, Cold
+8 November 11 am to 8 November 8 pm: Clear, Light winds
+8 November 8 pm to 9 November 2 pm: Clear, Cold
+9 November 2 pm to 9 November 4 pm: Clear
+9 November 4 pm to 9 November 7 pm: Clear, Light winds
+9 November 7 pm to 10 November 12 am: Clear, Cold",392,39.183609,-96.571671
+Oklahoma,Elk City,73644,"8 November 12 am to 8 November 5 am : Clear, light winds, Cold
+8 November 5 am to 8 November 9 am : Clear, light winds, Cold
+8 November 9 am to 8 November 5 pm : Hot, light winds
+8 November 5 pm to 9 November 5 am : Clear, light winds, Cold
+9 November 5 am to 9 November 4 pm : light winds, Cold
+9 November 4 pm to 9 November 5 pm : Light Rain, light winds, Cold
+9 November 5 pm to 9 November 8 pm : light winds, Cold
+9 November 8 pm to 9 November 9 pm : Clear, light winds, Cold
+9 November 9 pm to 10 November 12 am : light winds, Cold",590,35.3419882,-99.6669223
+Oklahoma,Oklahoma City,73101,"8 November 12 am to 8 November 8 am : Clear, light winds, Cold
+8 November 8 am to 8 November 3 pm : Hot, light winds
+8 November 3 pm to 9 November 4 am : light winds, Cold
+9 November 4 am to 9 November 5 am : Heavy winds, Cold
+9 November 5 am to 10 November 12 am : light winds, Cold",366,35.4827589,-97.808871
+Oklahoma,Cleveland,74020,"8 November 12 am to 8 November 4 am : Clear, light winds, Cold
+8 November 4 am to 8 November 5 pm : light winds, Cold
+8 November 5 pm to 9 November 12 am : Clear, light winds, Cold
+9 November 12 am to 9 November 2 am : light winds, Cold
+9 November 3 am to 9 November 4 am : Clear, light winds, Cold
+9 November 4 am to 10 November 12 am : light winds, Cold",199,36.2967076,-96.4988125
+Oklahoma,Norman,73026,"8 November 12 am to 8 November 7 am : Clear, light winds, Cold
+8 November 7 am to 8 November 3 pm : light winds, Hot
+8 November 3 pm to 9 November 3 am : light winds, Cold
+9 November 3 am to 9 November 5 am : Heavy winds, Cold
+9 November 5 am to 10 November 12 am : light winds, Cold",357,35.2469896,-97.5271858
+Oklahoma,McAlester,74501,"7 November 12 am to 7 November 4 am : light winds, Cold
+7 November 4 am to 7 November 5 am : Clear, light winds, Cold
+7 November 5 am to 7 November 5 pm : light winds, Hot
+7 November 5 pm to 7 November 7 pm : Clear, light winds, cold
+7 November 7 pm to 7 November 8 pm : light winds, Cold
+7 November 8 pm to 7 November 9 pm : Clear, light winds, Cold
+7 November 9 pm to 7 November 11 pm : light winds, Cold
+7 November 11 pm to 8 November 2 am : Clear, light winds, Cold
+8 November 2 am to 8 November 11 am : light winds, Cold
+8 November 11 am to 8 November 5 pm : light winds, Hot
+8 November 5 pm to 9 November 12 am : light winds, Cold",226,34.9191245,-95.8609535
+Oklahoma,Antlers,74523,"8 November 12 am to 8 November 7 am : Clear, light winds, Cold
+8 November 7 am to 8 November 5 pm : light winds, Hot
+8 November 5 pm to 8 November 9 pm : Clear, light winds, Cold
+8 November 9 pm to 9 November 7 am : light winds, Cold
+9 November 7 am to 9 November 10 pm : Light Rain, light winds, Cold
+9 November 10 pm to 9 November 11 pm : light winds, Cold
+9 November 11 pm to 10 November 12 am : Light Rain, light winds, Cold",155,34.2321068,-95.6484816
+Oklahoma,Tulsa,74102,"8 November 12 am to 8 November 4 am : Clear, light winds, Cold
+8 November 4 am to 8 November 6 am : light winds, Cold
+8 November 6 am to 8 November 6 pm : light winds, Hot
+8 November 6 pm to 9 November 12 am : Clear, light winds, Cold
+9 November 12 am to 9 November 2 am : light winds, Cold
+9 November 2 am to 9 November 3 am : Clear, light winds, Cold
+9 November 3 am to 10 November 12 am : light winds, Cold",220,36.1524043,-96.2076832
+Oklahoma,Ponca City,74602,"8 November 12 am to 8 November 7 am : Clear, light winds, Cold
+8 November 7 am to 8 November 3 pm : light winds, Hot
+8 November 3 pm to 8 November 8 pm : light winds, Cold
+8 November 8 pm to 8 November 11 pm : Clear, light winds, Cold
+8 November 11 pm to 9 November 2 am : light winds, Cold
+9 November 2 am to 9 November 4 am : Clear, light winds, Cold
+9 November 4 am to 9 November 5 am : light winds, Cold
+9 November 5 am to 9 November 7 am : Clear, light winds, Cold
+9 November 7 am to 9 November 6 pm : light winds, Cold
+9 November 6 pm to 10 November 12 am : Clear, light winds, Cold",310,36.7256727,-97.1483034
+Oklahoma,Muskogee,74401,"8 November 12 am to 8 November 4 am : Clear, light winds, Cold
+8 November 4 am to 8 November 6 am : light winds, Cold
+8 November 6 am to 8 November 5 pm : light winds, Hot
+8 November 5 pm to 9 November 12 am : Clear, light winds, Cold
+9 November 12 am to 9 November 2 am : light winds, Cold
+9 November 2 am to 9 November 4 am : Clear, light winds, Cold
+9 November 4 am to 10 November 12 am : light winds, Cold",176,35.7307768,-95.5353842
+Texas,Amarillo,79101,"8 November 12 am to 8 November 8 am : Cold, light winds, Clear
+8 November 8 am to 8 November 4 pm : light winds, Clear
+8 November 4 pm to 10 November 12 am : Cold, light winds, Clear",1116,35.20713273,-101.835201
+Texas,Dallas,75201,"8 November 12 am to 9 November 7 am : light winds, Clear
+9 November 7 am to 9 November 8 am : light winds, Light Rain
+9 November 8 am to 9 November 10 am : light winds, Light Rain, Light Fog
+9 November 10 am to 9 November 11 am : light winds, Light Rain
+9 November 11 am to 9 November 12 pm : light winds, Light Rain, Light Fog
+9 November 12 pm to 9 November 1 pm : light winds, Clear
+9 November 1 pm to 9 November 2 pm : light winds, Light Fog
+9 November 2 pm to 9 November 7 pm : Cold, light winds, Light Rain
+9 November 7 pm to 9 November 8 pm : Cold, light winds, Clear
+9 November 8 pm to 9 November 10 pm : Cold, light winds, Light Rain, Light Fog
+9 November 10 pm to 9 November 11 pm : Cold, light winds, Light Rain
+9 November 11 pm to 10 November 12 am : Cold, light winds, Light Rain, Light Fog",153,32.75198071,-96.80041684
+Texas,Houston,77001,"8 November 12 am to 8 November 11 pm : light winds, Clear
+8 November 11 pm to 9 November 2 pm : light winds, Clear
+9 November 2 pm to 9 November 3 pm : light winds, Light Rain
+9 November 3 pm to 9 November 7 pm : Light Rain, Light Fog
+9 November 7 pm to 10 November 12 am : Light Rain, Light Fog",21,29.78456383,-95.3767804
+Texas,Austin,73301,"8 November 12 am to 8 November 3 am : Clear
+8 November 3 am to 8 November 4 pm : light winds, Clear
+8 November 4 pm to 8 November 8 pm : Clear
+8 November 8 pm to 9 November 2 am : light winds, Clear
+9 November 2 am to 9 November 12 pm : Clear
+9 November 12 pm to 9 November 3 pm : light winds, Light Rain
+9 November 3 pm to 9 November 4 pm : Light Rain, Light Fog
+9 November 4 pm to 9 November 9 pm : light winds, Light Rain
+9 November 9 pm to 9 November 10 pm : light winds
+9 November 10 pm to 9 November 11 pm : Light Rain, Light Fog
+9 November 11 pm to 10 November 12 am : Light Rain",218,30.27296093,-97.74206082
+Texas,San Antonio,78201,"8 November 12 am to 8 November 9 am : light winds, Clear
+8 November 9 am to 8 November 10 am : Light Rain, Light Fog
+8 November 10 am to 8 November 5 pm : light winds, Clear
+8 November 5 pm to 8 November 7 pm : Clear
+8 November 7 pm to 9 November 4 am : light winds
+9 November 4 am to 9 November 7 am : Clear
+9 November 7 am to 9 November 8 am : Light Rain
+9 November 8 am to 9 November 10 am : Clear
+9 November 10 am to 9 November 1 pm : Light Rain
+9 November 1 pm to 9 November 2 pm : light winds, Light Rain
+9 November 2 pm to 9 November 3 pm : light winds
+9 November 3 pm to 9 November 11 pm : Light Rain, light winds
+9 November 11 pm to 10 November 12 am : Heavy Rain, light winds",202,29.44260537,-98.50909244
+Texas,Corpus Christi,78401,"8 November 12 am to 8 November 4 pm : light winds
+8 November 4 pm to 8 November 5 pm : Heavy winds
+8 November 5 pm to 9 November 5 am : light winds
+9 November 5 am to 9 November 8 am : Clear
+9 November 8 am to 9 November 2 pm : light winds
+9 November 2 pm to 9 November 3 pm : Heavy Rain, Light Fog
+9 November 3 pm to 9 November 7 pm : light winds
+9 November 7 pm to 9 November 11 pm : Light Rain, light winds
+9 November 11 pm to 10 November 12 am : Clear",2,27.74952256,-97.43022589
+Texas,Fort Stockton,79735,"8 November 12 am to 8 November 8 am : light winds
+8 November 8 am to 8 November 9 am : Clear
+8 November 9 am to 9 November 7 am : light winds
+9 November 7 am to 9 November 8 am : light winds, Light Fog
+9 November 8 am to 9 November 12 pm : Light Rain, light winds
+9 November 12 pm to 9 November 1 pm : light winds
+9 November 1 pm to 9 November 2 pm : light winds, Light Fog
+9 November 2 pm to 9 November 5 pm : light winds, Light Rain
+9 November 5 pm to 9 November 6 pm : light winds, Light Rain, Light Fog
+9 November 6 pm to 9 November 7 pm : light winds
+9 November 7 pm to 9 November 8 pm : light winds, Light Rain
+9 November 8 pm to 10 November 12 am : light winds",906,30.89170392,-102.8837323
+Texas,Lubbock,79401,"8 November 12 am to 8 November 7 pm : light winds, Clear
+8 November 7 pm to 8 November 8 pm : Clear
+8 November 8 pm to 9 November 9 am : light winds
+9 November 9 am to 9 November 10 am : light winds, Light Rain
+9 November 10 am to 9 November 1 pm : light winds
+9 November 1 pm to 9 November 3 pm : light winds, Light Rain
+9 November 3 pm to 9 November 4 pm : light winds
+9 November 4 pm to 9 November 5 pm : light winds, Light Rain
+9 November 5 pm to 10 November 12 am : light winds",976,33.56940021,-101.8658858
+Texas,Texarkana,75501,"8 November 12 am to 8 November 8 pm : light winds
+8 November 8 pm to 9 November 2 am : Clear
+9 November 2 am to 9 November 5 am : light winds
+9 November 5 am to 9 November 1 pm : Clear
+9 November 1 pm to 9 November 4 pm : Light Rain, light winds, Light Fog
+9 November 4 pm to 9 November 7 pm : Heavy Rain, light winds, Light Fog
+9 November 7 pm to 9 November 9 pm : Light Rain, light winds
+9 November 9 pm to 9 November 11 pm : Light Rain, light winds, Light Fog
+9 November 11 pm to 10 November 12 am : Light Rain, light winds",91,33.42878463,-94.05404804
+Texas,Port Arthur,77640,"8 November 12 am to 8 November 4 am : light winds, Clear
+8 November 4 am to 8 November 9 am : Clear
+8 November 9 am to 8 November 11 pm : light winds
+8 November 11 pm to 9 November 10 am : Clear
+9 November 10 am to 9 November 1 pm : light winds
+9 November 1 pm to 9 November 3 pm : Light Rain
+9 November 3 pm to 9 November 5 pm : light winds
+9 November 5 pm to 10 November 12 am : Clear",2,29.88043082,-93.94183553
+Texas,Port Lavaca,77979,"8 November 12 am to 8 November 6 am : Clear
+8 November 6 am to 8 November 7 am : Light Fog
+8 November 7 am to 8 November 8 am : Clear
+8 November 8 am to 8 November 9 pm : light winds
+8 November 9 pm to 9 November 7 am : Clear
+9 November 7 am to 9 November 8 am : Light Fog
+9 November 8 am to 9 November 11 am : Clear
+9 November 11 am to 9 November 1 pm : Heavy Rain, Light Fog
+9 November 1 pm to 9 November 2 pm : Light Rain, Light Fog
+9 November 2 pm to 9 November 3 pm : light winds
+9 November 3 pm to 9 November 7 pm : Light Rain, light winds
+9 November 7 pm to 9 November 9 pm : Clear
+9 November 9 pm to 9 November 10 pm : Light Fog
+9 November 10 pm to 10 November 12 am : Clear",5,28.61338643,-96.62816081
+Texas,Port Isabel,78578,"8 November 12 am to 8 November 3 am : light winds, Clear
+8 November 3 am to 8 November 7 am : Clear
+8 November 7 am to 9 November 3 am : light winds, Clear
+9 November 3 am to 9 November 7 am : Clear
+9 November 7 am to 9 November 8 am : Light Fog
+9 November 8 am to 9 November 11 am : light winds
+9 November 11 am to 9 November 12 pm : Light Rain, Light Fog
+9 November 12 pm to 9 November 9 pm : light winds
+9 November 9 pm to 9 November 12 am : Clear",2,26.07341078,-97.20858306
+Texas,Waco,76701,"8 November 12 am to 8 November 2 am : light winds, Clear
+8 November 2 am to 8 November 7 pm : light winds, Clear
+8 November 7 pm to 8 November 8 pm : Clear
+8 November 7 pm to 9 November 3 am : light winds, Clear
+9 November 3 am to 9 November 7 am : Clear
+9 November 7 am to 9 November 9 am : light winds, Clear
+9 November 9 am to 9 November 10 am : Light Rain
+9 November 10 am to 9 November 11 am : Light Rain, light winds
+9 November 11 am to 9 November 12 pm : Heavy Rain, Light Fog, light winds
+9 November 12 pm to 9 November 1 pm : Light Rain, Light Fog, light winds
+9 November 1 pm to 9 November 2 pm : light winds, Clear
+9 November 2 pm to 9 November 3 pm : Light Rain, light winds
+9 November 3 pm to 9 November 4 pm : Cold, Light Rain, light winds
+9 November 4 pm to 9 November 7 pm : Cold, Light Rain, Light Fog, light winds
+9 November 7 pm to 9 November 8 pm : Cold, Light Rain, light winds
+9 November 8 pm to 9 November 10 pm : Cold, Light Rain, Light Fog, light winds
+9 November 10 pm to 10 November 12 pm : Cold, Light Rain, light winds",143,31.54927893,-97.14665885
+Texas,College Station,77840,"8 November 12 am to 8 November 2 am : light winds, Clear
+8 November 2 am to 8 November 3 am : Clear
+8 November 3 am to 8 November 7 am : light winds
+8 November 7 am to 8 November 8 am : Clear
+8 November 8 am to 8 November 8 am : Clear
+8 November 8 am to 9 November 1 am : light winds, Clear
+9 November 8 am to 9 November 11 am : Clear
+9 November 11 am to 9 November 2 pm : light winds, Clear
+9 November 2 pm to 9 November 3 pm : Clear
+9 November 3 pm to 9 November 4 pm : Light Rain
+9 November 4 pm to 10 November 12 am : Light Rain, light winds",88,30.62796869,-96.33440112
+Texas,Fredericksburg,78624,"8 November 12 am to 8 November 3 am : Clear
+8 November 3 am to 8 November 7 am : light winds
+8 November 7 am to 8 November 9 am : Clear
+8 November 9 am to 8 November 11 am : light winds
+8 November 11 am to 8 November 12 pm : Clear
+8 November 12 am to 8 November 3 pm : light winds
+8 November 3 pm to 8 November 9 pm : Clear
+8 November 9 pm to 8 November 11 pm : light winds
+8 November 11 pm to 9 November 2 pm : Clear
+9 November 2 am to 9 November 3 am : light winds
+9 November 3 am to 9 November 12 pm : Clear
+9 November 12 pm to 9 November 1 pm : light winds, Light Rain, Light Fog
+9 November 1 pm to 9 November 2 pm : Light Rain
+9 November 2 pm to 9 November 5 pm : Light Rain, Light Fog
+9 November 5 pm to 9 November 8 pm : Light Rain, light winds
+9 November 8 pm to 9 November 10 pm : Light Rain, light winds, Cold
+9 November 10 pm to 9 November 11 pm : Light Rain, Light Fog, Cold
+9 November 11 pm to 10 November 12 am : Light Rain, light winds, Cold",516,30.27519486,-98.87183397
+Texas,San Angelo,76901,"8 November 12 am to 8 November 6 am : light winds
+8 November 6 am to 8 November 7 am : Clear
+8 November 7 am to 8 November 8 am : Cold
+8 November 8 am to 8 November 9 am : Clear
+8 November 9 am to 8 November 2 pm : light winds
+8 November 2 pm to 8 November 3 pm : Hot
+8 November 3 pm to 8 November 5 pm : Hot, light winds
+8 November 5 pm to 8 November 8 pm : Clear
+8 November 8 pm to 8 November 9 pm : light winds
+8 November 8 pm to 8 November 10 pm : Clear
+8 November 10 pm to 8 November 11 pm : light winds
+8 November 11 pm to 9 November 12 am : Clear
+9 November 12 am to 9 November 3 am : light winds
+9 November 3 am to 9 November 4 am : Clear
+9 November 4 am to 9 November 6 am : light winds
+9 November 6 am to 9 November 8 am : Light Rain, Cold, light winds
+9 November 8 am to 9 November 10 am : Light Rain, Cold, Light Fog, light winds
+9 November 10 am to 9 November 11 am : Cold, light winds
+9 November 11 am to 9 November 12 pm : Light Rain, Cold, light winds
+9 November 12 pm to 9 November 9 pm : Cold, light winds
+9 November 9 pm to 9 November 10 pm : Light Rain, Cold, light winds
+9 November 10 pm to 10 November 12 am : Cold, light winds",562,31.4648531,-100.4348444
+Texas,Laredo,78040,"8 November 12 am to 8 November 1 pm : light winds
+8 November 1 pm to 8 November 7 pm : light winds, Hot
+8 November 7 pm to 8 November 8 pm : Clear
+8 November 8 pm to 9 November 4 am : light winds
+9 November 4 am to 9 November 5 am : Clear
+9 November 5 am to 9 November 6 am : light winds
+9 November 6 am to 9 November 12 pm : Clear
+9 November 12 pm to 9 November 2 pm : light winds
+9 November 2 pm to 9 November 4 pm : Clear
+9 November 4 pm to 9 November 7 pm : light winds
+9 November 7 pm to 9 November 8 pm : Light Rain, light winds
+9 November 8 pm to 9 November 9 pm : light winds
+9 November 9 pm to 9 November 11 pm : Light Rain, light winds
+9 November 11 pm to 10 November 12 am : light winds",137,27.50357618,-99.50755313
+Texas,Del Rio,78840,"8 November 12 am to 8 November 3 am : Clear
+8 November 3 am to 8 November 4 am : Heavy Rain
+8 November 4 am to 8 November 6 am : Light Fog
+8 November 6 am to 8 November 8 am : Clear
+8 November 8 am to 8 November 10 am : Light Fog, light winds
+8 November 10 am to 9 November 10 am : Clear
+9 November 10 am to 9 November 11 am : Light Rain
+9 November 11 am to 9 November 12 pm : Clear
+9 November 12 pm to 9 November 1 pm : Light Rain
+9 November 1 pm to 9 November 4 pm : Light Rain, light winds
+9 November 4 pm to 9 November 6 pm : Light Rain
+9 November 6 pm to 9 November 9 pm : Heavy Rain, light winds
+9 November 9 pm to 9 November 10 pm : Light Rain, light winds
+9 November 10 pm to 10 November 12 am : Cold, Light Rain, light winds",305,29.37088595,-100.8958669
+Texas,Tyler,75701,"8 November 12 am to 8 November 7 pm : light winds
+8 November 7 pm to 8 November 9 pm : Clear
+8 November 9 pm to 9 November 3 am : light winds
+9 November 3 am to 9 November 11 am : Clear
+9 November 11 am to 9 November 12 pm : light winds
+9 November 12 pm to 9 November 1 pm : Clear
+9 November 1 pm to 9 November 2 pm : Light Rain, Light Fog
+9 November 2 pm to 9 November 3 pm : Heavy Rain, Light Fog, light winds
+9 November 3 pm to 9 November 5 pm : Light Rain, Light Fog, light winds
+9 November 5 pm to 9 November 7 pm : Light Rain, light winds
+9 November 7 pm to 9 November 9 pm : Heavy Rain, Light Fog
+9 November 9 pm to 9 November 10 pm : Cold, Heavy Rain, Light Fog
+9 November 10 pm to 9 November 11 pm : Cold, Light Rain, Light Fog
+9 November 11 pm to 10 November 12 am : Cold, Light Rain",165,32.35126068,-95.30106145
+Texas,Wichita Falls,76301,"8 November 12 am to 8 November 2 pm : light winds
+8 November 2 pm to 8 November 4 pm : Hot, light winds
+8 November 4 pm to 8 November 7 pm : Hot
+8 November 7 pm to 9 November 7 am : light winds
+8 November 7 am to 9 November 10 am : Cold, light winds
+9 November 10 am to 9 November 1 pm : Cold, Light Rain, light winds
+9 November 1 pm to 9 November 3 pm : Cold, Light Rain, Light Fog, light winds
+9 November 3 pm to 9 November 5 pm : Cold, light winds
+9 November 5 pm to 9 November 8 pm : Cold, Light Rain, light winds
+9 November 8 pm to 9 November 11 pm : Cold, light winds
+9 November 11 pm to 10 November 12 am : Cold",290,33.91370783,-98.49338651
+Texas,Galveston,77550,"8 November 12 am to 8 November 7 am : light winds
+8 November 6 am to 8 November 8 am : Clear
+8 November 8 am to 8 November 7 pm : light winds
+8 November 7 pm to 8 November 8 pm : Clear
+8 November 8 pm to 9 November 1 am : light winds
+9 November 1 am to 9 November 6 am : Clear
+9 November 6 am to 9 November 7 am : light winds
+9 November 7 am to 9 November 11 am : Clear
+9 November 11 am to 9 November 7 pm : light winds
+9 November 7 pm to 9 November 8 pm : light winds, Light Rain
+9 November 8 pm to 9 November 9 pm : light winds, Light Fog, Light Rain
+9 November 9 pm to 9 November 10 pm : Light Rain, light winds
+9 November 10 pm to 10 November 12 am : Light Rain",2,29.30134721,-94.79769468
+Louisiana,Alexandria,71301,"8 November 12 am to 8 November 2 am : clear, light winds
+8 November 2 am to 8 November 8 am : light fog, light winds,
+8 November 8 am to 8 November 10 am : light winds
+8 November 5 am to 8 November 10 am : light winds
+8 november 10 am to 9 november 12 am : clear, light winds
+9 November 12 am to 9 november 9 am : clear, light winds
+9 november 9 am to 9 november 7pm : light winds
+9 november 7 pm to 9 november 11 pm : light rain
+9 november 11 pm to 9 november 12 am : light rain, light fog",23,31.311295,-92.445137
+Louisiana,Lake Charles,70601,8 November 12 am to 10 November 12 am : clear,4,30.226595,-93.217377
+Louisiana,Lafayette,70501,"8 November 12 am to 8 November 3am : light fog
+8 November 3 am to 8 November 5 am : clear
+8 November 5 am to 8 November 7 am : light fog
+8 November 7 am to 8 November 10 am : clear
+8 November 10 am to 8 November 5 pm : clear, Light winds
+8 November 5 pm to 9 November 5 am : clear
+9 November 5 am to 9 November 6 am : light fog
+9 November 6 am to 10 November 12 am : Clear",15,30.224091,-92.019844
+Louisiana,New Orleans,70112,"8 November 12 am to 8 November 4 am : clear, light winds
+8 November 4 am to 8 November 7 am : light fog, light winds
+8 November 7 am to 8 November 5 pm : clear,light winds
+8 November 5 pm to 9 November 12 am : clear, light winds
+9 November 12 am to 9 November 10 am : clear,light winds
+9 November 10 am to 9 November 5 pm : light winds
+9 November 5 pm to 9 November 10 pm : overcast,light winds
+9 November 10 pm to 10 November 12 am : light rain, light fog, light winds",7,29.951065,-90.071533
+Louisiana,Baton Rouge,70808,"8 November 12 am to 8 November 8 am : clear
+8 November 8 am to 8 November 4 pm : light winds
+8 November 4 pm to 9 November 12 am : clear, light winds
+9 November 12 am to 9 November 4 am : clear
+9 November 4 am to 9 November 7 am : light fog
+9 November 7 am to 9 November 11 am : clear
+9 november 11 am to 9 november 3 pm : light winds
+9 November 3 pm to 10 November 12 am : overcast,light winds",14,30.451468,-91.187149
+Louisiana,Monroe,71201,"8 November 12 am to 8 November 3 am : heavy rain, light fog, light winds, cold
+8 November 3 am to 8 November 5 am : light rain,light fog, light winds,cold
+8 November 5 am to 8 November 6 am : light rain,overcast,light winds,cold
+8 November 6 am to 8 November 12 pm : light fog,light winds,cold
+8 November 12 pm to 8 November 2 pm : light winds,cold
+8 November 2 pm to 8 November 7 pm : light fog,light winds,cold
+8 November 7 pm to 8 November 11 pm : light winds,cold
+8 November 11 pm to 9 November 12 am : clear,cold
+9 November 12 am to 9 November 6 am : clear, light winds,cold
+9 November 6 am to 9 November 4 pm : clear,light winds,cold,
+9 November 4 pm to 9 November 8 pm : Clear,cold
+9 November 8 pm to 9 November 11 pm : overcast,cold
+9 November 11 pm to 10 November 12 am : clear,cold",72,32.50993,-92.121742
+Louisiana,Shreveport,71101,"8 November 12 am to 8 November 5 am : clear,light winds
+8 November 5 am to 8 November 9 am : overcast,light winds
+8 November 9 am to 8 November 11 am : light winds
+8 November 11 am to 8 November 2 pm : overcast,light winds
+8 November 2 pm to 9 November 12 am : clear, light winds
+9 November 12 am to 9 November 5 am : light winds
+9 November 5 am to 9 November 7 am : overcast
+9 November 7 am to 9 November 5 pm : light winds
+9 November 5 pm to 10 November 12 am : Light rain,light fog,light winds,cold",77,32.523659,-93.763504
+Mississippi,Meridian,39305,"8 November 12 am to 8 November 12 pm: Cold
+8 November 12 pm to 8 November 3 pm: Cold, light winds
+8 November 3 pm to 9 November 10 pm: Cold
+9 November 10 pm to 10 November 12 am: Very Cold ",105,32.364311,-88.703659
+Mississippi,Jackson,39206,"8 November 12 am to 8 November 6 am: Clear, Light Fog
+8 November 6 am to 8 November 9 am: Heavy Fog
+8 November 9 am to 8 November 11 pm: Clear, light winds, Light Fog
+8 November 11 pm to 9 November 7 am: Clear, Light Fog
+9 November 7 am to 9 November 8 am: light winds, Light Fog
+9 November 8 am to 9 November 11 pm: Light Fog
+9 November 11 pm to 10 November 12 am: light winds, Light Fog",85,32.298756,-90.184807
+Mississippi,Biloxi,39531,"8 November 12 am to 8 November 6 am: Clear, Light Fog
+8 November 6 am to 8 November 7 am: Heavy Fog
+8 November 7 am to 8 November 9 am:  Light Fog
+8 November 9 am to 9 November 3 am: Clear, light winds, Light Fog
+9 November 3 am to 9 November 9 am: Light Fog
+9 November 9 am to 9 November 5 pm: light winds, Light Fog
+9 November 5 pm to 10 November 12 am: Mostly Cloudy, Light Fog",6,30.396032,-88.885308
+Mississippi,Columbus,39701,"8 November 12 am to 8 November 11 am: Clear, Light Fog
+8 November 11 am to 9 November 1 am: Clear, light winds, Light Fog
+9 November 1 am to 9 November 8 am: Clear, Light Fog
+9 November 8 am to 9 November 4 pm: Light Fog
+9 November 4 pm to 10 November 12 am: Clear, Light Fog",66,33.495674,-88.427261
+Mississippi,Southaven,38671,"8 November 12 am to 8 November 7 am: Clear, light winds, Light Fog
+8 November 7 am to 8 November 2 pm: light winds, Light Fog
+8 November 2 pm to 8 November 11 pm: Clear, light winds, Light Fog
+8 November 11 pm to 9 November 5 am: light winds, Light Fog
+9 November 5 am to 9 November 9 am: Overcast, light winds, Light Fog
+9 November 9 am to 9 November 2 pm: light winds, Light Fog
+9 November 2 pm to 9 November 5 pm: Rain, light winds, Light Fog 
+9 November 5 pm to 9 November 6 pm: Heavy Rain, light winds, Light Fog
+9 November 6 pm to 10 November 12 am: Rain, light winds, Light Fog",94,34.988983,-90.012589
+Mississippi,Hattiesburg,39401,"8 November 12 am to 8 November 6 am: Clear, Light Fog
+8 November 6 am to 8 November 9 am: Heavy Fog
+8 November 9 am to 8 November 10 am: Light Fog
+8 November 10 am to 9 November 12 am: Clear, Light Fog, light winds
+9 November 12 am to 9 November 6 am: Light Fog
+9 November 6 am to 9 November 8 am: Heavy Fog
+9 November 8 am to 9 November 10 am: Light Fog
+9 November 10 am to 9 November 3 pm: light winds, Light Fog
+9 November 3 pm to 10 November 12 am: Overcast, Light Fog",52,31.32712,-89.290337
+Mississippi,Oxford,38655,"8 November 12 am to 8 November 8 am: Clear, light winds, Light Fog
+8 November 8 am to 8 November 2 pm: Cloudy, light winds, Light Fog
+8 November 2 pm to 8 November 4 pm: Clear, light winds, Light Fog 
+8 November 4 pm to 9 November 1 am: Clear, Light Fog
+9 November 1 am to 9 November 4 am: light winds, Light Fog
+9 November 4 am to 9 November 1 pm: Overcast, Light Fog
+9 November 1 pm to 10 November 12 am: Overcast, light winds, Light Fog",154,34.366495,-89.519248
+Alabama,Mobile,36605,"8 November 12 am to 8 November 1 am: Light Fog, Cold
+8 November 1 am to 8 November 2 am: Heavy Fog, Cold
+8 November 2 am to 8 November 4 am: Light Fog, Cold
+8 November 4 am to 8 November 7 am: Heavy Fog, Cold
+8 November 7 am to 8 November 8 am: Light Fog
+8 November 8 am to 8 November 5 pm: Light Winds
+8 November 5 pm to 9 November 12 am: Clear
+9 November 12 am to 9 November 2 am: Clear
+9 November 2 am to 9 November 3 am: Light Fog, Cold
+9 November 3 am to 9 November 6 am: Clear, Cold
+9 November 6 am to 9 November 12 pm: Clear
+9 November 12 pm to 9 November 4 pm: Light Winds
+9 November 4 pm to 9 November 9 pm: Clear
+9 November 9 pm to 10 November 12 am: Clear",3,30.69648949,-88.03952639
+Alabama,Montgomery,36117,"8 November 12 am to 8 November 2 am: Clear, Cold
+8 November 2 am to 8 November 4 am: Light Fog, Cold
+8 November 4 am to 8 November 5 am: Clear, Cold 
+8 November 5 am to 8 November 8 am: Light Fog, Cold
+8 November 8 am to 8 November 1 pm: Clear
+8 November 1 pm to 8 November 2 pm: Light Winds
+8 November 2 pm to 8 November 3 pm: Clear 
+8 November 3 pm to 8 November 4 pm: Clear, Light Winds 
+8 November 3 pm to 8 November 5 pm: Clear, Light Winds 
+8 November 5 pm to 8 November 9 pm: Clear
+8 November 9 pm to 8 November 10 pm: Overcast, Light Winds 
+8 November 10 pm to 9 November 12 am: Clear
+9 November 12 am to 9 November 2 am: Clear, Cold
+9 November 2 am to 9 November 8 am: Light Fog, Cold 
+9 November 8 am to 9 November 9 pm: Clear
+9 November 9 pm to 9 November 10 pm: Light Fog
+9 November 10 pm to 10 November 12 am: Clear",67,32.38081157,-86.31746466
+Alabama,Dothan,36305,"8 November 12 am to 8 November 3 am: Clear
+8 November 3 am to 8 November 6 am: Light Fog, Cold
+8 November 6 am to 8 November 8 am: Heavy Fog, Cold
+8 November 4 pm to 9 November 12 am: Clear, Light Winds, Cold
+8 November 8 am to 8 November 9 am: Light Fog
+8 November 9 am to 8 November 10 am: Clear
+8 November 10 am to 8 November 11 am: Light Winds 
+8 November 11 am to 8 November 12 pm: Clear
+8 November 12 pm to 8 November 1 pm: Light Winds 
+8 November 1 pm to 8 November 3 pm: Clear
+8 November 3 pm to 8 November 5 pm: Light Winds 
+8 November 5 pm to 8 November 7 pm: Clear 
+8 November 7 pm to 8 November 11 pm: Clear, Light Winds 
+8 November 11 pm to 9 November 12 am: Clear 
+9 November 12 am to 9 November 7 am: Heavy Fog, Cold
+9 November 7 am to 9 November 8 am: Light Fog, Cold
+9 November 8 am to 9 November 3 pm: Clear
+9 November 3 pm to 9 November 5 pm: Light Winds
+9 November 5 pm to 9 November 10 pm: Clear
+9 November 10 pm to 9 November 11 pm: Clear, Light Winds
+9 November 11 pm to 10 November 12 am: Clear",98,31.2229192,-85.38874885
+Alabama,Birmingham,35211,"8 November 12 am to 8 November 7 am: Clear, Cold
+8 November 7 am to 8 November 5 pm: Light Winds
+8 November 5 pm to 8 November 8 pm: Clear, Light Winds
+8 November 8 pm to 9 November 12 am: Light Winds
+9 November 12 am to 9 November 6 am: Clear, Light Winds 
+9 November 6 am to 9 November 5 pm: Light Winds 
+9 November 5 pm to 9 November 11 pm: Clear
+9 November 11 pm to 10 November 12 am: Overcast",196,33.51967994,-86.82268694
+Alabama,Huntsville,35801,"8 November 12 am to 8 November 8 am : Clear, Cold
+8 November 8 am to 8 November 4 pm : light winds 
+8 November 4 pm to 8 November 8 pm : Clear, light winds 
+8 November 8 pm to 9 November 12 am : light winds
+9 November 12 am to 9 November 7 am : Clear, Cold
+9 November 7 am to 9 November 4 pm : light winds
+9 November 4 pm to 9 November 9 pm : Clear, light winds
+9 November 9 pm to 10 November 12 am : light winds",193,34.729542,-86.585297
+Alabama,Florence,50124,"8 November 12 am to 8 November 6 am : Clear, Cold
+8 November 6 am to 8 November 9 am : Clear
+8 November 9 am to 8 November 11 am : Clear, light winds 
+8 November 11 am to 8 November 3 pm : light winds
+8 November 3 pm to 9 November 3 am : Clear, light winds
+9 November 3 am to 9 November 8 am : light winds
+9 November 8 am to 9 November 2 pm : Overcast
+9 November 2 pm to 9 November 4 pm : Overcast, light winds
+9 November 4 pm to 9 November 5 pm : Light rain, light winds
+9 November 5 pm to 9 November 10 pm : light winds
+9 November 10 pm to 10 November 12 am : Overcast",185,34.799809,-87.677254
+Alabama,Tuscaloosa,35401,"8 November 12 am to 8 November 3 am : Clear
+8 November 3 am to 8 November 4 am : Light fog
+8 November 4 am to 8 November 7 am : Clear
+8 November 7 am to 8 November 8 am : Light fog
+8 November 8 am to 8 November 10 am : Clear
+8 November 10 am to 8 November 5 pm : Clear, light winds
+8 November 5 pm to 8 November 10 pm : Clear
+8 November 10 pm to 9 November 1 am : Clear, light winds
+9 November 1 am to 9 November 6 am : Clear
+9 November 6 am to 9 November 8 am : Light fog
+9 November 8 am to 10 November 12 am : Clear",68,33.210678,-87.565582
+Alabama,Auburn,36830,"8 November 12 am to 8 November 9 am : Clear
+8 November 9 am to 8 November 12 pm : Clear, light winds
+8 November 12 pm to 8 November 2 pm : Clear
+8 November 2 pm to 8 November 5 pm : Clear, light winds
+8 November 5 pm to 8 November 10 pm : Clear
+8 November 10 pm to 9 November 12 am : Clear, light winds
+9 November 12 am to 9 November 2 am : Clear
+9 November 2 am to 9 November 5 am : Clear, Cold
+9 November 5 am to 9 November 6 am : Light fog, Cold
+9 November 6 am to 9 November 8 am : Heavy fog, Cold
+9 November 8 am to 9 November 9 am : Light fog
+9 November 9 am to 9 November 12 pm : Clear, light winds
+9 November 12 pm to 10 November 12 am : Clear",214,32.609856,-85.480782
+Tennessee ,Kingsport,37660,"8 November 12 am to 8 November 9 am: Clear,Cold
+8 November 9 am to 8 November 9 pm: Clear
+8 November 9 pm to 9 November 8 am: Clear,Cold
+9 November 8 am to 9 November 10 am: Clear
+9 November 10 am to 9 November 11 am: Clear,light winds
+9 November 11 am to 9 November 2 pm: Clear
+9 November 2 pm to 9 November 3 pm: Clear,light winds
+9 November 3 pm to 9 November 12 am: Clear",369,36.54843,-82.56182
+Tennessee ,NashVille,37211,"8 November 12 am to 8 November 2 am: Clear
+8 November 2 am to 8 November 5 am: Clear,Cold
+8 November 5 am to 8 November 7 am: Clear
+8 November 7 am to 8 November 9 pm: Clear,light winds
+8 November 9 pm to 9 November 10 am: Clear
+9 November 10 am to 9 November 11 am: Clear,light winds
+9 November 11 am to 9 November 5 pm: Clear
+9 November 5 pm to 9 November 6 pm: Clear,light winds
+9 November 6 pm to 9 November 7 pm: Clear
+9 November 7 pm to 9 November 8 pm: Clear,light winds
+9 November 8 pm to 9 November 12 am: Clear",171,36.16589,-86.78444
+Tennessee ,Collierville,38017,"8 November 12 am to 8 November 3 pm: Clear
+8 November 3 pm to 9 November 4 am: Clear,light winds
+9 November 4 am to 9 November 8 am: Clear
+9 November 8 am to 9 November 6 pm: Clear,light winds
+9 November 6 pm to 9 November 11 pm: Clear
+9 November 11 pm to 9 November 12 am: Clear,light winds",117,35.04204,-89.66453
+Tennessee ,Knoxville,37902,"8 November 12 am to 8 November 1am: Clear
+8 November 1 am to 8 November 8 am: Clear,Cold
+8 November 8 am to 8 November 10 am: Clear
+8 November 10 am to 8 November 8 pm: Clear,light winds
+8 November 8 pm to 8 November 11 am: Clear
+8 November 11 pm to 9 November 2 am: Clear,light winds
+9 November 2 am to 9 November 3 am: Clear
+9 November 3 am to 9 November 11 am: Clear,light winds
+9 November 11 am to 9 November 12 am: Clear
+9 November 12 am to 9 November 2 pm: Clear,light winds
+9 November 2 pm to 9 November 8 pm: Clear,light winds
+9 November 8 pm to 9 November 9 pm: light winds,Light Rain
+9 November 8 pm to 9 November 12 am: Clear",277,35.96064,-83.92074
+Tennessee ,Chattanooga,37410,"8 November 12 am to 8 November 9 am: Clear,Cold
+8 November 9 am to 8 November 12 am: Clear
+8 November 12 am to 8 November 5 pm: Clear,light winds
+8 November 5 pm to 8 November 5 pm: Clear,light winds
+8 November 7 pm to 9 November 12 am: Clear",208,35.04563,-85.30968
+Tennessee ,Clarksville,37042,"8 November 12 am to 8 November 2 am: Clear
+8 November 2 am to 8 November 5 am: Clear,Cold
+8 November 5 am to 8 November 7 am: Clear
+8 November 5 am to 8 November 9 pm: Clear,light winds
+8 November 9 pm to 9 November 10 am: Clear
+9 November 10 am to 9 November 11 am: Clear,light winds
+9 November 11 am to 9 November 5 pm: Clear
+9 November 5 pm to 9 November 6 pm: Clear,light winds
+9 November 6 pm to 9 November 7 pm: Clear
+9 November 7 pm to 9 November 8 pm: Clear,light winds
+9 November 7 pm to 9 November 12 am: Clear",145,36.52977,-87.35945
+Tennessee ,Franklin,37064,"8 November 12 am to 8 November 2 am: Clear
+8 November 12 am to 8 November 5 am: Clear,Cold
+8 November 5 am to 8 November 7 am: Clear
+8 November 7 am to 8 November 9 pm: Clear,light winds
+8 November 9 pm to 9 November 10 am: Clear
+9 November 10 am to 9 November 11 am: Clear,light winds
+9 November 12 pm to 9 November 5 pm: Clear
+9 November 5 pm to 9 November 6 pm: light winds,Light Rain
+9 November 6 pm to 9 November 7 pm: Clear,Light Rain
+9 November 7 pm to 9 November 8 pm: light winds,Light Rain,Cold
+9 November 8 pm to 9 November 10 pm: Clear,Cold
+9 November 10 pm to 9 November 11 pm: Clear,Cold,Light Rain
+9 November 11 pm to 9 November 12 pm: Clear,Cold",201,35.92506,-86.86889
+Tennessee ,Columbia,38401,"8 November 12 am to 8 November 2 am: Clear
+8 November 12 am to 8 November 5 am: Clear,Cold
+8 November 5 am to 8 November 7 am: Clear
+8 November 7 am to 8 November 9 pm: Clear,light winds
+8 November 9 pm to 9 November 10 am: Clear
+9 November 10 am to 9 November 11 am: Clear,light winds
+9 November 12 am to 9 November 5 pm: Clear
+9 November 5 pm to 9 November 6 pm: light winds,Light Rain
+9 November 6 pm to 9 November 7 pm: Light Rain
+9 November 7 pm to 9 November 8 pm: light winds,Light Rain,Cold
+9 November 8 pm to 9 November 10 pm: Clear,Cold
+9 November 10 pm to 9 November 11 pm: Cold,Light Rain
+9 November 11 pm to 9 November 12 pm: Clear,Cold",199,35.61507,-87.03528
+Tennessee ,Dyersburg,38024,"8 November 12 am to 8 November 10 am: Clear
+8 November 10 am to 8 November 3 pm: Clear,light winds
+8 November 3 pm to 8 November 10 pm: Clear
+8 November 10 pm to 9 November 2 am: Clear,light winds
+9 November 2 am to 9 November 4 am: Clear
+9 November 4 am to 9 November 5 am: Clear,light winds
+9 November 5 am to 9 November 6 am: Clear
+9 November 6 am to 9 November 1 pm: Clear,light winds
+9 November 1 pm to 9 November 3 pm: light winds,Light Rain
+9 November 3 pm to 9 November 7 pm: light winds,Light Rain,Cold
+9 November 7 pm to 9 November 12 am: Light Rain,Cold",96,36.03452,-89.38563
+Tennessee ,Memphis,38109,"8 November 12 am to 8 November 3am: Clear
+8 November 3 am to 8 November 4 am: Clear,light winds
+8 November 4 am to 8 November 5 am: Clear
+8 November 5 am to 8 November 6 am: Clear,light winds
+8 November 6 am to 8 November 8 am: Clear
+8 November 6 am to 8 November 6 pm: Clear,light winds
+8 November 6 pm to 8 November 11 pm: Clear
+8 November 11 pm to 9 November 12 am: Clear,light winds
+9 November 12 am to 9 November 6 am: Clear
+9 November 6 am to 9 November 8 am: Clear,light winds
+9 November 8 am to 9 November 9 am: Clear
+9 November 9 am to 9 November 1 pm: Clear,light winds
+9 November 1 pm to 9 November 2 pm: Clear,Cold
+9 November 2 pm to 9 November 3 pm: light winds,Light Rain,Cold
+9 November 3 pm to 9 November 4 pm: Light Rain,Cold
+9 November 4 pm to 9 November 7 pm: Heavy Rain,Cold
+9 November 7 pm to 9 November 9 pm: Light Rain,Cold,light winds
+9 November 9 pm to 9 November 12 am: Heavy Rain,Cold,light winds",84,35.14953,-90.04898
+Arkansas,Hot Springs,71913,"8 November 12 am to 8 November 7 am : Clear
+8 November 7 am to 8 November 4 pm : Light Rain
+8 November 5 pm to 8 November 7 pm : Heavy Rain
+8 November 8 pm to 8 November 11 pm : Clear
+8 November 11 pm to 8 November 12 am: Light Fog
+9 November 12 am to 9 November 3 am : Light Snow 
+9 November 4 am to 9 November 7 am : Heavy Snow 
+9 November 7 am to 9 November 2 pm : Clear 
+9 November 2 pm to 9 November 4 pm : Light Rain
+9 November 5 pm to 10 November 12 am : Light fog ",182,34.1382,-93.0595
+Arkansas,Pine Bluff,71603,"8 November 12 am to 8 November 7 am : Clear
+8 November 7 am to 8 November 4 pm : Light Rain
+8 November 5 pm to 8 November 7 pm : Heavy Rain
+8 November 8 pm to 8 November 11 pm : Clear
+8 November 11 pm to 8 November 12 am : Light Fog
+9 November 12 am to 9 November 3 am : Light Snow 
+9 November 4 am to 9 November 7 am : Heavy Snow 
+9 November 7 am to 9 November 2 pm : Clear 
+9 November 2 pm to 9 November 4 pm : Light Rain
+9 November 5 pm to 10 November 12 am : Light fog ",67,34.7805,-92.0009
+Arkansas,Jonesboro,72401,"8 November 12 am to 8 November 7 am : Clear
+8 November 7 am to 8 November 4 pm : Clear
+8 November 5 pm to 8 November 7 pm : Light Rain 
+8 November 8 pm to 8 November 11 pm : Light Rain
+8 November 11 pm to 8 November 12 am: Clear
+9 November 12 am to 9 November 3 am : Clear
+9 November 4 am to 9 November 7 am : Clear
+9 November 7 am to 9 November 2 pm : Clear 
+9 November 2 pm to 9 November 4 pm : Light Rain
+9 November 5 pm to 10 November 12 am :  Light Rain",99,35.8739,-90.4483
+Arkansas,West Memphis,72301,"8 November 12 am to 8 November 7 am : Clear
+8 November 7 am to 8 November 4 pm : Clear
+8 November 5 pm to 8 November 7 pm : Light Rain 
+8 November 8 pm to 8 November 11 pm : Light Rain
+8 November 11 pm to 8 November 12 am: Clear
+9 November 12 am to 9 November 3 am : Clear
+9 November 4 am to 9 November 7 am : Clear
+9 November 7 am to 9 November 2 pm : Clear 
+9 November 2 pm to 9 November 4 pm : Light Rain
+9 November 5 pm to 10 November 12 am :  Light Rain",64,35.1367,-90.0742
+Arkansas,Fayetteville,72701,"8 November 12 am to 8 November 7 am : Clear
+8 November 7 am to 8 November 4 pm : Clear
+8 November 5 pm to 8 November 7 pm : Light Rain 
+8 November 8 pm to 8 November 11 pm : Light Rain
+8 November 11 pm to 8 November 12 am : Clear
+9 November 12 am to 9 November 3 am : Clear
+9 November 4 am to 9 November 7 am : Clear
+9 November 7 am to 9 November 2 pm : Clear 
+9 November 2 pm to 9 November 4 pm : Light Rain
+9 November 5 pm to 10 November 12 am :  Light Rain",427,36.0829,-94.1754
+Arkansas,Little Rock,72212,"8 November 12 am to 8 November 7 am : Clear
+8 November 7 am to 8 November 4 pm : Clear
+8 November 5 pm to 8 November 7 pm : Light Rain 
+8 November 8 pm to 8 November 11 pm : Light Rain
+8 November 11 pm to 8 November 12 am: Clear
+9 November 12 am to 9 November 3 am : Clear
+9 November 4 am to 9 November 7 am : Clear
+9 November 7 am to 9 November 2 pm : Clear 
+9 November 2 pm to 9 November 4 pm : Light Rain
+9 November 5 pm to 10 November 12 am :  Light Rain",102,34.7464,-92.2898
+Arkansas,Conway,72034,"8 November 12 am to 8 November 7 am : Clear
+8 November 7 am to 8 November 4 pm : Clear
+8 November 5 pm to 8 November 7 pm : Light Rain 
+8 November 8 pm to 8 November 11 pm : Light Rain
+8 November 11 pm to 8 November 12 am: Clear
+9 November 12 am to 9 November 3 am : Clear
+9 November 4 am to 9 November 7 am : Clear
+9 November 7 am to 9 November 2 pm : Clear 
+9 November 2 pm to 9 November 4 pm : Light Rain
+9 November 5 pm to 10 November 12 am :  Light Rain",101,35.087,-92.4033
+Arkansas,Texarkana,71854,"8 November 12 am to 8 November 7 am : Clear
+8 November 7 am to 8 November 4 pm : Clear
+8 November 5 pm to 8 November 7 pm : Light Rain 
+8 November 8 pm to 8 November 11 pm : Light Rain
+8 November 11 pm to 8 November 12 am : Clear
+9 November 12 am to 9 November 3 am : Clear
+9 November 4 am to 9 November 7 am : Clear
+9 November 7 am to 9 November 2 pm : Clear 
+9 November 2 pm to 9 November 4 pm : Light Rain
+9 November 5 pm to 10 November 12 am :  Light Rain",110,33.4434,-93.7753
+Arkansas,Jacksonville,72076,"8 November 12 am to 8 November 7 am : Clear
+8 November 7 am to 8 November 4 pm : Clear
+8 November 5 pm to 8 November 7 pm : Light Rain 
+8 November 8 pm to 8 November 11 pm : Light Rain
+8 November 11 pm to 8 November 12 am : Clear
+9 November 12 am to 9 November 3 am : Clear
+9 November 4 am to 9 November 7 am : Clear
+9 November 7 am to 9 November 2 pm : Clear 
+9 November 2 pm to 9 November 4 pm : Light Rain
+9 November 5 pm to 10 November 12 am :  Light Rain",91,34.7541,-92.1139
+Arkansas,Fort Smith,72903,"8 November 12 am to 8 November 7 am : Clear
+8 November 7 am to 8 November 4 pm : Clear
+8 November 5 pm to 8 November 7 pm : Light Rain 
+8 November 8 pm to 8 November 11 pm : Light Rain
+8 November 11 pm to 8 November 12 am : Clear
+9 November 12 am to 9 November 3 am : Clear
+9 November 4 am to 9 November 7 am : Clear
+9 November 7 am to 9 November 2 pm : Clear 
+9 November 2 pm to 9 November 4 pm : Light Rain
+9 November 5 pm to 10 November 12 am :  Light Rain",141,35.1339,-94.4144
+Missouri,Branson,65616,"8 November 12 am to 8 November 1 am clear, light winds
+8 November 1 am to 8 November 5 am : clear
+8 November 5 am to 8 November 5 pm : light winds, clear
+8 November 5 pm to 8 November 10 pm :  light winds
+8 November 10 pm to 9 November 1 am : light winds, cold
+9 November 1 am to 9 November 5 am :  cold
+9 November 5 am to 9 November 7 am : clear, light winds, cold
+9 November 7 am to 9 November 8 am : clear, cold
+9 November 8 am to 9 November 9 am : clear, light winds, cold
+9 November 9 am to 9 November 11 am : light winds, cold
+9 November 11 am to 9 November 2 pm : clear, light winds, cold
+9 November 2 pm to 9 November 3 pm : light winds, cold
+9 November 3 pm to 9 November 4 pm : light rain, cold
+9 November 4 pm to 9 November 5 pm : clear, cold
+9 November 5 pm to 10 November 12 am : cold",236,36.6477253,-93.3454343
+Missouri,Jefferson City,65101,"8 November 12 am to 8 November 1 am : clear
+8 November 1 am to 8 November 7 pm : clear, light winds
+8 November 7 pm to 8 November 11 pm : light winds
+8 November 11 pm to 9 November 2 am : clear, light winds, cold
+9 November 2 am to 9 November 4 am : clear, cold
+9 November 4 am to 9 November 7 am : cold, light winds, clear
+9 November 7 am to 9 November 4 pm : clear, cold
+9 November 4 pm to 9 November 5 pm : light rain, cold
+9 November 4 pm to 10 November 12 am : Clear, cold",192,38.5712712,-92.2448066
+Missouri,Springfield,65807,"8 November 12 am to 8 November 7 pm : clear, light winds
+8 November 7 pm to 8 November 11 pm : light winds
+8 November 11 pm to 9 November 10 am : clear, cold, light winds
+9 November 10 am to 9 November 8 pm : cold, light winds
+9 November 8 pm to 10 November 12 am : clear, cold, light winds ",396,37.1792639,-93.4611368
+Missouri,Columbia,65203,"8 November 12 am to 8 November 10 am : clear
+8 November 10 am to 8 November 9 pm : clear, light winds
+8 November 9 pm to 9 November 3 am : clear, cold
+9 November 3 am to 9 November 4 am : clear, cold, light winds
+9 November 4 am to 10 November 12 am : clear, cold",232,38.9466452,-92.4956508
+Missouri,St Joseph,64503,"8 November 12 am to 8 November 8 am : cold
+8 November 8 am to 8 November 10 am : cold
+8 November 10 am to 8 November 11 am : cold, light winds
+8 November 11 am to 8 November 12 pm : light winds
+8 November 12 pm to 8 November 7 pm : light winds
+8 November 8 pm to 8 November 11 pm : cold, light winds
+9 November 12 am to 9 November 2 am : cold, light winds
+9 November 3 am to 10 November 12 am : cold",271,39.7593403,-94.9035857
+Missouri,Kirksville,63501,"8 November 1 am to 8 November 6 am : clear, light winds, cold
+8 November 6 am to 8 November 10 pm : clear, light winds
+8 November 3 pm to 9 November 2 pm : light winds
+8 November 3 pm to 8 November 4 pm : light rain, light winds
+8 November 4 pm to 8 November 10 pm : light winds, cold
+8 November 10 pm to 9 November 12 am : clear, light winds
+9 November 12 am to 10 November 12 am : clear, cold, light winds",295,40.1957774,-92.6584991
+Missouri,Kansas City,64030,"8 November 12 am to 8 November 6 am : clear
+8 November 9 am to 8 November 4 pm :light winds
+8 November 4 pm to 9 November 12 am : clear, light winds, cold
+9 November 12 am to 9 November 2 am : light winds, cold
+9 November 3 am to 10 November 12 am : cold",277,39.0919879,-94.9053768
+Missouri,Cape Girardeau,63701,"8 November 12 am to 8 November 9 am : clear, light winds
+8 November 9 am to 8 November 7 pm : light winds
+8 November 7 pm to 8 November 9 pm : clear, light winds
+8 November 7 pm to 8 November 11 pm : clear
+9 November 12 am to 9 November 6 am : light winds
+9 November 6 am to 9 November 5 pm : clear, cold, light winds
+9 November 7 pm to 9 November 10 pm : light rain, cold
+9 November 10 pm to 10 November 12 am : cold",113,37.3042393,-89.7205983
+Missouri,St. Louis,63116,"8 November 12 am to 8 November 2 am : clear, light winds
+8 November 2 am to 9 November 12 am : light winds
+9 November 12 am to 9 November 3 am : cold
+9 November 3 am to 9 November 7 am : cold, light winds
+9 November 11 am to 9 November 5 pm : cold, light winds
+9 November 7 pm to 10 November 12 am : cold",142,38.468476,-90.792132
+Illinois,Chicago,60629,"8 November 12 am to 8 November 3 am : light winds, Cold 
+8 November 3 am to 8 November 4 am : Light Rain, light winds, Cold
+8 November 4 am to 8 November 8 am :  light winds, Cold
+8 November 8 am to 8 November 11 am : Light Rain, light winds, Cold
+8 November 11 am to 8 November 2 pm : light winds, Cold
+8 November 2 pm to 8 November 5 pm : light winds
+8 November 5 pm to 8 November 7 pm : Cold, light winds
+8 November 7 pm to 8 November 8 pm : Light Fog, Cold, light winds, Light Rain
+8 November 8 pm to 9 November 8 am : Cold, light winds
+9 November 8 am to 9 November 9 am : Cold
+9 November 9 am to 9 November 1 pm : Cold, light winds
+9 November 1 pm to 9 November 2 pm : Cold, Heavy winds
+9 November 2 pm to 9 November 5 pm : Cold, light winds
+9 November 5 pm to 9 November 7 pm : Clear, Cold
+9 November 7 pm to 10 November 12 am : light winds, Cold",181,41.8337734,-88.061624
+Illinois,Quincy,62301,"8 November 12 am to 8 November 6 am : Clear, light winds, Cold
+8 November 6 am to 8 November 7 am : Light Fog, light winds, Cold
+8 November 7 am to 8 November 10 am : Clear, light winds
+8 November 10 am to 8 November 3 pm : light winds, Cold
+8 November 3 pm to 8 November 4 pm : Light rain, light winds
+8 November 4 pm to 9 November 5 am : light winds, Cold
+9 November 5 am to 9 November 6 am : Clear, Cold
+9 November 6 am to 9 November 7 am : Clear, Cold, light winds
+9 November 7 am to 9 November 8 am : Clear, Cold
+9 November 8 am to 9 November 10 am : Clear, Cold, light winds
+9 November 10 am to 9 November 11 am : Clear, Cold
+9 November 11 am to 9 November 12 pm: Clear, Cold, light winds
+9 November 12 pm to 9 November 3 pm : Clear, Cold
+9 November 3 pm to 9 November 4 pm : Clear, Cold, light winds
+9 November 4 pm to 9 November 5 pm : Clear, Cold
+9 November 5 pm to 9 November 10 pm : Clear, Cold, light winds
+9 November 10 pm to 9 November 11 pm : Clear, Cold
+9 November 11 pm to 10 November 12 am : Clear, light winds, Cold",178,39.935094,-91.454528
+Illinois,Rock Island,61201,"8 November 12 am to 8 Nov 12 pm : light winds, Cold
+8 November 12 pm to 8 November 2 pm : Light Fog, light winds, Cold
+8 November 2 pm to 8 November 3 pm : light winds, Cold
+8 November 3 pm to 8 November 4 pm : Light Rain, Light Fog, Cold, light winds
+8 November 4 pm to 8 November 9 pm : Clear, light winds, Cold
+8 November 9 pm to 8 November 10 pm : Light Fog, light winds, Cold
+8 November 10 pm to 9 November 7 pm : Clear, light winds, Cold
+9 November 7 pm to 9 November 10 pm : light winds, Cold
+9 November 10 pm to 10 November 12 am : Cold",247,41.4652318,-90.6748775
+Illinois,Rockford,61107,"8 November 12 am to 8 November 1 am : Light Rain, light winds, Cold
+8 November 1 am to 8 November 2 am : Light Rain, Cold
+8 November 2 am to 8 November 5 am : Cold
+8 November 5 am to 8 November 6 am : light winds, Cold
+8 November 6 am to 8 November 7 am : Cold
+8 November 7 am to 8 November 8 am : Light Rain, Light Fog, light winds, Cold
+8 November 8 am to 8 November 3 pm : Light Rain, Light Fog, Cold
+8 November 3 pm to 8 November 5 pm : Light Rain, Light Fog, Cold, light winds
+8 November 5 pm to 8 November 7 pm : light winds, Cold
+8 November 7 pm to 8 November 8 pm : Light Rain, light winds, Cold
+8 November 8 pm to 9 November 5 am : light winds, Cold
+9 November 5 am to 9 November 9 am : Clear, Cold
+9 November 9 am to 9 November 4 pm : Clear, light winds, Cold
+9 November 4 pm to 9 November 10 pm : Clear, light winds, Cold
+9 November 10 pm to 9 November 11 pm : light winds, Cold
+9 November 11 pm to 10 November 12 am : Cold",222,42.2531137,-89.2328719
+Illinois,Peoria,61614,"8 November 12 am to 8 November 1 am : light winds, Cold
+8 November 1 am to 8 November 4 am : Cold
+8 November 4 am to 8 November 7 am : light winds, Cold
+8 November 7 am to 8 November 8 am : Cold
+8 November 8 am to 8 November 12 pm : light winds
+8 November 12 pm to 8 November 1 pm : Clear
+8 November 1 pm to 8 November 10 pm : Clear, light winds
+8 November 10 pm to 9 November 1 am : Clear, Cold
+9 November 1 am to 9 November 4 am : Clear, Cold, light winds
+9 November 4 am to 9 November 8 am : Clear, Cold
+9 November 8 am to 9 November 10 am : Clear, Cold, light winds
+9 November 10 am to 9 November 12 pm : Clear, Cold
+9 November 12 am to 9 November 4 pm : Clear, Cold, light winds
+9 November 4 pm to 9 November 5 pm : Clear, Cold
+9 November 5 pm to 10 November 12 am : Clear, Cold, light winds",153,40.7481799,-89.7872008
+Illinois,Springfield,62704,"8 November 12 am to 8 November 5 am : light winds, Cold
+8 November 5 am to 8 November 6 am : light winds
+8 November 6 am to 8 November 7 am : Light Fog, light winds
+8 November 7 am to 8 November 4 pm : Clear, light winds
+8 November 4 pm to 8 November 5 pm : Clear
+8 November 5 pm to 8 November 7 pm : light winds
+8 November 7 pm to 9 November 10 am : light winds, Cold
+9 November 10 am to 9 November 12 pm : Cold
+9 November 12 pm to 9 November 1 pm : light winds, Cold
+9 November 1 pm to 10 November 12 am : Clear, Cold",170,39.7639848,-89.8356444
+Illinois,Champaign,61820,"8 November 12 am to 8 November 7 am : light winds, Cold
+8 November 7 am to 8 November 2 pm : Clear, light winds
+8 November 2 pm to 8 November 4 pm : Clear, Heavy winds
+8 November 4 pm to 8 November 7 pm : light winds
+8 November 7 pm to 8 November 8 pm : Light Rain, Light Fog, light winds
+8 November 8 pm to 8 November 9 pm : light winds
+8 November 9 pm to 9 November 3 pm : light winds, Cold
+9 November 3 pm to 9 November 11 pm : Clear, Cold
+9 November 11 pm to 10 November 12 am : Clear, Cold, light winds",233,40.1147331,-88.3595115
+Illinois,Carbondale,62901,"8 November 12 am to 8 November 1 am : Clear, light winds
+8 November 1 am to 8 November 2 am : Clear
+8 November 2 am to 8 November 3 pm : Clear, light winds
+8 November 3 pm to 8 November 4 pm : Heavy winds
+8 November 4 pm to 9 November 2 am : Clear, light winds
+9 November 2 am to 9 November 4 pm : Cold, light winds
+9 November 4 pm to 9 November 7 pm : Clear, Cold
+9 November 7 pm to 9 November 8 pm : light winds, Cold
+9 November 8 pm to 10 November 12 am : Cold",126,37.7209146,-89.2954106
+Wisconsin,Milwaukee,53215,"8 November 12 am to 8 November 2 am : Cold, light winds
+8 November 2 am to 8 November 3 am : light rain, Cold, light winds,
+8 November 3 am to 8 November 4 am  : Heavy rain, Cold, light winds
+8 November 4 am to 8 November 7 am : Light rain, Cold, light winds
+8 November 7 am to 8 November 10 am : Cold, light winds
+8 November 10 am to 8 November 3 pm : Light fog, Cold, light winds, light rain
+8 November 3 pm to 8 November 5 pm : Heavy rain, Cold
+8 November 5 pm to 9 November 4 am : Cold, light winds
+9 November 4 am to 9 November 9 pm : Clear, Cold, light winds
+9 November 9 pm to 9 November 11 pm : Cold, light winds
+9 November 11 pm to 10 November 12 am : Light rain, Cold, light winds",188,43.038902,-87.906471
+Wisconsin,Appleton,54915,"8 November 12 am to 8 November 2 am : Cold, light winds
+8 November 2 am to 8 November 3  am : Cold, light rain, light winds
+8 November 3 am to 8 November 6 am : Cold, light winds
+8 November 6 am to 8 November 12 pm : Cold, light winds, light rain
+8 November 12 pm   to 8  November 2 pm : Cold, light rain, light fog
+8 November 2 pm to 8 November 5 pm : Cold
+8 November 5 pm to 8 November 8 pm : Cold, light fog
+8 November 8 pm to 8 November 9 pm : heavy fog, light winds, cold
+8 November 9 pm to 9 November 12 am : Cold, light winds, light fog
+9 November 12 am to 9 November 3 am : Cold, light winds
+9 November 3 am to 9 November 10 pm : Cold, light winds, clear
+9 November 10 pm to 10 November 12 am : Cold, light winds",241,44.2619,-88.4154
+Wisconsin,Madison,53704,"8 November 12 am to 8 November 1  am : Cold, light rain
+8 November 1 am to 8 November 2 am : Cold, light winds
+8 November 2 am to 8 November 12 pm : Cold, light winds, light rain
+8 November 12 pm  to 8  November 3 pm : Cold, light winds
+8 November 3 pm to 8 November 8 pm : Cold, light winds, light fog
+8 November 8 pm to 8 November 11 pm : Cold
+8 November 11 pm to 9 November 1 am : Clear, cold
+9 November 1 am to 9 November 2 am : Cold, light winds
+9 November 2 am to 9 November 4 am : Cold, light winds, clear
+9 November 4 am to 9 November 5 pm : Cold, light winds, clear
+9 November 5 pm to 9 November 8  pm : Cold, clear
+9 November 8 pm to 10 November 12  am : Cold, light winds",266,43.073051,-89.40123
+Wisconsin,Wisconsin Dells,53965,"8 November 12 am to 8 November 12  pm : light rain, light winds, cold
+8 November 12 pm to 8 November 3 pm : Cold, light winds
+8 November 3 pm to 8 November 5 pm : light fog, cold, light winds
+8 November 5 pm   to 8  November 7 pm : Cold 
+8 November 7 pm to 9 November 8 pm : Cold, light fog
+8 November 8 pm   to 9  November 12 am : Cold
+9 November 12 am to 9 November 4 am : Clear, cold, light winds
+9 November 4 am to 9 November 7 am : Clear, cold
+9 November 7 am to 9 November 5 pm : Clear, cold, light winds
+9 November 5 pm to 9 November 8 pm : Clear, cold
+9 November 8 pm to 10 November 12 am : cold",277,43.6275,-89.771
+Wisconsin,Eau Claire,54703,"8 November 12 am to 8 November 9 am : Cold, light winds
+8 November 9 am to 8 November 10 am : Cold, light rain
+8 November 10 am to 8 November 8 pm : cold
+8 November 8 pm   to 8 November 11 pm : Cold, light winds
+8 November 11 pm to 9 November 5 am : Clear, cold, light winds
+9 November 5 am   to 9 November 6 am : cold, Light winds
+9 November 7 am to 9 November 7 pm : Cold, clear, light winds
+9 November 7 pm to 10 November 12 am: Cold, light winds",240,44.811348,-91.498497
+Wisconsin,Green Bay,54311,"8 November 12 am to 8 November 3 am : Cold, light winds
+8 November 3 am to 8 November 4 am : Cold, light winds, light rain
+8 November 4 am to 8 November 6 am : Light winds, cold
+8 November 6 am   to 8 November 7 am :  Cold, light winds, light rain.
+8 November 7 am to 8 November  11 am : light fog, light winds, cold
+8 November 11 am   to 8 November 12 pm :  cold, Light winds.,light rain
+8 November 12 pm to 8 November 9 pm : cold, Light winds
+8 November 9 pm  to 8 November 10 pm :  light fog, cold, light winds
+8 November 10 pm to 9 November  5 am : light winds, cold
+9 November 5 am   to 10 November 12 am :  cold, Light winds, clear",177,44.513332,-88.015831
+Wisconsin,Superior,54880,"8 November 12 am to 8 November 2 am : Cold, light winds, light rain
+8 November 2 am to 8 November 4 am : cold, light winds
+8 November 4 am to 8 November 5 am : Cold, light winds, light rain, light fog
+8 November 5 am to 8 November  7 pm  : cold
+8 November 7 pm   to 9 November 3 am : Cold, light winds
+9 November 3 am to 9 November 4 am : light fog
+9 November 4 am to 10 November 12 am : light winds, cold",226,46.7134,-92.0877
+Wisconsin,Wausau,54401,"8 November 12 am to 8 November 1 am : Cold, light winds
+8 November 1 am to 8 November 2 am : light rain, cold, light winds
+8 November 2 am to 8 November 6 am : Cold, light winds
+8 November 6 am to 8 November 7 am  : light fog
+8 November 7 am   to 8 November 11 am : Cold, light winds
+8 November 11 am to 8 November 2 pm : light fog
+8 November 2 pm to 8 November 5 pm : Cold, light winds, light rain
+8 November 5 pm to 8 November 11 pm : light fog, cold, light winds
+8 November 11 pm to 9 November 4 pm : cold, light winds
+9 November 4 am to 9 November 10 pm : Cold, light winds, clear
+9 November 10 pm to 9 November 11 pm : cold, light winds
+9 November 11 pm to 10 November 12 am : cold, light winds, clear",368,44.959633,-89.6306
+Iowa,Davenport,52722,"8 November 12 am to 8 November 1 pm : Cold, Clear, Light winds 
+8 November 1 pm to 8 November 2 pm : Cold, light winds, Light Fog
+8 November 2 pm to 8 November 3 pm : Clear, Cold, light winds
+8 November 3 pm to 8 November 4 pm : Clear,  light winds
+8 November 4 pm to 8 November 5 pm : light winds, Light Rain, Light Fog
+8 November 5 pm to 8 November 10 pm : Clear, Cold, light winds
+8 November 10 pm to 8 November 11 pm : Light Fog, light winds, Cold
+8 November 11 pm to 9 November 11 pm : Clear, Cold, light winds
+9 November 11 pm to 10 November 12 am : Clear, Cold",177,41.543056,-90.590836
+Iowa,Cedar Rapids,52227,"8 November 12 am to 8 November 5 pm : Clear, Cold, light winds
+8 November 5 pm to 8 November 8 pm : Cold, Light Fog
+8 November 8 pm to 10 November 12 am : Clear, Cold, light winds ",247,41.977879,-91.665627
+Iowa,Des Moines,50047,"8 November 12 am to 8 November 3 pm : Clear, Cold, light winds
+8 November 3 pm to 8 November 5 pm : Clear, light winds
+8 November 5 pm to 9 November 1 am : Clear, light winds, Cold
+9 November 1 am to 9 November 9 am : Clear, Cold
+9 November 9 am to 9 November 2 pm : Clear, Cold, light winds
+9 November 2 pm to 9 November 4 pm : Clear, light winds
+9 November 4 pm to 10 November 12 am : Clear, Cold, light winds  ",266,41.58783092,-93.61916419
+Iowa,Fort Dodge,50501,"8 November 12 am to 8 November 10 am : Cold, Clear
+8 November 10 am to 8 November 2 pm : Cold, Clear, light winds
+8 November 2 pm to 8 November 5 pm : Cold, Clear, Heavy winds
+8 November 5 pm to 8 November 11 pm : Cold, Clear, light winds
+8 November 11 pm to 9 November 3 am : Cold, Clear
+9 November 3 pm to 9 November 6 am : Cold, Clear, light winds
+9 November 6 am to 9 November 8 am : Cold, Clear
+9 November 8 am to 9 November 11 pm : Cold, Clear, light winds
+9 November 11 pm to 10 November 12 am : Cold, Clear",352,42.512745,-94.188148
+Iowa,Mason City,50401,"8 November 12 am to 8 November 6 am : Clear, Cold, light winds
+8 November 6 am to 8 November 7 am : Clear, Cold
+8 November 7 am to 10 November 12 am : Clear, Cold, light winds",344,43.167126,-93.210754
+Iowa,Sioux City,51054,"8 November 6 am to 8 November 6 am : Clear, Cold
+8 November 6 am to 9 November 12 am : Clear, Cold, light winds
+9 November 12 am to 9 November 9 am : Clear, Cold
+9 November 9 am to 10 November 12 am : Cold, Clear, light winds",366,42.499994,-96.400307
+Iowa,Burlington,52601,"8 November 12 am to 8 November 3 am : Cold, Clear, light winds
+8 November 3 am to 8 November 5 am : Cold, Clear
+8 November 5 am to 8 November 12 pm : Clear, Cold, light winds
+8 November 12 pm to 8 November 1 pm : Fog, Cold, light winds
+8 November 1 pm to 8 November 3 pm : Clear, Cold, light winds
+8 November 3 pm to 8 November 5 pm : Fog, Cold, light winds
+8 November 5 pm to 9 November 12 am : Clear, Cold, light winds
+9 November 12 am to 9 November 1 am : Clear, Cold, Heavy winds
+9 November 1 am to 9 November 10 pm : Clear, Cold, light winds
+9 November 10 pm to 9 November 11 pm: Clear, Cold
+9 November 11 pm to 10 November 12 am : Clear, Cold, light winds",183,40.810947,-91.131844
+Iowa,Waterloo,50701,"8 November 12 am to 8 November 10 pm : Clear, Cold, light winds
+8 November 10 pm to 8 November 11 pm : Clear, Cold, Heavy winds
+8 November 11 pm to 10 November 12 am : Clear, Cold, light winds ",269,42.499504,-92.358665
+Iowa,Le Mars,51031,"8 November 12 am to 8 November 6 am : Clear, Cold
+8 November 6 am to 9 November 12 am : Cold, Clear, light winds
+9 November 12 am to 9 November 12 pm : Cold, Clear
+9 November 12 pm to 10 November 12 am : Cold, Clear, light winds",376,42.7941567,-96.1655778
+Minnesota,St Cloud,56301,"8 November 12 am to 8 November 7 am : Cold, Clear 
+8 November 7 am to 8 November 12 pm : Cold, 
+8 November 12 pm to 8 November 3 pm : light winds 
+8 November 3 pm to 9 November 12 am : Cold, Clear, light winds 
+9 November 12 am to 9 November 7 am : Cold, Clear, light winds 
+9 November 7 am to 9 November 11 am : light winds, Cold 
+9 November 11 am to 9 November 1 pm : Cold, light winds 
+9 November 1 pm to 9 November 3 pm : Cold, light winds 
+9 November 3 pm to 9 November 5 pm : Cold, light winds 
+9 November 5 pm to 9 November 6 pm : Cold, Light Snow, light winds 
+9 November 6 pm to 10 November 12 am : Cold, light winds",314,45.55751932,-94.16178095
+Minnesota,Minneapolis,55407,"8 November 12 am to 8 November 5 pm : Cold
+8 November 5 pm to 8 November 9 pm : Cold, light winds
+8 November 9 pm to 9 November 9 am : Cold, Clear
+9 November 9 am to 9 November 12 pm : Cold, light winds
+9 November 12 pm to 9 November 3 pm : Cold, light winds
+9 November 3 pm to 10 November 12 am : Cold, light winds",253,44.97899284,-93.26592094
+Minnesota,Thief River Falls,56701,"8 November 12 am to 8 November 2 am : Clear, Cold
+8 November 2 am to 8 November 5 am : Light Fog, Cold
+8 November 5 am to 8 November 6 am : Light Rain, Light Fog, Cold
+8 November 6 am to 8 November 9 am : Light Fog, Cold
+8 November 10 am to 8 November 4 pm : Clear, Cold
+8 November 4 pm to 8 November 7 pm : Light Rain, Cold
+8 November 7 pm to 9 November 12 pm : Clear, Cold
+9 November 12 am to 9 November 4 am : Clear, Cold
+9 November 4 am to 9 November 5 am : Light Rain, Cold
+9 November 5 am to 9 November 8 am : Clear, Cold
+9 November 8 am to 9 November 9 am : Light Snow, Light Fog, Cold
+9 November 9 am to 9 November 12 pm : Clear, Cold
+9 November 12 pm to 9 November 2 pm : Light Snow, Light Fog, Cold
+9 November 2 pm to 9 November 3 pm : Light Fog, Cold
+9 November 3 pm to 9 November 5 pm : Light Snow, Light Fog, Cold
+9 November 5 pm to 9 November 11 pm : Light Snow, Cold
+9 November 11 pm to 10 November 12 am : Clear, Cold",345,48.11938695,-96.18073064
+Minnesota,Duluth,55811,"8 November 12 am to 8 November 1 am : Light Rain, Cold 
+8 November 1 am to 8 November 2 am : Light Rain, Light Fog, light winds, Cold 
+8 November 2 am to 8 November 3 am : Clear, hot 
+8 November 3 am to 8 November 4 am : Light Rain 
+8 November 4 am to 8 November 5 am : Light Rain, Light Fog, Cold 
+8 November 5 am to 9 November 12 am : Clear, Cold 
+9 November 12 am to 9 November 11 am : Clear, Cold 
+9 November 11 am to 9 November 12 pm : Light Rain, Cold 
+9 November 12 pm to 10 November 12 am : Clear, Cold",238,46.78642579,-92.09862734
+Minnesota,St Paul,55101,"8 November 12 am to 8 November 8 am : Cold, Clear 
+8 November 8 am to 8 November 4 pm : Cold
+8 November 4 pm to 8 November 6 pm : Cold, Clear 
+8 November 6 pm to 9 November 12 am : Cold, light winds 
+9 November 12 am to 9 November 7 am : Cold, Clear, light winds 
+9 November 7 am to 9 November 4 pm : Cold, light winds 
+9 November 4 pm to 9 November 9 pm : Cold, light winds, Clear 
+9 November 9 pm to 10 November 12 am : Cold, light winds",285,44.95463181,-93.08955777
+Minnesota,Rochester,55901,"8 November 12 am to 8 November 3 am : Cold, light winds 
+8 November 3 am to 8 November 1 pm : Cold 
+8 November 1 pm to 8 November 7 pm : Cold 
+8 November 7 pm to 9 November 12 am : Cold, light winds 
+9 November 12 am to 9 November 1 am : Cold, Clear 
+9 November 1 am to 9 November 7 am : Cold, Clear, light winds 
+9 November 7 am to 9 November 4 pm : Cold, light winds
+9 November 4 pm to 9 November 10 pm : Cold light winds 
+9 November 10 pm to 10 November 12 am : Cold, light winds",331,44.01149058,-92.48389829
+Minnesota,Bemidji,56601,"8 November 12 am to 8 November 4 pm : Clear, Cold
+8 November 4 pm to 8 November 5 pm : Light Rain, Cold
+8 November 5 pm to 8 November 7 pm : Clear, Cold
+8 November 7 pm to 8 November 9 pm : Light Rain, Cold
+8 November 9 pm to 9 November 12 am : Clear, Cold
+9 November 12 am to 9 November 2 am : Clear, Cold
+9 November 2 am to 9 November 3 am : Light Snow,Cold
+9 November 3 am to 9 November 4 am : Clear, Cold
+9 November 4 am to 9 November 6 am : Light Snow, Cold
+9 November 6 am to 9 November 7 am : Clear, Cold
+9 November 7 am to 9 November 10 am : Light Snow, Cold
+9 November 10 am to 9 November 11 am : Light Rain, Cold
+9 November 11 am to 9 November 10 pm : Light Snow, Cold
+9 November 10 pm to 10 November 12 am : Clear, Cold",416,47.47120666,-94.88236325
+Minnesota,Crookston,56716,"8 November 12 am to 8 November 2 am : Clear, Cold
+8 November 2 am to 8 November 5 am : Light Fog, Cold
+8 November 5 am to 8 November 6 am : Light Rain, Light Fog, Cold
+8 November 6 am to 8 November 9 am : Light Fog, Cold
+8 November 9 am to 8 November 4 pm : Clear, Cold
+8 November 4 pm to 8 November 6 pm : Light Rain, Cold
+8 November 6 pm to 9 November 12 am : Clear,Cold
+9 November 12 am to 9 November 3 am : Clear, Cold
+9 November 3 am to 9 November 4 am : Light Rain,Cold
+9 November 4 am to 9 November 8 am : Clear, Cold
+9 November 8 am to 9 November 9 am : Light Snow, Cold
+9 November 8 am to 9 November 12 pm : Clear, Cold
+9 November 12 pm to 9 November 2 pm : Light Snow , Light Fog,Cold
+9 November 2 pm to 9 November 3 pm : Light Fog, Cold
+9 November 3 pm to 9 November 5 pm : Light Snow, Light Fog, Cold
+9 November 5 pm to 9 November 11 pm : Light Snow, Cold
+9 November 11 pm to 10 November 12 am : Clear, Cold",419,47.77469412,-96.60950703
+Indiana,Hammond,46323,"8 November 12 am to 8 November 12 pm : Cold, light winds
+8 November 12 pm to 8 November 5 pm : light winds
+8 November 5 pm to 8 November 8 pm : Cold, light winds
+8 November 8 pm to 8 November 9 pm : Cold, Light fog, light winds, light rain
+8 November 9 pm to 8 Novemebr 10 pm : Light fog, light winds, cold
+8 November 10 pm to 9 November 4 pm : light winds, cold
+9 November 4 pm to 10 November 12 am : cold
+",181,41.58392151,-87.49640341

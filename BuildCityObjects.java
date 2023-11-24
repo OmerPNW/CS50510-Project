@@ -19,8 +19,8 @@ public class BuildCityObjects {
 
 
     public static void main(String[] args) throws IOException{
-        String citiesCsvPath = "HW6_weather.csv";
-        String connectionCsvPath = "HW6_Data_City_Connections.csv";
+        String citiesCsvPath = "Cities.txt";
+        String connectionCsvPath = "Connections_test.txt";
 
         // Create a FileHandler that writes log messages to a file
         FileHandler fileHandlerInfo = new FileHandler("info.log");
@@ -41,16 +41,16 @@ public class BuildCityObjects {
         
         Map<String, String[]> weatherData;
         Map<String, String[]> connectionData;
-        HashMap<String, City> cities = new HashMap<>();
+        HashMap<String, City> cities;
         try{
             weatherData = LDP.loadIndividualCityData(citiesCsvPath);
             connectionData = LDP.loadCityConnectionData(connectionCsvPath);
             cities = twoWayBuild(weatherData, connectionData);
 
-            // for (Map.Entry<String, City> city : cities.entrySet()){
-            //     System.out.println(city.getKey());
-            //     city.getValue().printObject();
-            // }
+            for (Map.Entry<String, City> city : cities.entrySet()){
+                System.out.println(city.getKey());
+                city.getValue().printObject();
+            }
 
             // System.out.println(checkConnectivity(cities));
 
@@ -65,7 +65,7 @@ public class BuildCityObjects {
         HashMap<String, City> cities = new HashMap<>();
 
         for (Map.Entry<String, String[]> weatherEntry : weatherData.entrySet()) {
-                String key = StringStandardize.standardizeString(weatherEntry.getKey());
+                String key = weatherEntry.getKey();
                 String[] values = weatherEntry.getValue();
                 int seaLevel;
                 float lat;
@@ -87,18 +87,25 @@ public class BuildCityObjects {
                     lat = -400;
                     lngt = -400;
                     System.out.println("No lat lng found. Assuming invalid vals");
-                }                      
+                }        
                 cities.put(key, new City(values[1],values[0], values[2], seaLevel, values[3], lat, lngt));
             }
         for (Map.Entry<String, String[]> connectionEntry : connectionData.entrySet()) {
             String[] keySplits = connectionEntry.getKey().split(",");
-            String key = StringStandardize.standardizeString(keySplits[0]);
+            String key = keySplits[0];
+
             String[] connectionCity = connectionEntry.getValue();
             City city = cities.get(key);
+
             if (city != null){
-                city.connections.add(new CityConnectionStruct(StringStandardize.standardizeString(connectionCity[2]),
-                 Float.parseFloat(connectionCity[3]), Integer.parseInt(connectionCity[4])));
+
+                String state = connectionCity[2];
+                if (StringStandardize.standardizeString(state).equals(""))
+                    state = city.state;
+                city.connections.add(new CityConnectionStruct(connectionCity[3], state,
+                 Float.parseFloat(connectionCity[4]), Integer.parseInt(connectionCity[5])));
             }
+
         }
         return cities;
 
@@ -110,14 +117,16 @@ public class BuildCityObjects {
                 String key = cityEntry.getKey();
                 City city = cityEntry.getValue();
                 for (CityConnectionStruct c: city.connections){
-                    City connCity = cities.get(c.name);
+                    String connkey = StringStandardize.standardizeString(c.state) + "__" + StringStandardize.standardizeString(c.name);
+                    City connCity = cities.get(connkey);
                     if (connCity != null){
                         boolean isPresent = false;
                         for (CityConnectionStruct backConnC : connCity.connections){
-                            if (backConnC.name.equals(key)) isPresent = true;
+                            String backConnCKey = StringStandardize.standardizeString(backConnC.state) + "__" + StringStandardize.standardizeString(backConnC.name);
+                            if (backConnCKey.equals(key)) isPresent = true;
                         }
                         if (!isPresent){
-                            connCity.connections.add(new CityConnectionStruct(key, c.distance, c.timeTaken));
+                            connCity.connections.add(new CityConnectionStruct(city.name, city.state, c.distance, c.timeTaken));
                         }
                     }
                 }
@@ -143,8 +152,9 @@ public class BuildCityObjects {
                 cityNames.add(dequeueKey);
                 // System.out.println(dequeueKey);
                 for (CityConnectionStruct connectCity : city.connections) {
-                    if (!cityNames.contains(connectCity.name) && !queue.contains(connectCity.name)){
-                        queue.add(connectCity.name);
+                    String connkey = StringStandardize.standardizeString(connectCity.state) + "__" + StringStandardize.standardizeString(connectCity.name);
+                    if (!cityNames.contains(connkey) && !queue.contains(connkey)){
+                        queue.add(connkey);
                     }
                 }
             }
@@ -178,6 +188,8 @@ public class BuildCityObjects {
         }
 
     }
+    
+    
     public static void printAdjacencyList(HashMap<String, City> cityMap){
         int totalCities = 0;
         int totalConnections = 0;
@@ -188,8 +200,9 @@ public class BuildCityObjects {
             System.out.println("####");
             System.out.print(city.name + " ( " + city.state + " ) :");
             for (CityConnectionStruct cityConnectionStruct : city.connections){
-                if (cityMap.get(cityConnectionStruct.name)!= null){
-                    String connCityState = cityMap.get(cityConnectionStruct.name).state ;
+                String connkey = StringStandardize.standardizeString(cityConnectionStruct.state) + "__" + StringStandardize.standardizeString(cityConnectionStruct.name);
+                if (cityMap.get(connkey)!= null){
+                    String connCityState = cityMap.get(connkey).state ;
                     if (connCityState.equals(city.state)) System.out.print(" --- " + cityConnectionStruct.distance   + " km ---> " + cityConnectionStruct.name + " ,");
                     else System.out.print(" --- " + cityConnectionStruct.distance   + " km ---> " + cityConnectionStruct.name + "(" + connCityState + ") ," );
                 }
@@ -203,17 +216,35 @@ public class BuildCityObjects {
         System.out.println("Avg connections per city are : " + (totalConnections * 1.0f/totalCities));
 
     }
+
+    public static HashMap<String, City> copyCityMap(HashMap<String, City> cityMap){
+
+        HashMap<String, City> newCityMap = new HashMap<>();
+        for (Map.Entry<String,City> me: cityMap.entrySet()) newCityMap.put(me.getKey(), new City(me.getValue()));
+        return newCityMap;
+    }
 }
 
 class CityConnectionStruct {
     final String name;
+    final String state;
     final float distance;
     final int timeTaken;
-    CityConnectionStruct(String name, float distance, int timeTaken){
+    String meta;
+    CityConnectionStruct(String name, String state, float distance, int timeTaken){
         this.name = name;
+        this.state = state;
         this.distance = distance;
         this.timeTaken = timeTaken;
 
+    }
+    // copy cosntructor
+    CityConnectionStruct(CityConnectionStruct c){
+        this.name = c.name;
+        this.state = c.state;
+        this.distance = c.distance;
+        this.timeTaken = c.timeTaken;
+        this.meta = c.meta;
     }
 
     public void printString(String message, Logger logger){
@@ -223,7 +254,8 @@ class CityConnectionStruct {
 
     public void printObject(Logger logger){
         printString("---Connection Info---", logger);
-        printString("Connected City Name : "+ name, logger);
+        printString("Connected City Name : "+ name + " in state of "+ state, logger);
+
         printString("Distance (forward) in km :" + String.valueOf(distance), logger);
         printString("Avg time taken (forward) in min :" + timeTaken, logger);
     }
@@ -254,6 +286,20 @@ class City {
         this(name, state, postCode, seaLevel, weatherDataString,-400, -400);
     }
 
+    // copy constructor
+    City(City city){
+        this.name = city.name;
+        this.state = city.state;
+        this.seaLevel = city.seaLevel;
+        this.postCode = city.postCode;
+        this.lat = city.lat;
+        this.lngt = city.lngt;
+        this.weatherData = city.weatherData;
+        this.connections = new LinkedList<>();
+        for (CityConnectionStruct c: city.connections){
+            this.connections.add(new CityConnectionStruct(c));
+        }
+    }
 
     public void printString(String message, Logger logger){
         if (logger == null) System.out.println(message);

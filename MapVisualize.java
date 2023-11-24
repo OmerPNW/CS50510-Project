@@ -46,8 +46,8 @@ public class MapVisualize extends JFrame {
         mapPanel.addMouseMotionListener(new MouseMotionAdapter() {
             @Override
             public void mouseMoved(MouseEvent e) {
-                for (String cityName : citiesDS.keySet()) {
-                    City city = citiesDS.get(cityName);
+                for (String cityNameKey : citiesDS.keySet()) {
+                    City city = citiesDS.get(cityNameKey);
                     float lat = city.lat;
                     float lngt = city.lngt;
                     if (new Ellipse2D.Double(convertCoords(lngt, "lngt") - 10, convertCoords(lat, "lat") - 10, 20, 20).contains(e.getPoint())) {
@@ -56,8 +56,8 @@ public class MapVisualize extends JFrame {
                     }
                     Point point1 = new Point((int)convertCoords(lngt, "lngt"), (int)convertCoords(lat, "lat"));
                     for (CityConnectionStruct ccs : city.connections){
-                        
-                            City connCity = citiesDS.get(ccs.name);
+                            String connCityKey = StringStandardize.standardizeString(ccs.state) + "__" + StringStandardize.standardizeString(ccs.name);
+                            City connCity = citiesDS.get(connCityKey);
                             if (connCity != null){
                                 float conn_x = convertCoords(connCity.lngt, "lngt") ;
                                 float conn_y  = convertCoords(connCity.lat, "lat");
@@ -162,8 +162,8 @@ public class MapVisualize extends JFrame {
                 g2d.drawString(city.name, x, y - 10);
 
                 for (CityConnectionStruct ccs : city.connections){
-                    
-                        City connCity = citiesDS.get(ccs.name);
+                        String connKey = StringStandardize.standardizeString(ccs.state) + "__" + StringStandardize.standardizeString(ccs.name);
+                        City connCity = citiesDS.get(connKey);
                         if (connCity != null){
                             float conn_x = convertCoords(connCity.lngt, "lngt") ;
                             float conn_y  = convertCoords(connCity.lat, "lat");
@@ -172,7 +172,7 @@ public class MapVisualize extends JFrame {
                             g2d.setColor(Color.RED);
                             g2d.drawLine((int)x, (int)y, (int)conn_x, (int)conn_y);
                             g2d.setColor(Color.BLACK);
-                            g2d.drawString(String.format("%.2f", distance), (x + conn_x) / 2, (y + conn_y) / 2);
+                            // g2d.drawString(String.format("%.2f", distance), (x + conn_x) / 2, (y + conn_y) / 2);
                         }
                 }
             }
@@ -193,8 +193,8 @@ public class MapVisualize extends JFrame {
     public static void main(String[] args) {
 
 
-        String citiesCsvPath = "Cities.txt" ;
-        String connectionCsvPath = "Connections.txt" ;
+        String citiesCsvPath = "Cities_2.txt" ;
+        String connectionCsvPath = "Connections_3.txt" ;
 
         try{
             Map<String, String[]> weatherData = LDP.loadIndividualCityData(citiesCsvPath);

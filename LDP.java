@@ -1,3 +1,4 @@
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -15,7 +16,7 @@ public class LDP {
     
 
     final static String[] inorderCityHeaders = {"State", "Source_city", "Postal Code", "Weather", "Sea_level/m", "Latitude / degrees(Optional)", "Longitude / degrees(Optional)"} ;
-    final static String[] inorderConnectionsHeaders = {"State", "City", "Destination", "Distance/km", "Time Taken/min"} ;
+    final static String[] inorderConnectionsHeaders = {"State", "City", "Destination State","Destination", "Distance/km", "Time Taken/min"} ;
 
     public static Map<String, String[]> loadIndividualCityData(String csvPath) throws IOException, Exception{
         Map<String, String[]> weatherData = new HashMap<>();
@@ -68,7 +69,7 @@ public class LDP {
                     if (index > inorderCityHeaders.length - 1) break;
                 }
 
-                String key = StringStandardize.standardizeString(weatherFields[1]); // City
+                String key = StringStandardize.standardizeString(weatherFields[0]) + "__" + StringStandardize.standardizeString(weatherFields[1]); // City
                 if (key.equals("")){
                     logger.warning("Empty .Found row with no city name in row "+ String.valueOf(rowNum + 1) + ". Skipping row");
                     continue ; // skip empty row
@@ -109,7 +110,7 @@ public class LDP {
             String line = scanner.nextLine();
             String[] headers = line.split(",");
             HashMap<String, ArrayList<String>> studentToCity = new HashMap<>();
-            final String[] expectedHeaders = {"City","Student ID"};
+            final String[] expectedHeaders = {"State", "City","Student ID"};
 
             for( int i=0; i< headers.length; i++){
                 if (!StringStandardize.standardizeString(headers[i]).equals(StringStandardize.standardizeString(expectedHeaders[i]))){
@@ -125,21 +126,21 @@ public class LDP {
             while( scanner.hasNextLine()){
                 rowNum += 1;
                 String[] fields = scanner.nextLine().split(",");
-                if (fields.length < 2){
+                if (fields.length < 3){
                     logger.warning("Empty .Found row with missing data . Row num "+ String.valueOf(rowNum + 1) +". Skipping");
                     continue ; // skip empty row
                 }
-                String key = StringStandardize.standardizeString(fields[0]);
-                if (key.equals("")){
-                    logger.warning("Empty . Found row with no city name in row "+ String.valueOf(rowNum + 1) + ". Skipping");
+                String key = StringStandardize.standardizeString(fields[0]) + "__" + StringStandardize.standardizeString(fields[1]);
+                if (key.equals("__")){
+                    logger.warning("Empty . Found row with no city or state name in row "+ String.valueOf(rowNum + 1) + ". Skipping");
                     continue ; // skip empty row
                 }
-                final String stndName = StringStandardize.standardizeString(fields[1]);
+                final String stndName = StringStandardize.standardizeString(fields[2]);
                 if (studentToCity.get(stndName)==null){
                     studentToCity.put(stndName, new ArrayList<>());
                 }
                 ArrayList<String> newCityList = studentToCity.get(stndName);
-                newCityList.add(StringStandardize.standardizeString(fields[0]));
+                newCityList.add(key);
                 studentToCity.put(stndName, newCityList);
                 // back connection
 
@@ -166,7 +167,7 @@ public class LDP {
             String line = scanner.nextLine();
             String[] headers = line.split(",");
             HashMap<String, String> cityToStudent = new HashMap<>();
-            final String[] expectedHeaders = {"City","Student ID"};
+            final String[] expectedHeaders = {"State", "City","Student ID"};
 
             for( int i=0; i< headers.length; i++){
                 if (!StringStandardize.standardizeString(headers[i]).equals(StringStandardize.standardizeString(expectedHeaders[i]))){
@@ -182,16 +183,16 @@ public class LDP {
             while( scanner.hasNextLine()){
                 rowNum += 1;
                 String[] fields = scanner.nextLine().split(",");
-                if (fields.length < 2){
+                if (fields.length < 3){
                     logger.warning("Empty .Found row with missing data . Row num "+ String.valueOf(rowNum + 1) + ". Skipping");
                     continue ; // skip empty row
                 }
-                String key = StringStandardize.standardizeString(fields[0]);
-                if (key.equals("")){
-                    logger.warning("Empty .Found row with no city name in row "+ String.valueOf(rowNum + 1) + ". Skipping");
+                String key = StringStandardize.standardizeString(fields[0]) + "__" + StringStandardize.standardizeString(fields[1]);
+                if (key.equals("__")){
+                    logger.warning("Empty .Found row with no state / city name in row "+ String.valueOf(rowNum + 1) + ". Skipping");
                     continue ; // skip empty row
                 }
-                final String studentName = StringStandardize.standardizeString(fields[1]);
+                final String studentName = StringStandardize.standardizeString(fields[2]);
                 cityToStudent.put(key, studentName);
             }
             return cityToStudent;
@@ -235,12 +236,14 @@ public class LDP {
                     logger.warning("Empty .Found row with missing data . Row num "+ String.valueOf(rowNum + 1) + ". Skipping");
                     continue ; // skip empty row
                 }
-                String key = StringStandardize.standardizeString(connectionFields[1]) + "," + StringStandardize.standardizeString(connectionFields[2]); // City + Destination City
+                String key = StringStandardize.standardizeString(connectionFields[0]) + "__" +
+                 StringStandardize.standardizeString(connectionFields[1]) + "," + StringStandardize.standardizeString(connectionFields[2]) + "__" +
+                StringStandardize.standardizeString(connectionFields[3]); // City + Destination City
                 if (key.equals(",")){
                     logger.warning("Empty .Found row with no city name in row "+ String.valueOf(rowNum + 1) + ". Skipping");
                     continue ; // skip empty row
                 }
-                if (!isNumber(connectionFields[3]) || !isNumber(connectionFields[4])){
+                if (!isNumber(connectionFields[4]) || !isNumber(connectionFields[5])){
                     logger.severe("Encountered non numeric data in a numeric column in City Data at row " + String.valueOf(rowNum + 1));
                     return null;
                 }
@@ -330,29 +333,31 @@ public class LDP {
 
             File outputCsvFile = new File(outputCsvPath);
             FileWriter fileWriter = new FileWriter(outputCsvFile);
+            BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
             String[] header = new String[] { "State", "City", "Postal Code", "Weather", "Sea level height", 
-            "Destination City", "Distance", "Time taken" };
-            fileWriter.write(String.join(",", header));
-
+            "Destination State","Destination City", "Distance", "Time taken" };
+            bufferedWriter.write(String.join(",", header));
+            bufferedWriter.newLine();
             // Perform inner join and write to output CSV
             for (Map.Entry<String, String[]> connectionEntry : connectionData.entrySet()) {
                 String[] keySplits = connectionEntry.getKey().split(",");
-                String key = StringStandardize.standardizeString(keySplits[0]);
+                String key = keySplits[0];
                 // System.out.println(key);
                 if (weatherData.containsKey(key)) {
                     String[] connectionFields = connectionEntry.getValue();
                     String[] weatherFields = weatherData.get(key);
                     String[] outputLine = new String[] {
-                        connectionFields[0], connectionFields[1], weatherFields[2], weatherFields[3], weatherFields[4],
-                        connectionFields[2], connectionFields[3], connectionFields[4]
+                        connectionFields[0], connectionFields[1], weatherFields[2], '"' + weatherFields[3] + '"', weatherFields[4],
+                        connectionFields[2], connectionFields[3], connectionFields[4], connectionFields[5]
                     };
-                    fileWriter.write(String.join(",",outputLine));
+                    bufferedWriter.write(String.join(",",outputLine));
+                    bufferedWriter.newLine();
                 }
 
             }
             logger.info("File is at :" + outputCsvPath);
             logger.info("-------END-------\n");
-            fileWriter.close();
+            bufferedWriter.close();
 
         } catch (IOException e) {
             logger.severe("-----INNER JOIN FILE CREATION ERROR ----");
@@ -390,8 +395,8 @@ public class LDP {
         /*
          * Data files, input * output
          */
-        String citiesCsvPath = "Cities.txt" ;
-        String connectionCsvPath = "Connections.txt" ;
+        String citiesCsvPath = "Cities_2.txt" ;
+        String connectionCsvPath = "Connections_test.txt" ;
         String contributionsCsvPath = "contributions.txt" ;
 
         // output inner join csv. Only vaild if createInnerJoin is true
@@ -453,6 +458,7 @@ public class LDP {
                 logger.info("-------- DESCRIBE ALL CITIES & CONNECTIONS -----");
                 for (Map.Entry<String, City> cityDS: citiesDS.entrySet()){
                     City c = cityDS.getValue();
+                    logger.info(cityDS.getKey());
                     c.printObject(logger);
                 }
                 logger.info("-------END--------------");

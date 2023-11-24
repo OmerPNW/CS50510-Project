@@ -1,0 +1,806 @@
+State,City,Destination State,Destination,Distance/km,Time_Taken/min
+Indiana,Hammond,Illinois,Chicago,45.7,38
+Indiana,Hammond,Illinois,Springfield,315,184
+Indiana,Hammond,Illinois,Rock Island,282,162
+Indiana,Hammond,Illinois,Peoria,258,145
+Indiana,Hammond,Illinois,Champaign,198,121
+,,,,,
+Alabama,Mobile,Alabama,Montgomery,271,146
+Alabama,Mobile,Alabama,Dothan,317,189
+Alabama,Mobile,Alabama,Tuscaloosa,315,213
+Alabama,Mobile,Mississippi,Meridian,215,140
+Alabama,Mobile,Mississippi,Biloxi,101,58
+Alabama,Mobile,Mississippi,Hattiesburg,153,96
+Alabama,Montgomery,Alabama,Mobile,271,143
+Alabama,Montgomery,Alabama,Dothan,174,125
+Alabama,Montgomery,Alabama,Birmingham,146,80
+Alabama,Montgomery,Alabama,Tuscaloosa,166,113
+Alabama,Montgomery,Alabama,Auburn,89,60
+Alabama,Montgomery,Mississippi,Meridian,252,164
+Alabama,Montgomery,Tennessee,Columbia,263,174
+Alabama,Montgomery,Mississippi,Oxford,166,126
+Alabama,Dothan,Alabama,Mobile,317,183
+Alabama,Dothan,Alabama,Montgomery,174,124
+Alabama,Dothan,Alabama,Tuscaloosa,331,235
+Alabama,Dothan,Alabama,Auburn,187,132
+Alabama,Birmingham,Alabama,Montgomery,145,81
+Alabama,Birmingham,Alabama,Huntsville,162,87
+Alabama,Birmingham,Alabama,Florence ,188,118
+Alabama,Birmingham,Alabama,Tuscaloosa,92,55
+Alabama,Birmingham,Alabama,Auburn,178,128
+Alabama,Birmingham,Mississippi,Meridian,235,132
+Alabama,Birmingham,Mississippi,Columbus,189,116
+Alabama,Birmingham,Mississippi,Oxford,298,168
+Alabama,Birmingham,Tennessee,Nashville,308,169
+Alabama,Birmingham,Tennessee,Chattanooga,237,137
+Alabama,Birmingham,Tennessee,Columbia,253,142
+,,,,,
+,,,,,
+Alabama,Huntsville,Alabama,Florence,122,87
+Alabama,Huntsville,Alabama,Tuscaloosa,252,140
+Alabama,Huntsville,Alabama,Auburn,325,127
+Alabama,Huntsville,Alabama,Birmingham,167,90
+Alabama,Huntsville,Mississippi,Oxford,308,187
+Alabama,Huntsville,Mississippi,Southaven,348,212
+Alabama,Huntsville,Mississippi,Columbus,265,186
+Alabama,Huntsville,Tennessee,Columbia,122,83
+Alabama,Huntsville,Tennessee,Nashville,178,112
+Alabama,Huntsville,Tennessee,Chattanooga,164,99
+Alabama,Huntsville,Tennessee,Memphis,347,214
+Alabama,Florence,Alabama,Huntsville,117,80
+Alabama,Florence,Alabama,Auburn,364,239
+Alabama,Florence,Alabama,Tuscaloosa,197,147
+Alabama,Florence,Alabama,Birmingham,187,116
+Alabama,Florence,Mississippi,Oxford,224,141
+Alabama,Florence,Mississippi,Southaven,251,155
+Alabama,Florence,Mississippi,Columbus,187,140
+Alabama,Florence,Tennessee,Dyersburg,251,167
+Alabama,Florence,Tennessee,Memphis,250,158
+Alabama,Tuscaloosa,Alabama,Huntsville,251,139
+Alabama,Tuscaloosa,Alabama,Florence,197,146
+Alabama,Tuscaloosa,Alabama,Auburn,253,166
+Alabama,Tuscaloosa,Alabama,Mobile,315,210
+Alabama,Tuscaloosa,Alabama,Montgomery,166,110
+Alabama,Tuscaloosa,Alabama,Birmingham,92.9,54
+Alabama,Tuscaloosa,Mississippi,Columbus,94.4,75
+Alabama,Auburn,Alabama,Huntsville,340,214
+Alabama,Auburn,Alabama,Florence,365,240
+Alabama,Auburn,Alabama,Tuscaloosa,253,166
+Alabama,Auburn,Alabama,Dothan,187,129
+Alabama,Auburn,Alabama,Montgomery,88.9,59
+Alabama,Auburn,Alabama,Birmingham,177,126
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+North Dakota,Bismarck,North Dakota,Jamestown,164,110
+North Dakota,Bismarck,North Dakota,Bowman,281,170
+North Dakota,Bismarck,North Dakota,Minot,178,130
+North Dakota,Bismarck,North Dakota,New Town,239,160
+North Dakota,Bismarck,North Dakota,Devils Lake,289,180
+North Dakota,Bismarck,South Dakota,Pierre,330,210
+North Dakota,Bismarck,South Dakota,Mobridge,181,120
+North Dakota,Jamestown,North Dakota,Bismarck,164,110
+North Dakota,Jamestown,North Dakota,Fargo,155,110
+North Dakota,Jamestown,North Dakota,Devils Lake,159,100
+North Dakota,Jamestown,North Dakota,Minot,274,170
+North Dakota,Jamestown,North Dakota,New Town,358,220
+North Dakota,Jamestown,South Dakota,Aberdeen,166,110
+North Dakota,Bowman,North Dakota,Bismarck,285,172
+North Dakota,Bowman,North Dakota,Minot,402,250
+North Dakota,Bowman,North Dakota,New Town,272,170
+North Dakota,Bowman,South Dakota,Rapid City,264,160
+North Dakota,Bowman,South Dakota,Mobridge,262,170
+North Dakota,Minot,North Dakota,Bismarck,178,130
+North Dakota,Minot,North Dakota,Jamestown,274,170
+North Dakota,Minot,North Dakota,Devils Lake,195,120
+North Dakota,Minot,North Dakota,New Town,119,85
+North Dakota,Minot,North Dakota,Bowman,402,250
+North Dakota,Fargo,North Dakota,Jamestown,155,100
+North Dakota,Fargo,North Dakota,Grand Forks,130,85
+North Dakota,Fargo,Minnesota,St Cloud,277,190
+North Dakota,Grand Forks,North Dakota,Fargo,130,90
+North Dakota,Grand Forks,North Dakota,Devils Lake,144,100
+North Dakota,Grand Forks,Minnesota,Thief River Falls,82.7,60
+North Dakota,Grand Forks,Minnesota,Crookston,40.7,30
+North Dakota,New Town,North Dakota,Bismarck,239,160
+North Dakota,New Town,North Dakota,Jamestown,358,220
+North Dakota,New Town,North Dakota,Minot,119,90
+North Dakota,New Town,North Dakota,Bowman,272,170
+North Dakota,Devils Lake,North Dakota,Bismarck,289,180
+North Dakota,Devils Lake,North Dakota,Jamestown,159,100
+North Dakota,Devils Lake,North Dakota,Minot,195,110
+North Dakota,Devils Lake,North Dakota,Grand Forks,144,100
+,,,,,
+Wisconsin,Milwaukee,Wisconsin,Appleton,172,95
+Wisconsin,Milwaukee,Wisconsin,Madison,128,76
+Wisconsin,Milwaukee,Wisconsin,Wausau,303,169
+Wisconsin,Milwaukee,Illinois,Chicago,149,96
+Wisconsin,Milwaukee,Illinois,Rockford,152,90
+Wisconsin,appleton,Wisconsin,milwaukee,172,93
+Wisconsin,appleton,Wisconsin,Madison,169,109
+Wisconsin,appleton,Wisconsin,Wisconsin Dells,160,113
+Wisconsin,appleton,Wisconsin,Eau Claire,293,178
+Wisconsin,appleton,Wisconsin,Green Bay,34,51
+Wisconsin,appleton,Wisconsin,Wausau,165,93
+Wisconsin,madison,Wisconsin,Milwaukee,128,75
+Wisconsin,madison,Wisconsin,Appleton,175,109
+Wisconsin,madison,Wisconsin,Wisconsin Dells,87.3,59
+Wisconsin,madison,Wisconsin,Eau Claire,287,165
+Wisconsin,madison,Wisconsin,Green Bay,226,136
+Wisconsin,madison,Wisconsin,Wausau,230,131
+Wisconsin,wisconsin dells,Wisconsin,milwaukee,196,107
+Wisconsin,wisconsin dells,Wisconsin,appleton,161,115
+Wisconsin,wisconsin dells,Wisconsin,madison,86.2,59
+Wisconsin,wisconsin dells,Wisconsin,Eau Claire,201,115
+Wisconsin,wisconsin dells,Wisconsin,Green Bay,212,141
+Wisconsin,wisconsin dells,Wisconsin,Wausau,181,102
+Wisconsin,Eau claire,Wisconsin,appleton,294,181
+Wisconsin,Eau claire,Wisconsin,madison,286,167
+Wisconsin,Eau claire,Wisconsin,wisconsin dells,201,116
+Wisconsin,Eau claire,Wisconsin,Green Bay,309,179
+Wisconsin,Eau claire,Wisconsin,Superior,244,145
+Wisconsin,Eau claire,Wisconsin,Wausau,160,93
+Wisconsin,green bay,Wisconsin,milwaukee,188,108
+Wisconsin,green bay,Wisconsin,appleton,52.5,36
+Wisconsin,green bay,Wisconsin,madison,222,138
+Wisconsin,green bay,Wisconsin,wisconsin dells,213,143
+Wisconsin,green bay,Wisconsin,Wausau,158,90
+Wisconsin,green bay,Wisconsin,eau claire,313,176
+Wisconsin,superior,Wisconsin,Wausau,375,216
+Wisconsin,superior,Wisconsin,eau claire,242,141
+Wisconsin,Wausau,Wisconsin,milwaukee,304,172
+Wisconsin,Wausau,Wisconsin,Appleton,166,96
+Wisconsin,Wausau,Wisconsin,Madison,230,136
+Wisconsin,Wausau,Wisconsin,Wisconsin Dells,181,105
+Wisconsin,Wausau,Wisconsin,Eau Claire,162,95
+Wisconsin,Wausau,Wisconsin,Green Bay,157,94
+Wisconsin,Wausau,Wisconsin,Superior,377,217
+Wisconsin,milwaukee,Illinois, Naperville,168,109
+Wisconsin,eau claire,Minnesota, minneapolis,149,93
+Wisconsin,Madison,Iowa, Dubuque,148,94
+,,,,,
+South Dakota,Pierre,North Dakota,Bismarck,330,210
+South Dakota,Pierre,South Dakota,Mobridge,175,108
+South Dakota,Pierre,South Dakota,Mitchell,247,136
+South Dakota,Pierre,South Dakota,Aberdeen,256,157
+South Dakota,Pierre,South Dakota,Murdo,88,55
+South Dakota,Pierre,South Dakota,Watertown,301,187
+South Dakota,Pierre,South Dakota,Rapid City,278,160
+South Dakota,Mobridge,South Dakota,Mitchell,380,208
+South Dakota,Mobridge,South Dakota,Pierre,174,108
+South Dakota,Mobridge,North Dakota,Bismarck,113,120
+South Dakota,Mobridge,South Dakota,Murdo,262,162
+South Dakota,Mobridge,South Dakota,Aberdeen,161,102
+South Dakota,Mobridge,North Dakota,Bowman,263,170
+South Dakota,Aberdeen,Minnesota,St Cloud,235,252
+South Dakota,Aberdeen,South Dakota,Sioux Falls,328,193
+South Dakota,Aberdeen,South Dakota,Pierre,262,159
+South Dakota,Aberdeen,South Dakota,Watertown,163,101
+South Dakota,Aberdeen,South Dakota,Mobridge,161,102
+South Dakota,Aberdeen,North Dakota,Jamestown,166,110
+South Dakota,Rapid City,South Dakota,Murdo,220,117
+South Dakota,Rapid City,South Dakota,Pierre,277,157
+South Dakota,Rapid City,North Dakota,Bowman,258,170
+South Dakota,Mitchell,South Dakota,Vermillion,176,111
+South Dakota,Mitchell,South Dakota,Pierre,246,140
+South Dakota,Mitchell,South Dakota,Watertown,206,132
+South Dakota,Mitchell,South Dakota,Murdo,225,125
+South Dakota,Mitchell,South Dakota,Aberdeen,231,142
+South Dakota,Mitchell,South Dakota,Sioux Falls,117,67
+South Dakota,Murdo,South Dakota,Rapid City,220,125
+South Dakota,Murdo,South Dakota,Pierre,88,53
+South Dakota,Murdo,South Dakota,Aberdeen,353,210
+South Dakota,Murdo,South Dakota,Mobridge,262,202
+South Dakota,Murdo,South Dakota,Mitchell,226,121
+South Dakota,Sioux Falls,South Dakota,Aberdeen,327,189
+South Dakota,Sioux Falls,South Dakota,Vermillion,102,62
+South Dakota,Sioux Falls,South Dakota,Mitchell,117,68
+South Dakota,Sioux Falls,South Dakota,Watertown,167,94
+South Dakota,Watertown,South Dakota,Aberdeen,163,102
+South Dakota,Watertown,South Dakota,Mitchell,207,133
+South Dakota,Watertown,South Dakota,Pierre,301,187
+South Dakota,Vermillion,South Dakota,Sioux Falls,101,60
+South Dakota,Vermillion,South Dakota,Mitchell,176,115
+South Dakota,Vermillion,Nebraska,Ainsworth,180,181
+South Dakota,Sioux Falls,Iowa,Le Mars,86,85
+,,,,,
+,,,,,
+Illinois,Chicago,Indiana,Hammond,46.7,33
+Illinois,Chicago,Wisconsin,Milwaukee,148,88
+Illinois,Chicago,Illinois,Rockford,143,83
+Illinois,Chicago,Illinois,Rock Island,271,162
+Illinois,Chicago,Illinois,Peoria,267,149
+Illinois,Chicago,Illinois,Champaign,218,127
+Illinois,Quincy,Missouri,Kirksville,119,83
+Illinois,Quincy,Illinois,Springfield,179,109
+Illinois,Quincy,Illinois,Rock Island,232,153
+Illinois,Quincy,Illinois,Peoria,206,143
+Illinois,Rockford,Wisconsin,Madison,119,78
+Illinois,Rockford,Wisconsin,Milwaukee,153,94
+Illinois,Rockford,Iowa,Davenport,208,128
+Illinois,Rockford,Illinois,Chicago,143,86
+Illinois,Rockford,Illinois,Rock Island,197,126
+Illinois,Rockford,Illinois,Peoria,219,141
+Illinois,Rockford,Indiana,Hammond,186,112
+Illinois,Springfield,Indiana,Hammond,315,184
+Illinois,Springfield,Illinois,Quincy,178,106
+Illinois,Springfield,Illinois,Rock Island,280,161
+Illinois,Springfield,Illinois,Peoria,119,71
+Illinois,Springfield,Illinois,Champaign,139,83
+Illinois,Springfield,Missouri,St. louis,156,87
+Illinois,Springfield,Illinois,Carbondale,271,174
+Illinois,Rock Island,Indiana,Hammond,282,162
+Illinois,Rock Island,Iowa,Davenport,2.7,4
+Illinois,Rock Island,Illinois,Chicago,273,170
+Illinois,Rock Island,Illinois,Rockford,197,127
+Illinois,Rock Island,Illinois,Quincy,236,150
+Illinois,Rock Island,Illinois,Springfield,279,158
+Illinois,Rock Island,Illinois,Peoria,161,92
+Illinois,Peoria,Indiana,Hammond,258,145
+Illinois,Peoria,Iowa,Davenport,158,95
+Illinois,Peoria,Illinois,Chicago,269,155
+Illinois,Peoria,Illinois,Rockford,217,139
+Illinois,Peoria,Illinois,Quincy,205,143
+Illinois,Peoria,Illinois,Springfield,118,68
+Illinois,Peoria,Illinois,Rock Island,162,92
+Illinois,Peoria,Illinois,Champaign,144,85
+Illinois,Champaign,Indiana,Hammond,198,121
+Illinois,Champaign,Illinois,Chicago,217,126
+Illinois,Champaign,Illinois,Springfield,139,82
+Illinois,Champaign,Illinois,Peoria,145,93
+Illinois,Champaign,Illinois,Carbondale,315,186
+Illinois,Carbondale,Illinois,Springfield,270,174
+Illinois,Carbondale,Illinois,Champaign,321,190
+,,,,,
+Louisiana,Alexandria,Louisiana,Lake charles,159,104
+Louisiana,Alexandria,Louisiana,Lafayette,142,78
+Louisiana,Alexandria,Louisiana,New orleans,327,193
+Louisiana,Alexandria,Louisiana,Baton Rouge,200,122
+Louisiana,Alexandria,Louisiana,Monroe,153,103
+Louisiana,Alexandria,Louisiana,Shreveport,200,108
+Louisiana,Lake charles,Louisiana,Alexandria,159,104
+Louisiana,Lake charles,Louisiana,Lafayette,120,71
+Louisiana,Lake charles,Louisiana,New orleans,331,196
+Louisiana,Lake charles,Louisiana,Baton Rouge,204,124
+Louisiana,Lake charles,Louisiana,Shreveport,304,206
+Louisiana,Lafayette,Louisiana,Alexandria,143,79
+Louisiana,Lafayette,Louisiana,Lake charles,121,72
+Louisiana,Lafayette,Louisiana,New orleans,217,150
+Louisiana,Lafayette,Louisiana,Baton Rouge,90,77
+Louisiana,Lafayette,Louisiana,Monroe,294,181
+Louisiana,New orleans,Louisiana,Baton Rouge,131,77
+Louisiana,Baton Rouge,Louisiana,Alexandria,198,122
+Louisiana,Baton Rouge,Louisiana,Lafayette,89,55
+Louisiana,Baton Rouge,Louisiana,New orleans,131,80
+Louisiana,Baton Rouge,Louisiana,Monroe,300,201
+Louisiana,Monroe,Louisiana,Alexandria,153,102
+Louisiana,Monroe,Louisiana,Lake charles,311,202
+Louisiana,Monroe,Louisiana,Shreveport,159,88
+Louisiana,Shreveport,Louisiana,Alexandria,291,110
+Louisiana,Shreveport,Louisiana,Lake charles,302,199
+Louisiana,Shreveport,Louisiana,Monroe,160,90
+Louisiana,Shreveport,Texas,tyler,157,92
+Louisiana,Shreveport,Texas,dallas,302,169
+Louisiana,lake charles,Texas,houston,231,133
+Louisiana,lake charles,Texas,port arthur,92,65
+Louisiana,lake charles,Texas,galveston,219,170
+Louisiana,alexandria,Texas,tyler,343,192
+Louisiana,alexandria,Texas,port arthur,249,161
+Louisiana,alexandria,Mississippi,jackson,286,194
+Louisiana,baton rouge,Mississippi,jackson,282,159
+Louisiana,baton rouge,Mississippi,biloxi,238,134
+Louisiana,new orleans,Mississippi,Meridians,319,180
+Louisiana,new orleans,Mississippi,biloxi,145,110
+Louisiana,new orleans,Mississippi,jackson,300,174
+Louisiana,monroe,Arkansas,little rock,284,180
+Louisiana,shreveport,Arkansas,little rock,343,190
+,,,,,
+Nebraska,Ainsworth,Nebraska,O'neil,106,65
+Nebraska,Ainsworth,Nebraska,Grand Island,270,170
+Nebraska,Ainsworth,Nebraska,Hyannis,241,150
+Nebraska,Ainsworth,Nebraska,Lexington,234,140
+Nebraska,O'neil,Nebraska,Ainsworth,106,65
+Nebraska,O'neil,Nebraska,Grand Island,180,110
+Nebraska,O'neil,Nebraska,Columbus,188,120
+Nebraska,O'neil,Nebraska,Omaha,311,200
+Nebraska,O'neil,Nebraska,Lexington,266,170
+Nebraska,Omaha,Nebraska,O'neil,311,200
+Nebraska,Omaha,Iowa,Sioux City,155,85
+Nebraska,Omaha,Nebraska,Columbus,147,90
+Nebraska,Omaha,Nebraska,Lincoln,95,55
+Nebraska,Grand Island,Nebraska,Ainsworth,270,170
+Nebraska,Grand Island,Nebraska,Lincoln,152,90
+Nebraska,Grand Island,Nebraska,Hyannis,343,210
+Nebraska,Grand Island,Nebraska,Lexington,140,81
+Nebraska,Grand Island,Kansas,WaKeeney,323,195
+Nebraska,Grand Island,Nebraska,Columbus,103,70
+Nebraska,Grand Island,Nebraska,O'neil,180,110
+Nebraska,Columbus,Nebraska,Grand Island,103,70
+Nebraska,Columbus,Nebraska,O'neil,188,120
+Nebraska,Columbus,Nebraska,Omaha,147,90
+Nebraska,Columbus,Nebraska,Hyannis,424,260
+Nebraska,Columbus,Nebraska,Lincoln,123,66
+Nebraska,Lincoln,Nebraska,Grand Island,152,90
+Nebraska,Lincoln,Nebraska,Omaha,93,55
+Nebraska,Lincoln,Nebraska,Columbus,123,66
+Nebraska,Lincoln,Missouri,Kansas City,309,184
+Nebraska,Lincoln,Nebraska,Lexington,267,152
+Nebraska,Lexington,Nebraska,Hyannis,274,170
+Nebraska,Lexington,Nebraska,Ainsworth,234,140
+Nebraska,Lexington,Nebraska,Grand Island,140,80
+Nebraska,Lexington,Nebraska,O'neil,266,170
+Nebraska,Lexington,Nebraska,Lincoln,267,152
+Nebraska,Hyannis,Nebraska,Ainsworth,241,150
+Nebraska,Hyannis,Nebraska,Lexington,274,170
+Nebraska,Hyannis,Nebraska,Columbus,424,258
+Nebraska,Hyannis,Nebraska,Grand Island,343,210
+Nebraska,Columbus,Iowa,Sioux City,188,130
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+Minnesota,Minneapolis ,Minnesota,St Cloud,105,64
+Minnesota,St Cloud ,Minnesota,Crookston,225,213
+Minnesota,St Cloud ,Minnesota,Thief River Falls ,362,231
+Minnesota,St Cloud ,Minnesota,Duluth,232,141
+Minnesota,St Cloud ,Minnesota,Bemidji,246,153
+Minnesota,St Cloud ,Minnesota,St Paul,121,69
+Minnesota,St Paul,Minnesota,Minneapolis,19,20
+Minnesota,St Paul,Minnesota,Rochester,124,74
+Minnesota,St Paul,Minnesota,Duluth,243,135
+Minnesota,Minneapolis ,Minnesota,Duluth,248,136
+Minnesota,Crookston ,Minnesota,Thief River Falls ,66,47
+Minnesota,Bemidji,Minnesota,Crookston,142,86
+Minnesota,Minneapolis ,Minnesota,Thief River Falls ,473,292
+Minnesota,Crookston ,Minnesota,Duluth,381,246
+Minnesota,Duluth ,Minnesota,Thief River Falls ,386,256
+Minnesota,Rochester,Iowa,Mason City,144,93
+Minnesota,Rochester,Iowa,Cedar Rapids ,273,175
+Minnesota,St Cloud ,Sotuh Dakota,Aberdeen,235,252
+Minnesota,Rochester,Wisconsin,Madison,336,194
+Minnesota,Crookston ,North Dakota,Devils Lake,186,113
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+Texas,Amarillo,Texas,Lubbock,197,110
+Texas,Lubbock,Texas,Wichita Falls,336,200
+Texas,Lubbock,Texas,San Angelo,314,190
+Texas,San Angelo,Texas,Fort Stockton,265,160
+Texas,San Angelo,Texas,San Antonio,339,210
+Texas,San Angelo ,Texas,Austin,330,240
+Texas,San Angelo,Texas,Waco,336,210
+Texas,Dallas,Texas,Wichita Falls,226,150
+Texas,Dallas,Texas,Tyler,158,110
+Texas,Dallas,Texas,Waco,155,110
+Texas,Dallas,Arkansas,Texarkana,287,161
+Texas,Waco ,Texas,Austin,164,130
+Texas,Waco ,Texas,College Station,148,105
+Texas,Waco,Texas,Tyler,210,150
+Texas,Texarkana,Texas,Tyler,186,135
+Texas,College Station,Texas,Tyler,241,190
+Texas,Houston,Texas,Tyler,320,250
+Texas,Port Arthur,Texas,Tyler,342,270
+Texas,Houston,Texas,College Station,153,105
+Texas,Houston,Texas,San Antonio,318,200
+Texas,Houston ,Texas,Austin,266,180
+Texas ,Austin ,Texas,San Antonio,128,90
+Texas,Austin,Texas,College Station,172,120
+Texas,Austin,Texas,Port Lavaca,245,180
+Texas,San Antonio,Texas,Corpus Christi,231,135
+Texas,Corpus Christi,Texas,Port Lavaca,136,90
+Texas,Fort Stockton,Texas,Del Rio,298,170
+Texas,Port Arthur,Texas,Houston,144,90
+Texas,Port Lavaca,Texas,Houston,205,135
+Texas,Port Lavaca,Texas,San Antonio,227,165
+Texas,Fort Stockton,Texas,Del Rio,298,180
+Texas,Port Arthur,Louisiana,Lake Charles,96,70
+Texas,Dallas,Oklahoma,Antlers,243,155
+Texas,Texarkana,Oklahoma,Antlers,220,140
+Texas,Texarkana,Louisiana,Shreveport,118,70
+Texas,Texarkana,Arkansas,Texarkana,2,1
+,,,,,
+Texas,Port Isabel,Texas,Corpus Christi,284,170
+Texas,Port Isabel,Texas,Laredo,354,260
+Texas,Waco,Texas,Fredericksburg,272,180
+Texas,Waco,Texas,San Angelo,337,215
+Texas,Waco,Texas,Wichita Falls,326,190
+Texas,Waco,Texas,Houston,294,190
+Texas,College Station,Texas,Fredericksburg,294,220
+Texas,College Station,Texas,San Antonio,273,205
+Texas,College Station,Texas,Tyler,240,115
+Texas,College Station,Texas,Waco,148,102
+Texas,College Station,Texas,Houston,156,97
+Texas,College Station,Texas,Corpus Christi,382,260
+Texas,Fredericksburg,Texas,San Antonio,112,75
+Texas,Fredericksburg,Texas,Austin,125,107
+Texas,Fredericksburg,Texas,Waco,287,190
+Texas,Fredericksburg,Texas,College Station,294,220
+Texas,Fredericksburg,Texas,San Angelo,235,140
+Texas,Fredericksburg,Texas,Del Rio,278,170
+Texas,San Angelo,Texas,Del Rio,252,160
+Texas,San Angelo,Texas,Fredericksburg,236,145
+Texas,San Angelo,Texas,Wichita Falls,374,225
+Texas,Laredo,Texas,Port Isabel,345,235
+Texas,Laredo,Texas,San Antonio,252,160
+Texas,Laredo,Texas,Del Rio,288,195
+Texas,Laredo,Texas,Fredericksburg,354,230
+Texas,Del Rio,Texas,San Antonio,252,170
+Texas,Del Rio,Texas,Fredericksburg,281,170
+Texas,Del Rio,Texas,San Angelo,252,160
+Texas,Del Rio,Texas,Laredo,288,200
+Texas,Tyler,Texas,Waco,210,155
+Texas,Tyler,Texas,College Station,241,185
+Texas,Tyler,Texas,Dallas,157,110
+Texas,Tyler,Louisiana,Shreveport,157,97
+Texas,Tyler,Texas,Texarkana,186,135
+Texas,Wichita Falls,Texas,Waco,327,195
+Texas,Wichita Falls,Texas,San Angelo,375,235
+Texas,Wichita Falls,Oklahoma,Oklahama City,223,130
+Texas,Galveston,Texas,Houston,81,62
+Texas,Galveston,Texas,College Station,234,155
+Texas,San Antonio,Texas,Waco,290,185
+Texas,San Antonio,Texas,Del Rio,251,165
+Texas,San Antonio,Texas,College Station,272,190
+Texas,San Antonio,Texas,Laredo,252,155
+Texas,San Antonio,Texas,Corpus Christi,231,135
+Texas,San Antonio,Texas,San Angelo,339,200
+Texas,Austin,Texas,Galveston,347,230
+Texas,Austin,Texas,Houston,266,170
+Texas,Houston,Texas,Galveston,82,60
+Texas,Corpus Christi,Texas,Port Isabel,283,170
+,,,,,
+Mississippi,Meridian,Mississippi,Jackson,148,100
+Mississippi,Meridian,Mississippi,Biloxi,265,180
+Mississippi,Meridian,Mississippi,Columbus,149,100
+Mississippi,Meridian,Mississippi,Southaven,353,250
+Mississippi,Meridian,Mississippi,Hattiesburg,140,100
+Mississippi,Meridian,Mississippi,Oxford,261,220
+Mississippi,Jackson,Mississippi,Meridian,149,100
+Mississippi,Jackson,Mississippi,Biloxi,266,210
+Mississippi,Jackson,Mississippi,Columbus,246,180
+Mississippi,Jackson,Mississippi,Southaven,317,190
+Mississippi,Jackson,Mississippi,Hattiesburg,145,130
+Mississippi,Jackson,Mississippi,Oxford,259,180
+Mississippi,Biloxi,Mississippi,Meridian,266,180
+Mississippi,Biloxi,Mississippi,Jackson,267,210
+Mississippi,Biloxi,Mississippi,Hattiesburg,121,100
+Mississippi,Biloxi,Louisiana,New Orleans,147,120
+Mississippi,Columbus,Mississippi,Meridian,149,100
+Mississippi,Columbus,Mississippi,Jackson,246,170
+Mississippi,Columbus,Mississippi,Southaven,267,180
+Mississippi,Columbus,Mississippi,Hattiesburg,287,180
+Mississippi,Columbus,Mississippi,Oxford,169,130
+Mississippi,Columbus,Alabama,Birmingham,189,110
+Mississippi,Columbus,Alabama,Florence,189,130
+Mississippi,Columbus,Alabama,Tuscaloosa,94.6,75
+Mississippi,Southaven,Mississippi,Meridian,354,250
+Mississippi,Southaven,Mississippi,Jackson,316,190
+Mississippi,Southaven,Mississippi,Columbus,267,180
+Mississippi,Southaven,Mississippi,Oxford,117,80
+Mississippi,Southaven,Arkansas,West Memphis,31.2,22
+Mississippi,Southaven,Arkansas,Jonesboro,133,70
+Mississippi,Southaven,Tennessee,Memphis,21.2,12
+Mississippi,Southaven,Tennessee,Dyersburg,143,90
+Mississippi,Hattiesburg,Mississippi,Meridian,140,100
+Mississippi,Hattiesburg,Mississippi,Jackson,145,130
+Mississippi,Hattiesburg,Mississippi,Biloxi,121,100
+Mississippi,Hattiesburg,Mississippi,Columbus,287,190
+Mississippi,Oxford,Mississippi,Meridian,260,220
+Mississippi,Oxford,Mississippi,Jackson,258,170
+Mississippi,Oxford,Mississippi,Columbus,170,130
+Mississippi,Oxford,Mississippi,Southaven,116,80
+,,,,,
+,,,,,
+Iowa,Davenport,Iowa,Cedar Rapids,127,90
+Iowa,Davenport,Iowa,Des Moines,269,170
+Iowa,Davenport,Iowa,Burlington,120,85
+Iowa,Cedar Rapids,Iowa,Davenport,132,90
+Iowa,Cedar Rapids,Iowa,Des Moines,206,120
+Iowa,Cedar Rapids,Iowa,Burlington,164,100
+Iowa,Cedar Rapids,Iowa,Waterloo,88,55
+Iowa,Des Moines,Iowa,Davenport,272,170
+Iowa,Des Moines,Iowa,Cedar Rapids,206,130
+Iowa,Des Moines,Iowa,Fort Dodge,154,100
+Iowa,Des Moines,Iowa,Sioux City,318,190
+Iowa,Des Moines,Iowa,Burlington,270,170
+Iowa,Des Moines,Iowa,Waterloo,206,120
+Iowa,Des Moines,Iowa,Mason City,195,120
+Iowa,Burlington,Iowa,Davenport,120,85
+Iowa,Burlington,Iowa,Cedar Rapids,164,100
+Iowa,Burlington,Iowa,Des Moines,270,170
+Iowa,Mason City,Iowa,Sioux City,331,220
+Iowa,Mason City,Iowa,Fort Dodge,149,100
+Iowa,Mason City,Iowa,Waterloo,133,85
+Iowa,Mason City,Iowa,Des Moines,196,120
+Iowa,Mason City,Iowa,Le Mars,276,200
+Iowa,Waterloo,Iowa,Cedar Rapids,88,55
+Iowa,Waterloo,Iowa,Des Moines,212,130
+Iowa,Waterloo,Iowa,Fort Dodge,165,100
+Iowa,Waterloo,Iowa,Mason City,137,85
+Iowa,Fort Dodge,Iowa,Des Moines,154,100
+Iowa,Fort Dodge,Iowa,Mason City,150,100
+Iowa,Fort Dodge,Iowa,Waterloo,160,100
+Iowa,Fort Dodge,Iowa,Sioux City,189,130
+Iowa,Fort Dodge,Iowa,Le Mars,204,130
+Iowa,Sioux City,Iowa,Des Moines,319,190
+Iowa,Sioux City,Iowa,Fort Dodge,189,130
+Iowa,Sioux City,Iowa,Mason City,332,210
+Iowa,Sioux City,Iowa,Le Mars,42.6,35
+Iowa,Davenport,Illinois,Rock Island,3,5
+Iowa,Mason City,Minnesota,Rochester,145,100
+Iowa,Sioux City,South Dakota,Vermillion,39,40
+Iowa,Sioux City,Nebraska,Omaha,155,90
+Iowa,Sioux City,Nebraska,Columbus,188,130
+Iowa,Waterloo,Wisconsin,Madison,293,190
+Iowa,Cedar Rapids,Wisconsin,Madison,265,180
+Iowa,Davenport,Wisconsin,Madison,262,170
+Iowa,Burlington,Missouri,Kirksville,194,130
+Iowa,Des Moines,Missouri,Kirksville,214,160
+Iowa,Le Mars,Iowa,Fort Dodge,205,130
+Iowa,Le Mars,Iowa,Mason City,276,200
+Iowa,Le Mars,Iowa,Sioux City,42.6,35
+Iowa,Le Mars,South Dakota,Vermillion,45,55
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+Missouri,Branson,Missouri,Jefferson City,278,168
+Missouri,Branson,Missouri,Springfield,71,48
+Missouri,Branson,Missouri,Columbia,328,192
+Missouri,Branson,Missouri,Kansas City,337,194
+Missouri,Jefferson City,Missouri,Branson,280,165
+Missouri,Jefferson City,Missouri,Springfield,221,136
+Missouri,Jefferson City,Missouri,Columbia,51,34
+Missouri,Jefferson City,Missouri,Kirksville,196,115
+Missouri,Jefferson City,Missouri,St. Louis,213,122
+Missouri,Springfield,Missouri,Branson,72,47
+Missouri,Springfield,Missouri,Jefferson City,220,135
+Missouri,Springfield,Missouri,Columbia,270,130
+Missouri,Springfield,Missouri,Kansas City,266,160
+Missouri,Springfield,Missouri,St. Louis,347,202
+Missouri,Columbia,Missouri,Jefferson City,50,34
+Missouri,Columbia,Missouri,kirksville,147,92
+Missouri,Columbia,Missouri,Kansas City,202,112
+Missouri,Columbia,Missouri,St. Louis,201,114
+Missouri,St. Joseph,Missouri,kirksville,240,153
+Missouri,St. Joseph,Missouri,kansas City,89,55
+Missouri,kirksville,Missouri,Jefferson City,196,115
+Missouri,kirksville,Missouri,Columbia,147,121
+Missouri,kirksville,Missouri,st joseph,240,154
+Missouri,kirksville,Missouri,kansas City,266,167
+Missouri,kirksville,Missouri,st louis,329,198
+Missouri,kansas City,Missouri,Branson,339,196
+Missouri,kansas City,Missouri,Jefferson City,236,149
+Missouri,kansas City,Missouri,Springfield,268,159
+Missouri,kansas City,Missouri,Columbia,202,113
+Missouri,kansas City,Missouri,st joseph,91,55
+Missouri,kansas City,Missouri,kirksville,266,164
+Missouri,Cape Girardeau,Missouri,st louis,186,111
+Missouri,St. louis,Missouri,Jefferson City,213,121
+Missouri,St. louis,Missouri,springfield,348,201
+Missouri,St. louis,Missouri,Columbia,201,114
+Missouri,St. louis,Missouri,kirksville,328,195
+Missouri,st. louis,Missouri,cape Girardeau,186,110
+Missouri,Branson,Arkansas,Little Rock,280,190
+Missouri,kansas City,Kansas,Wichita,314,180
+Missouri,st. louis,Illinois,Quincy,221,135
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+Oklahoma,Elk City,Oklahoma,Oklahoma City,179,100
+Oklahoma,Oklahoma City,Oklahoma,Elk City,180,100
+Oklahoma,Oklahoma City,Oklahoma,Norman,32,30
+Oklahoma,Oklahoma City,Oklahoma,McAlester,208,115
+Oklahoma,Oklahoma City,Oklahoma,Antlers,291,161
+Oklahoma,Oklahoma City,Oklahoma,Cleveland,176,104
+Oklahoma,Oklahoma City,Oklahoma,Tulsa,171,96
+Oklahoma,Oklahoma City,Oklahoma,Ponca City,170,94
+Oklahoma,Oklahoma City,Oklahoma,Muskogee,223,126
+Oklahoma,Cleveland,Oklahoma,Oklahoma City,177,101
+Oklahoma,Cleveland,Oklahoma,Elk City,356,194
+Oklahoma,Cleveland,Oklahoma,Tulsa,55,34
+Oklahoma,Cleveland,Oklahoma,Ponca City,100,69
+Oklahoma,Cleveland,Oklahoma,McAlester,206,123
+Oklahoma,Norman,Oklahoma,Oklahoma City,32,30
+Oklahoma,Norman,Oklahoma,Cleveland,205,122
+Oklahoma,Norman,Oklahoma,McAlester,217,123
+Oklahoma,Norman,Oklahoma,Antlers,228,154
+Oklahoma,Norman,Oklahoma,Muskogee,232,133
+Oklahoma,Norman,Texas,Dallas,307,174
+Oklahoma,McAlester,Oklahoma,Oklahoma City,209,111
+Oklahoma,McAlester,Oklahoma,Norman,184,126
+Oklahoma,McAlester,Oklahoma,Antlers,90,55
+Oklahoma,McAlester,Oklahoma,Tulsa,146,90
+Oklahoma,McAlester,Oklahoma,Muskogee,103,63
+Oklahoma,Antlers,Oklahoma,Oklahoma City,292,157
+Oklahoma,Antlers,Oklahoma,Norman,242,155
+Oklahoma,Antlers,Oklahoma,McAlester,89,53
+Oklahoma,Antlers,Oklahoma,Tulsa,229,135
+Oklahoma,Antlers,Oklahoma,Muskogee,192,110
+Oklahoma,Antlers,Texas,Dallas,243,155
+Oklahoma,Tulsa,Oklahoma,Oklahoma City,171,92
+Oklahoma,Tulsa,Oklahoma,Cleveland,54,33
+Oklahoma,Tulsa,Oklahoma,Antlers,230,145
+Oklahoma,Tulsa,Oklahoma,McAlester,147,90
+Oklahoma,Tulsa,Oklahoma,Muskogee,79,52
+Oklahoma,Tulsa,Oklahoma,Ponca City,149,85
+Oklahoma,Ponca City,Oklahoma,Oklahoma City,170,96
+Oklahoma,Ponca City,Oklahoma,Cleveland,101,68
+Oklahoma,Ponca City,Oklahoma,Antlers,378,221
+Oklahoma,Ponca City,Oklahoma,Tulsa,150,87
+Oklahoma,Ponca City,Kansas,Wichita,139,82
+Oklahoma,Muskogee,Oklahoma,Oklahoma City,223,123
+Oklahoma,Muskogee,Oklahoma,Norman,240,135
+Oklahoma,Muskogee,Oklahoma,McAlester,105,62
+Oklahoma,Muskogee,Oklahoma,Tulsa,80,52
+Oklahoma,Muskogee,Oklahoma,Antlers,193,112
+Oklahoma,Muskogee,Arkansas,Fayetteville,139,115
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+Kansas,WaKeeney,Kansas,Dodge City,152,110
+Kansas,WaKeeney,Kansas,Salina,206,120
+Kansas,Salina,Kansas,Wichita,145,85
+Kansas,Salina,Kansas,Topeka,181,110
+Kansas,WaKeeney,Kansas,Garden City,195,130
+Kansas,Salina,Kansas,Manhattan,107,63
+Kansas,Dodge City,Kansas,WaKeeney,152,100
+Kansas,Dodge City,Kansas,Salina,256,170
+Kansas,Dodge City,Kansas,Wichita,248,157
+Kansas,Salina,Kansas,Topeka,181,101
+Kansas,Dodge City,Kansas,Garden City,84,55
+Kansas,Salina,Kansas,Manhattan,107,107
+Kansas,Salina,Kansas,WaKeeney,206,120
+Kansas,Salina,Kansas,Dodge City,256,170
+Kansas,Salina,Kansas,Garden City,321,220
+Kansas,Wichita,Kansas,Salina,145,85
+Kansas,Salina,Kansas,WaKeeney,206,120
+Kansas,Wichita,Kansas,Dodge City,249,160
+Kansas,Wichita,Kansas,Salina,145,85
+Kansas,Wichita,Kansas,Topeka,223,130
+Kansas,Wichita,Kansas,Dodge City,249,160
+Kansas,Wichita,Kansas,Manhattan,210,130
+Kansas,Topeka,Kansas,Salina,181,110
+Kansas,Topeka,Kansas,Wichita,222,140
+Kansas,Topeka,Kansas,Manhattan,94,60
+Kansas,Garden City,Kansas,WaKeeney,195,130
+Kansas,Garden City,Kansas,Dodge City,84,60
+Kansas,Garden City,Kansas,Salina,321,210
+Kansas,Manhattan,Kansas,Salina,107,110
+Kansas,Manhattan,Kansas,Wichita,210,130
+Kansas,Manhattan,Kansas,Topeka,94,60
+Kansas,Topeka,Missouri,Kansas City,102,65
+Kansas,Wichita,Oklahoma,Ponca City,139,85
+Kansas,Manhattan,Nebraska,Lincoln,218,140
+,,,,,
+Tennessee,Kingsport,Tennessee,Knoxville,160,110
+Tennessee,NashVille,Tennessee,Collierville,331,210
+Tennessee,NashVille,Tennessee,Knoxville,290,210
+Tennessee,NashVille,Tennessee,Chattanooga,214,160
+Tennessee,NashVille,Tennessee,Clarksville,81.8,80
+Tennessee,NashVille,Tennessee,Franklin,34.6,45
+Tennessee,NashVille,Tennessee,Columbia,74.1,70
+Tennessee,NashVille,Tennessee,Dyersburg,277,190
+Tennessee,NashVille,Tennessee,Memphis,341,220
+Tennessee,Collierville,Tennessee,Clarksville,322,230
+Tennessee,Collierville,Tennessee,Franklin,322,220
+Tennessee,Collierville,Tennessee,Columbia,305,210
+Tennessee,Collierville,Tennessee,Dyersburg,137,120
+Tennessee,Collierville,Tennessee,Memphis,46.6,40
+Tennessee,Knoxville,Tennessee,Chattanooga,192,160
+Tennessee,Knoxville,Tennessee,Columbia,354,240
+Tennessee,Chattanooga,Tennessee,Franklin,222,160
+Tennessee,Chattanooga,Tennessee,Columbia,241,170
+Tennessee,Clarksville,Tennessee,Columbia,119,130
+Tennessee,Clarksville,Tennessee,Dyersburg,221,200
+Tennessee,Clarksville,Tennessee,Memphis,333,230
+Tennessee,Franklin,Tennessee,Columbia,48.2,60
+Tennessee,Franklin,Tennessee,Dyersburg,269,190
+Tennessee,Franklin,Tennessee,Memphis,333,200
+Tennessee,Columbia,Tennessee,Dyersburg,255,175
+Tennessee,Columbia,Tennessee,Memphis,319,200
+Tennessee,Dyersburg,Tennessee,Memphis,127,100
+Tennessee,Dyersburg,Mississippi,Southaven,143,90
+Tennessee,Memphis,Mississippi,Southaven,21,12
+,,,,,
+Arkansas,Hot Springs,Arkansas,Pine Bluff,115.4,88
+Arkansas,Hot Springs,Arkansas,Jonesboro,292,168
+Arkansas,Hot Springs,Arkansas,West Memphis,289,166
+Arkansas,Hot Springs,Arkansas,Fayetteville,301,204
+Arkansas,Hot Springs,Arkansas,Little Rock,87.7,55
+Arkansas,Hot Springs,Arkansas,Conway,124.2,75
+Arkansas,Hot Springs,Arkansas,Texarkana,179,115
+Arkansas,Hot Springs,Arkansas,Jacksonville,106.7,65
+Arkansas,Hot Springs,Arkansas,Fort Smith,206,158
+Arkansas,Pine Bluff,Arkansas,Hot Springs,114.2,88
+Arkansas,Pine Bluff,Arkansas,Jonesboro,273.6,156
+Arkansas,Pine Bluff,Arkansas,West Memphis,220.5,149
+Arkansas,Pine Bluff,Arkansas,Fayetteville,372.1,209
+Arkansas,Pine Bluff,Arkansas,Little Rock,71.3,44
+Arkansas,Pine Bluff,Arkansas,Conway,117.2,69
+Arkansas,Pine Bluff,Arkansas,Texarkana,247.9,156
+Arkansas,Pine Bluff,Arkansas,Jacksonville,89.6,54
+Arkansas,Pine Bluff,Arkansas,Fort Smith,321.9,183
+Arkansas,Jonesboro,Arkansas,Hot Springs,293.3,170
+Arkansas,Jonesboro,Arkansas,Pine Bluff,277.6,157
+Arkansas,Jonesboro,Arkansas,West Memphis,102.2,61
+Arkansas,Jonesboro,Arkansas,Fayetteville,463.5,265
+Arkansas,Jonesboro,Arkansas,Little Rock,210.8,119
+Arkansas,Jonesboro,Arkansas,Conway,209.2,124
+Arkansas,Jonesboro,Arkansas,Texarkana,436.1,247
+Arkansas,Jonesboro,Arkansas,Jacksonville,186.9,105
+Arkansas,Jonesboro,Arkansas,Fort Smith,413.6,238
+Arkansas,Jonesboro,Mississippi,Southaven,133,75
+Arkansas,West Memphis,Arkansas,Hot Springs,289.7,170
+Arkansas,West Memphis,Arkansas,Pine Bluff,223.7,146
+Arkansas,West Memphis,Arkansas,Jonesboro,102.2,61
+Arkansas,West Memphis,Arkansas,Fayetteville,497.1,264
+Arkansas,West Memphis,Arkansas,Little Rock,207.8,119
+Arkansas,West Memphis,Arkansas,Conway,243.4,138
+Arkansas,West Memphis,Arkansas,Texarkana,433.4,247
+Arkansas,West Memphis,Arkansas,Jacksonville,201.2,113
+Arkansas,West Memphis,Arkansas,Fort Smith,447.5,252
+Arkansas,West Memphis,Mississippi,Southaven,30.9,22
+Arkansas,Fayetteville,Arkansas,Hot Springs,301,204
+Arkansas,Fayetteville,Arkansas,Pine Bluff,376,216
+Arkansas,Fayetteville,Arkansas,Jonesboro,463,265
+Arkansas,Fayetteville,Arkansas,West Memphis,497,269
+Arkansas,Fayetteville,Arkansas,Little Rock,309,170
+Arkansas,Fayetteville,Arkansas,Conway,254,142
+Arkansas,Fayetteville,Arkansas,Texarkana,389,262
+Arkansas,Fayetteville,Arkansas,Jacksonville,316,173
+Arkansas,Fayetteville,Arkansas,Fort Smith,93,58
+Arkansas,Little Rock,Arkansas,Hot Springs,87.7,55
+Arkansas,Little Rock,Arkansas,Pine Bluff,71.3,44
+Arkansas,Little Rock,Arkansas,Jonesboro,210.8,119
+Arkansas,Little Rock,Arkansas,West Memphis,207.8,119
+Arkansas,Little Rock,Arkansas,Fayetteville,309,170
+Arkansas,Little Rock,Arkansas,Conway,52.3,31
+Arkansas,Little Rock,Arkansas,Texarkana,232.2,142
+Arkansas,Little Rock,Arkansas,Jacksonville,24.9,16
+Arkansas,Little Rock,Arkansas,Fort Smith,257.5,144
+Arkansas,Conway,Arkansas,Hot Springs,123.3,75
+Arkansas,Conway,Arkansas,Pine Bluff,117.8,68
+Arkansas,Conway,Arkansas,Jonesboro,207.8,121
+Arkansas,Conway,Arkansas,West Memphis,245.1,136
+Arkansas,Conway,Arkansas,Fayetteville,257.5,144
+Arkansas,Conway,Arkansas,Little Rock,53.9,31
+Arkansas,Conway,Arkansas,Texarkana,268.8,162
+Arkansas,Conway,Arkansas,Jacksonville,60.8,35
+Arkansas,Conway,Arkansas,Fort Smith,207.8,117
+Arkansas,Texarkana,Arkansas,Hot Springs,177,115
+Arkansas,Texarkana,Arkansas,Pine Bluff,246,154
+Arkansas,Texarkana,Arkansas,Jonesboro,433,244
+Arkansas,Texarkana,Arkansas,West Memphis,431,242
+Arkansas,Texarkana,Arkansas,Fayetteville,388,266
+Arkansas,Texarkana,Arkansas,Little Rock,230,130
+Arkansas,Texarkana,Arkansas,Conway,267,151
+Arkansas,Texarkana,Arkansas,Jacksonville,250,141
+Arkansas,Texarkana,Arkansas,Fort Smith,296,215
+Arkansas,Jacksonville,Arkansas,Hot Springs,1014,592
+Arkansas,Jacksonville,Arkansas,Pine Bluff,90.6,54
+Arkansas,Jacksonville,Arkansas,Jonesboro,185,102
+Arkansas,Jacksonville,,West Memphis,204,112
+Arkansas,Jacksonville,,Fayetteville,1435,783
+Arkansas,Jacksonville,,Little Rock,24.6,17
+Arkansas,Jacksonville,,Conway,1391,775
+Arkansas,Jacksonville,,Texarkana,253,156
+Arkansas,Jacksonville,,Fort Smith,266,147
+Arkansas,Fort Smith,,Hot Springs,206,158
+Arkansas,Fort Smith,,Pine Bluff,322,207
+Arkansas,Fort Smith,,Jonesboro,414,239
+Arkansas,Fort Smith,,West Memphis,449,253
+Arkansas,Fort Smith,,Fayetteville,93,58
+Arkansas,Fort Smith,,Little Rock,259,144
+Arkansas,Fort Smith,,Conway,206,117
+Arkansas,Fort Smith,,Texarkana,296,215
+Arkansas,Fort Smith,,Jacksonville,266,147
