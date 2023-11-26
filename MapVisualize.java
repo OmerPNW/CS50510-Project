@@ -1,107 +1,122 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionAdapter;
 import java.awt.geom.Ellipse2D;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
 public class MapVisualize extends JFrame {
-    private Map<String, Point> cityCoordinates;
-    private Map<String, Map<String, Double>> distances;
-    private String sourceCity = "";
-    private String destinationCity = "";
-    private float min_x = -108;
+    private float min_x = -105;
     private float max_x = -85;
-    private float min_y = 25;
-    private float max_y = 51;
+    private float min_y = 23;
+    private float max_y = 49;
 
-    private int WIDTH = 1300;
+    private int WIDTH = 1500;
     private int HEIGHT = 1000;
+    private static final int    EARTH_RADIUS    = 1;
+    private static final double FOCAL_LENGTH    = 500; 
 
-    private float convertCoords(float val, String type){
-        if (type.equals("lngt")) return (val - min_x)/(max_x-min_x) * WIDTH;
-        else if (type.equals("lat")) return HEIGHT - (val - min_y)/(max_y-min_y) * HEIGHT;
-        return -1;
-    }
+        double convertXY(double lat, double lngt, String type){
+            double latitude = lat * Math.PI / 180;
+            double longitude = lngt * Math.PI / 180;
+        
+            double x = EARTH_RADIUS * (Math.sin(latitude)) * (Math.cos(longitude));
+            double y = EARTH_RADIUS * (Math.sin(latitude)) * (Math.sin(longitude));
+            double z = EARTH_RADIUS * Math.cos(latitude);
+        
+            double projectedX = x * FOCAL_LENGTH / (FOCAL_LENGTH + z) *2* WIDTH + WIDTH;
+            double projectedY = y * FOCAL_LENGTH / (FOCAL_LENGTH + z) * 1.5*HEIGHT + 1.5*HEIGHT;
+            System.out.println(projectedX);
+                        System.out.println(projectedY);
 
-    public MapVisualize(HashMap<String, City> citiesDS) {
-        setTitle("City Map");
-        setSize(WIDTH , HEIGHT);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            if (type.equals("lat")) return projectedY;
+            else if (type.equals("lngt")) return projectedX;
+            return -1;
+        }
 
 
-        // Add a custom JPanel for drawing the map
-        MapPanel mapPanel = new MapPanel(citiesDS);
-        JScrollPane scrollPane = new JScrollPane(mapPanel);
-        scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
-        scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
-        // mapPanel.add(scrollPane);
-        add(scrollPane);
+        private float convertCoords(float val, String type){
+            if (type.equals("lngt")) return (val - min_x)/(max_x-min_x) * WIDTH;
+            else if (type.equals("lat")) return HEIGHT - (val - min_y)/(max_y-min_y) * HEIGHT;
+            return -1;
+        }
 
-        // Add mouse motion listener for tooltips
-        mapPanel.addMouseMotionListener(new MouseMotionAdapter() {
-            @Override
-            public void mouseMoved(MouseEvent e) {
-                for (String cityNameKey : citiesDS.keySet()) {
-                    City city = citiesDS.get(cityNameKey);
-                    float lat = city.lat;
-                    float lngt = city.lngt;
-                    if (new Ellipse2D.Double(convertCoords(lngt, "lngt") - 10, convertCoords(lat, "lat") - 10, 20, 20).contains(e.getPoint())) {
-                        mapPanel.setToolTipText(city.name);
-                        return;
-                    }
-                    Point point1 = new Point((int)convertCoords(lngt, "lngt"), (int)convertCoords(lat, "lat"));
-                    for (CityConnectionStruct ccs : city.connections){
-                            String connCityKey = StringStandardize.standardizeString(ccs.state) + "__" + StringStandardize.standardizeString(ccs.name);
-                            City connCity = citiesDS.get(connCityKey);
-                            if (connCity != null){
-                                float conn_x = convertCoords(connCity.lngt, "lngt") ;
-                                float conn_y  = convertCoords(connCity.lat, "lat");
+        public MapVisualize(HashMap<String, City> citiesDS) {
+            setTitle("City Map");
+            setSize(WIDTH , HEIGHT);
+            setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-                                Point point2 = new Point((int)conn_x, (int)conn_y) ;
-                                if (isPointOnLine(e.getPoint(), point1, point2)) {
-                                    double distance = ccs.distance;
-                                    mapPanel.setToolTipText(String.format("Distance: %.2f", distance));
 
-                                    return;
-                                }
+            // Add a custom JPanel for drawing the map
+            MapPanel mapPanel = new MapPanel(citiesDS);
+            JScrollPane scrollPane = new JScrollPane(mapPanel);
+            scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
+            scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+            // mapPanel.add(scrollPane);
+            add(scrollPane);
 
-                            }
+            // Add mouse motion listener for tooltips
+            mapPanel.addMouseMotionListener(new MouseMotionAdapter() {
+                @Override
+                public void mouseMoved(MouseEvent e) {
+                    for (String cityNameKey : citiesDS.keySet()) {
+                        City city = citiesDS.get(cityNameKey);
+                        float lat = city.lat;
+                        float lngt = city.lngt;
+                        if (new Ellipse2D.Double(convertCoords(lngt, "lngt") - 10, convertCoords(lat, "lat") - 10, 20, 20).contains(e.getPoint())) {
+                            mapPanel.setToolTipText(city.name);
+                            return;
                         }
+                        Point point1 = new Point((int)convertCoords(lngt, "lngt"), (int)convertCoords(lat, "lat"));
+                        for (CityConnectionStruct ccs : city.connections){
+                                String connCityKey = utils.standardizeCityKey(ccs.state, ccs.name);
+                                // String connCityKey = StringStandardize.standardizeString(ccs.state) + "__" + StringStandardize.standardizeString(ccs.name);
+                                City connCity = citiesDS.get(connCityKey);
+                                if (connCity != null){
+                                    float conn_x = convertCoords(connCity.lngt, "lngt") ;
+                                    float conn_y  = convertCoords(connCity.lat, "lat");
+
+                                    Point point2 = new Point((int)conn_x, (int)conn_y) ;
+                                    if (isPointOnLine(e.getPoint(), point1, point2)) {
+                                        double distance = ccs.distance;
+                                        mapPanel.setToolTipText(String.format("Distance: %.2f", distance));
+
+                                        return;
+                                    }
+
+                                }
+                            }
+                    }
+
+                    mapPanel.setToolTipText(null);
                 }
+            });
 
-                mapPanel.setToolTipText(null);
-            }
-        });
+            // Add a panel for user input
+            JPanel inputPanel = new JPanel();
+            JTextField sourceField = new JTextField(10);
+            JTextField destinationField = new JTextField(10);
+            JButton enterButton = new JButton("Enter");
+            // enterButton.addActionListener(new ActionListener() {
+            //     @Override
+            //     public void actionPerformed(ActionEvent e) {
+            //         sourceCity = sourceField.getText();
+            //         destinationCity = destinationField.getText();
+            //         mapPanel.repaint(); // Repaint to update the path
+            //     }
+            // });
+            inputPanel.add(new JLabel("Source City:"));
+            inputPanel.add(sourceField);
+            inputPanel.add(new JLabel("Destination City:"));
+            inputPanel.add(destinationField);
+            inputPanel.add(enterButton);
 
-        // Add a panel for user input
-        JPanel inputPanel = new JPanel();
-        JTextField sourceField = new JTextField(10);
-        JTextField destinationField = new JTextField(10);
-        JButton enterButton = new JButton("Enter");
-        // enterButton.addActionListener(new ActionListener() {
-        //     @Override
-        //     public void actionPerformed(ActionEvent e) {
-        //         sourceCity = sourceField.getText();
-        //         destinationCity = destinationField.getText();
-        //         mapPanel.repaint(); // Repaint to update the path
-        //     }
-        // });
-        inputPanel.add(new JLabel("Source City:"));
-        inputPanel.add(sourceField);
-        inputPanel.add(new JLabel("Destination City:"));
-        inputPanel.add(destinationField);
-        inputPanel.add(enterButton);
+            // Add the input panel to the frame
+            add(inputPanel, BorderLayout.SOUTH);
 
-        // Add the input panel to the frame
-        add(inputPanel, BorderLayout.SOUTH);
-
-        setVisible(true);
-    }
+            setVisible(true);
+        }
 
     class MapPanel extends JPanel {
         HashMap<String, City> citiesDS;
@@ -138,22 +153,22 @@ public class MapVisualize extends JFrame {
                 float y  = convertCoords(city.lat, "lat");
 
                 Color color = Color.BLUE;
-                if (StringStandardize.standardizeString(city.state).equals("indiana")) color = Color.MAGENTA;
-                if (StringStandardize.standardizeString(city.state).equals("northdakota")) color = Color.CYAN;
-                if (StringStandardize.standardizeString(city.state).equals("southdakota")) color = Color.DARK_GRAY;
-                if (StringStandardize.standardizeString(city.state).equals("nebraska")) color = Color.LIGHT_GRAY;
-                if (StringStandardize.standardizeString(city.state).equals("kansas")) color = Color.ORANGE;
-                if (StringStandardize.standardizeString(city.state).equals("oklahoma")) color = Color.PINK;
-                if (StringStandardize.standardizeString(city.state).equals("texas")) color = Color.WHITE;
-                if (StringStandardize.standardizeString(city.state).equals("loisiana")) color = Color.YELLOW;
-                if (StringStandardize.standardizeString(city.state).equals("alamba")) color = Color.GREEN;
-                if (StringStandardize.standardizeString(city.state).equals("tennessee")) color = new Color(0.2f, 0.7f, 0.33f);
-                if (StringStandardize.standardizeString(city.state).equals("arkansas")) color = new Color(0.3f, 0.2f, 0.6f);
-                if (StringStandardize.standardizeString(city.state).equals("missouri")) color = new Color(0.9f, 0.1f, 0.3f);
-                if (StringStandardize.standardizeString(city.state).equals("illinois")) color = new Color(0.5f, 0.0f, 0.5f);
-                if (StringStandardize.standardizeString(city.state).equals("wisconsin")) color = new Color(0.3f, 0.9f, 0.9f);;
-                if (StringStandardize.standardizeString(city.state).equals("iowa")) color = new Color(0.4f, 0.4f, 0.2f);
-                if (StringStandardize.standardizeString(city.state).equals("minnesota")) color = new Color(0.1f, 0.1f, 0.5f);
+                if (utils.standardizeString(city.state).equals("indiana")) color = Color.MAGENTA;
+                if (utils.standardizeString(city.state).equals("northdakota")) color = Color.CYAN;
+                if (utils.standardizeString(city.state).equals("southdakota")) color = Color.DARK_GRAY;
+                if (utils.standardizeString(city.state).equals("nebraska")) color = Color.LIGHT_GRAY;
+                if (utils.standardizeString(city.state).equals("kansas")) color = Color.ORANGE;
+                if (utils.standardizeString(city.state).equals("oklahoma")) color = Color.PINK;
+                if (utils.standardizeString(city.state).equals("texas")) color = Color.WHITE;
+                if (utils.standardizeString(city.state).equals("loisiana")) color = Color.YELLOW;
+                if (utils.standardizeString(city.state).equals("alamba")) color = Color.GREEN;
+                if (utils.standardizeString(city.state).equals("tennessee")) color = new Color(0.2f, 0.7f, 0.33f);
+                if (utils.standardizeString(city.state).equals("arkansas")) color = new Color(0.3f, 0.2f, 0.6f);
+                if (utils.standardizeString(city.state).equals("missouri")) color = new Color(0.9f, 0.1f, 0.3f);
+                if (utils.standardizeString(city.state).equals("illinois")) color = new Color(0.5f, 0.0f, 0.5f);
+                if (utils.standardizeString(city.state).equals("wisconsin")) color = new Color(0.3f, 0.9f, 0.9f);;
+                if (utils.standardizeString(city.state).equals("iowa")) color = new Color(0.4f, 0.4f, 0.2f);
+                if (utils.standardizeString(city.state).equals("minnesota")) color = new Color(0.1f, 0.1f, 0.5f);
 
 
                 g2d.setColor(color);
@@ -162,7 +177,8 @@ public class MapVisualize extends JFrame {
                 g2d.drawString(city.name, x, y - 10);
 
                 for (CityConnectionStruct ccs : city.connections){
-                        String connKey = StringStandardize.standardizeString(ccs.state) + "__" + StringStandardize.standardizeString(ccs.name);
+                        String connKey = utils.standardizeCityKey(ccs.state, ccs.name);
+                        // String connKey = StringStandardize.standardizeString(ccs.state) + "__" + StringStandardize.standardizeString(ccs.name);
                         City connCity = citiesDS.get(connKey);
                         if (connCity != null){
                             float conn_x = convertCoords(connCity.lngt, "lngt") ;
@@ -172,7 +188,7 @@ public class MapVisualize extends JFrame {
                             g2d.setColor(Color.RED);
                             g2d.drawLine((int)x, (int)y, (int)conn_x, (int)conn_y);
                             g2d.setColor(Color.BLACK);
-                            // g2d.drawString(String.format("%.2f", distance), (x + conn_x) / 2, (y + conn_y) / 2);
+                            g2d.drawString(String.format("%.2f", distance), (x + conn_x) / 2, (y + conn_y) / 2);
                         }
                 }
             }
@@ -193,8 +209,8 @@ public class MapVisualize extends JFrame {
     public static void main(String[] args) {
 
 
-        String citiesCsvPath = "Cities_2.txt" ;
-        String connectionCsvPath = "Connections_3.txt" ;
+        String citiesCsvPath = "Cities_3.txt" ;
+        String connectionCsvPath = "Connections_4.txt" ;
 
         try{
             Map<String, String[]> weatherData = LDP.loadIndividualCityData(citiesCsvPath);

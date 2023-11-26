@@ -34,6 +34,11 @@ Alabama,Birmingham,Mississippi,Oxford,298,168
 Alabama,Birmingham,Tennessee,Nashville,308,169
 Alabama,Birmingham,Tennessee,Chattanooga,237,137
 Alabama,Birmingham,Tennessee,Columbia,253,142
+Alabama,Huntsville,Tennessee,Columbia,130,90
+Alabama,Birmingham,Tennessee,Columbia,253,150
+Alabama,Florence,Tennessee,Columbia,124,110
+Alabama,Huntsville,Tennessee,Chattanooga,164,110
+Alabama,Auburn,Tennessee,Chattanooga,353,240
 ,,,,,
 ,,,,,
 Alabama,Huntsville,Alabama,Florence,122,87
@@ -112,41 +117,41 @@ North Dakota,Devils Lake,North Dakota,Jamestown,159,100
 North Dakota,Devils Lake,North Dakota,Minot,195,110
 North Dakota,Devils Lake,North Dakota,Grand Forks,144,100
 ,,,,,
-Wisconsin,Milwaukee,Wisconsin,Appleton,172,95
+Wisconsin,Milwaukee,Wisconsin,Appleton,172,96
 Wisconsin,Milwaukee,Wisconsin,Madison,128,76
-Wisconsin,Milwaukee,Wisconsin,Wausau,303,169
-Wisconsin,Milwaukee,Illinois,Chicago,149,96
-Wisconsin,Milwaukee,Illinois,Rockford,152,90
-Wisconsin,appleton,Wisconsin,milwaukee,172,93
-Wisconsin,appleton,Wisconsin,Madison,169,109
+Wisconsin,Milwaukee,Wisconsin,Wausau,303,167
+Wisconsin,Milwaukee,Illinois,Chicago,149,109
+Wisconsin,Milwaukee,Illinois,Rockford,152,89
+Wisconsin,appleton,Wisconsin,milwaukee,172,95
+Wisconsin,appleton,Wisconsin,Madison,169,113
 Wisconsin,appleton,Wisconsin,Wisconsin Dells,160,113
 Wisconsin,appleton,Wisconsin,Eau Claire,293,178
-Wisconsin,appleton,Wisconsin,Green Bay,34,51
+Wisconsin,appleton,Wisconsin,Green Bay,51,35
 Wisconsin,appleton,Wisconsin,Wausau,165,93
-Wisconsin,madison,Wisconsin,Milwaukee,128,75
-Wisconsin,madison,Wisconsin,Appleton,175,109
-Wisconsin,madison,Wisconsin,Wisconsin Dells,87.3,59
-Wisconsin,madison,Wisconsin,Eau Claire,287,165
+Wisconsin,madison,Wisconsin,Milwaukee,128,79
+Wisconsin,madison,Wisconsin,Appleton,175,111
+Wisconsin,madison,Wisconsin,Wisconsin Dells,87.3,60
+Wisconsin,madison,Wisconsin,Eau Claire,287,163
 Wisconsin,madison,Wisconsin,Green Bay,226,136
-Wisconsin,madison,Wisconsin,Wausau,230,131
-Wisconsin,wisconsin dells,Wisconsin,milwaukee,196,107
-Wisconsin,wisconsin dells,Wisconsin,appleton,161,115
-Wisconsin,wisconsin dells,Wisconsin,madison,86.2,59
-Wisconsin,wisconsin dells,Wisconsin,Eau Claire,201,115
+Wisconsin,madison,Wisconsin,Wausau,230,130
+Wisconsin,wisconsin dells,Wisconsin,milwaukee,196,112
+Wisconsin,wisconsin dells,Wisconsin,appleton,161,116
+Wisconsin,wisconsin dells,Wisconsin,madison,86.2,60
+Wisconsin,wisconsin dells,Wisconsin,Eau Claire,201,112
 Wisconsin,wisconsin dells,Wisconsin,Green Bay,212,141
-Wisconsin,wisconsin dells,Wisconsin,Wausau,181,102
-Wisconsin,Eau claire,Wisconsin,appleton,294,181
+Wisconsin,wisconsin dells,Wisconsin,Wausau,181,101
+Wisconsin,Eau claire,Wisconsin,appleton,294,180
 Wisconsin,Eau claire,Wisconsin,madison,286,167
-Wisconsin,Eau claire,Wisconsin,wisconsin dells,201,116
-Wisconsin,Eau claire,Wisconsin,Green Bay,309,179
-Wisconsin,Eau claire,Wisconsin,Superior,244,145
+Wisconsin,Eau claire,Wisconsin,wisconsin dells,201,114
+Wisconsin,Eau claire,Wisconsin,Green Bay,309,176
+Wisconsin,Eau claire,Wisconsin,Superior,244,141
 Wisconsin,Eau claire,Wisconsin,Wausau,160,93
-Wisconsin,green bay,Wisconsin,milwaukee,188,108
-Wisconsin,green bay,Wisconsin,appleton,52.5,36
-Wisconsin,green bay,Wisconsin,madison,222,138
-Wisconsin,green bay,Wisconsin,wisconsin dells,213,143
+Wisconsin,green bay,Wisconsin,milwaukee,188,110
+Wisconsin,green bay,Wisconsin,appleton,52.5,38
+Wisconsin,green bay,Wisconsin,madison,222,140
+Wisconsin,green bay,Wisconsin,wisconsin dells,213,142
 Wisconsin,green bay,Wisconsin,Wausau,158,90
-Wisconsin,green bay,Wisconsin,eau claire,313,176
+Wisconsin,green bay,Wisconsin,eau claire,313,175
 Wisconsin,superior,Wisconsin,Wausau,375,216
 Wisconsin,superior,Wisconsin,eau claire,242,141
 Wisconsin,Wausau,Wisconsin,milwaukee,304,172
@@ -342,8 +347,8 @@ Nebraska,Columbus,Iowa,Sioux City,188,130
 ,,,,,
 ,,,,,
 Minnesota,Minneapolis ,Minnesota,St Cloud,105,64
-Minnesota,St Cloud ,Minnesota,Crookston,225,213
-Minnesota,St Cloud ,Minnesota,Thief River Falls ,362,231
+Minnesota,St Cloud ,Minnesota,Crookston,362,209
+Minnesota,St Cloud ,Minnesota,Thief River Falls ,372,231
 Minnesota,St Cloud ,Minnesota,Duluth,232,141
 Minnesota,St Cloud ,Minnesota,Bemidji,246,153
 Minnesota,St Cloud ,Minnesota,St Paul,121,69
@@ -358,7 +363,7 @@ Minnesota,Crookston ,Minnesota,Duluth,381,246
 Minnesota,Duluth ,Minnesota,Thief River Falls ,386,256
 Minnesota,Rochester,Iowa,Mason City,144,93
 Minnesota,Rochester,Iowa,Cedar Rapids ,273,175
-Minnesota,St Cloud ,Sotuh Dakota,Aberdeen,235,252
+Minnesota,St Cloud ,South Dakota,Aberdeen,235,252
 Minnesota,Rochester,Wisconsin,Madison,336,194
 Minnesota,Crookston ,North Dakota,Devils Lake,186,113
 ,,,,,
@@ -400,7 +405,6 @@ Texas,Port Arthur,Louisiana,Lake Charles,96,70
 Texas,Dallas,Oklahoma,Antlers,243,155
 Texas,Texarkana,Oklahoma,Antlers,220,140
 Texas,Texarkana,Louisiana,Shreveport,118,70
-Texas,Texarkana,Arkansas,Texarkana,2,1
 ,,,,,
 Texas,Port Isabel,Texas,Corpus Christi,284,170
 Texas,Port Isabel,Texas,Laredo,354,260
@@ -438,7 +442,7 @@ Texas,Tyler,Louisiana,Shreveport,157,97
 Texas,Tyler,Texas,Texarkana,186,135
 Texas,Wichita Falls,Texas,Waco,327,195
 Texas,Wichita Falls,Texas,San Angelo,375,235
-Texas,Wichita Falls,Oklahoma,Oklahama City,223,130
+Texas,Wichita Falls,Oklahoma,Oklahoma City,223,130
 Texas,Galveston,Texas,Houston,81,62
 Texas,Galveston,Texas,College Station,234,155
 Texas,San Antonio,Texas,Waco,290,185
@@ -492,6 +496,10 @@ Mississippi,Oxford,Mississippi,Meridian,260,220
 Mississippi,Oxford,Mississippi,Jackson,258,170
 Mississippi,Oxford,Mississippi,Columbus,170,130
 Mississippi,Oxford,Mississippi,Southaven,116,80
+Mississippi,Oxford,Tennessee,Collierville,91,70
+Mississippi,Columbus,Tennessee,Collierville,250,160
+Mississippi,Oxford,Tennessee,Columbia,326,200
+,,,,,
 ,,,,,
 ,,,,,
 Iowa,Davenport,Iowa,Cedar Rapids,127,90
@@ -589,9 +597,10 @@ Missouri,st. louis,Missouri,cape Girardeau,186,110
 Missouri,Branson,Arkansas,Little Rock,280,190
 Missouri,kansas City,Kansas,Wichita,314,180
 Missouri,st. louis,Illinois,Quincy,221,135
-,,,,,
-,,,,,
-,,,,,
+Missouri,Cape Girardeau,Tennessee,Dyersburg,172,110
+Missouri,Springfield,Tennessee,Dyersburg,451,300
+Missouri,St. Louis,Tennessee,Clarksville,426,270
+Missouri,Cape Girardeau,Tennessee,Clarksville,257,190
 ,,,,,
 Oklahoma,Elk City,Oklahoma,Oklahoma City,179,100
 Oklahoma,Oklahoma City,Oklahoma,Elk City,180,100
@@ -682,6 +691,131 @@ Kansas,Topeka,Missouri,Kansas City,102,65
 Kansas,Wichita,Oklahoma,Ponca City,139,85
 Kansas,Manhattan,Nebraska,Lincoln,218,140
 ,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+Arkansas,Hot Springs,,Pine Bluff,115.4,88
+Arkansas,Hot Springs,,Jonesboro,292,168
+Arkansas,Hot Springs,,West Memphis,289,166
+Arkansas,Hot Springs,,Fayetteville,301,204
+Arkansas,Hot Springs,,Little Rock,87.7,55
+Arkansas,Hot Springs,,Conway,124.2,75
+Arkansas,Hot Springs,,Texarkana,179,115
+Arkansas,Hot Springs,,Jacksonville,106.7,65
+Arkansas,Hot Springs,,Fort Smith,206,158
+Arkansas,Pine Bluff,,Hot Springs,114.2,88
+Arkansas,Pine Bluff,,Jonesboro,273.6,156
+Arkansas,Pine Bluff,,West Memphis,220.5,149
+Arkansas,Pine Bluff,,Fayetteville,372.1,209
+Arkansas,Pine Bluff,,Little Rock,71.3,44
+Arkansas,Pine Bluff,,Conway,117.2,69
+Arkansas,Pine Bluff,,Texarkana,247.9,156
+Arkansas,Pine Bluff,,Jacksonville,89.6,54
+Arkansas,Pine Bluff,,Fort Smith,321.9,183
+Arkansas,Jonesboro,,Hot Springs,293.3,170
+Arkansas,Jonesboro,,Pine Bluff,277.6,157
+Arkansas,Jonesboro,,West Memphis,102.2,61
+Arkansas,Jonesboro,,Fayetteville,463.5,265
+Arkansas,Jonesboro,,Little Rock,210.8,119
+Arkansas,Jonesboro,,Conway,209.2,124
+Arkansas,Jonesboro,,Texarkana,436.1,247
+Arkansas,Jonesboro,,Jacksonville,186.9,105
+Arkansas,Jonesboro,,Fort Smith,413.6,238
+Arkansas,Jonesboro,Mississippi,Southaven,133,75
+Arkansas,West Memphis,,Hot Springs,289.7,170
+Arkansas,West Memphis,,Pine Bluff,223.7,146
+Arkansas,West Memphis,,Jonesboro,102.2,61
+Arkansas,West Memphis,,Fayetteville,497.1,264
+Arkansas,West Memphis,,Little Rock,207.8,119
+Arkansas,West Memphis,,Conway,243.4,138
+Arkansas,West Memphis,,Texarkana,433.4,247
+Arkansas,West Memphis,,Jacksonville,201.2,113
+Arkansas,West Memphis,,Fort Smith,447.5,252
+Arkansas,West Memphis,Mississippi,Southaven,30.9,22
+Arkansas,Fayetteville,,Hot Springs,301,204
+Arkansas,Fayetteville,,Pine Bluff,376,216
+Arkansas,Fayetteville,,Jonesboro,463,265
+Arkansas,Fayetteville,,West Memphis,497,269
+Arkansas,Fayetteville,,Little Rock,309,170
+Arkansas,Fayetteville,,Conway,254,142
+Arkansas,Fayetteville,,Texarkana,389,262
+Arkansas,Fayetteville,,Jacksonville,316,173
+Arkansas,Fayetteville,,Fort Smith,93,58
+Arkansas,Little Rock,,Hot Springs,87.7,55
+Arkansas,Little Rock,,Pine Bluff,71.3,44
+Arkansas,Little Rock,,Jonesboro,210.8,119
+Arkansas,Little Rock,,West Memphis,207.8,119
+Arkansas,Little Rock,,Fayetteville,309,170
+Arkansas,Little Rock,,Conway,52.3,31
+Arkansas,Little Rock,,Texarkana,232.2,142
+Arkansas,Little Rock,,Jacksonville,24.9,16
+Arkansas,Little Rock,,Fort Smith,257.5,144
+Arkansas,Conway,,Hot Springs,123.3,75
+Arkansas,Conway,,Pine Bluff,117.8,68
+Arkansas,Conway,,Jonesboro,207.8,121
+Arkansas,Conway,,West Memphis,245.1,136
+Arkansas,Conway,,Fayetteville,257.5,144
+Arkansas,Conway,,Little Rock,53.9,31
+Arkansas,Conway,,Texarkana,268.8,162
+Arkansas,Conway,,Jacksonville,60.8,35
+Arkansas,Conway,,Fort Smith,207.8,117
+Arkansas,Texarkana,,Hot Springs,177,115
+Arkansas,Texarkana,,Pine Bluff,246,154
+Arkansas,Texarkana,,Jonesboro,433,244
+Arkansas,Texarkana,,West Memphis,431,242
+Arkansas,Texarkana,,Fayetteville,388,266
+Arkansas,Texarkana,,Little Rock,230,130
+Arkansas,Texarkana,,Conway,267,151
+Arkansas,Texarkana,,Jacksonville,250,141
+Arkansas,Texarkana,,Fort Smith,296,215
+Arkansas,Jacksonville,,Hot Springs,1014,592
+Arkansas,Jacksonville,,Pine Bluff,90.6,54
+Arkansas,Jacksonville,,Jonesboro,185,102
+Arkansas,Jacksonville,,West Memphis,204,112
+Arkansas,Jacksonville,,Fayetteville,1435,783
+Arkansas,Jacksonville,,Little Rock,24.6,17
+Arkansas,Jacksonville,,Conway,1391,775
+Arkansas,Jacksonville,,Texarkana,253,156
+Arkansas,Jacksonville,,Fort Smith,266,147
+Arkansas,Fort Smith,,Hot Springs,206,158
+Arkansas,Fort Smith,,Pine Bluff,322,207
+Arkansas,Fort Smith,,Jonesboro,414,239
+Arkansas,Fort Smith,,West Memphis,449,253
+Arkansas,Fort Smith,,Fayetteville,93,58
+Arkansas,Fort Smith,,Little Rock,259,144
+Arkansas,Fort Smith,,Conway,206,117
+Arkansas,Fort Smith,,Texarkana,296,215
+Arkansas,Fort Smith,,Jacksonville,266,147
+Arkansas,Jonesboro,Tennessee,Dyersburg,157,110
+Arkansas,West Memphis,Tennessee,Memphis,14,15
+,,,,,
 Tennessee,Kingsport,Tennessee,Knoxville,160,110
 Tennessee,NashVille,Tennessee,Collierville,331,210
 Tennessee,NashVille,Tennessee,Knoxville,290,210
@@ -709,98 +843,20 @@ Tennessee,Franklin,Tennessee,Memphis,333,200
 Tennessee,Columbia,Tennessee,Dyersburg,255,175
 Tennessee,Columbia,Tennessee,Memphis,319,200
 Tennessee,Dyersburg,Tennessee,Memphis,127,100
+Tennessee,Dyersburg,Arkansas,Jonesboro,157,110
+Tennessee,Memphis,Arkansas,West Memphis,14,15
+Tennessee,Columbia,Alabama,Huntsville,130,90
+Tennessee,Columbia,Alabama,Birmingham,253,150
+Tennessee,Columbia,Alabama,Florence,124,110
+Tennessee,Chattanooga,Alabama,Huntsville,164,110
+Tennessee,Chattanooga,Alabama,Birmingham,238,135
+Tennessee,Chattanooga,Alabama,Auburn,353,240
+Tennessee,Dyersburg,Missouri,Cape Girardeau,172,110
+Tennessee,Dyersburg,Missouri,Springfield,451,300
+Tennessee,Clarksville,Missouri,St. Louis,426,270
+Tennessee,Clarksville,Missouri,Cape Girardeau,257,190
 Tennessee,Dyersburg,Mississippi,Southaven,143,90
 Tennessee,Memphis,Mississippi,Southaven,21,12
-,,,,,
-Arkansas,Hot Springs,Arkansas,Pine Bluff,115.4,88
-Arkansas,Hot Springs,Arkansas,Jonesboro,292,168
-Arkansas,Hot Springs,Arkansas,West Memphis,289,166
-Arkansas,Hot Springs,Arkansas,Fayetteville,301,204
-Arkansas,Hot Springs,Arkansas,Little Rock,87.7,55
-Arkansas,Hot Springs,Arkansas,Conway,124.2,75
-Arkansas,Hot Springs,Arkansas,Texarkana,179,115
-Arkansas,Hot Springs,Arkansas,Jacksonville,106.7,65
-Arkansas,Hot Springs,Arkansas,Fort Smith,206,158
-Arkansas,Pine Bluff,Arkansas,Hot Springs,114.2,88
-Arkansas,Pine Bluff,Arkansas,Jonesboro,273.6,156
-Arkansas,Pine Bluff,Arkansas,West Memphis,220.5,149
-Arkansas,Pine Bluff,Arkansas,Fayetteville,372.1,209
-Arkansas,Pine Bluff,Arkansas,Little Rock,71.3,44
-Arkansas,Pine Bluff,Arkansas,Conway,117.2,69
-Arkansas,Pine Bluff,Arkansas,Texarkana,247.9,156
-Arkansas,Pine Bluff,Arkansas,Jacksonville,89.6,54
-Arkansas,Pine Bluff,Arkansas,Fort Smith,321.9,183
-Arkansas,Jonesboro,Arkansas,Hot Springs,293.3,170
-Arkansas,Jonesboro,Arkansas,Pine Bluff,277.6,157
-Arkansas,Jonesboro,Arkansas,West Memphis,102.2,61
-Arkansas,Jonesboro,Arkansas,Fayetteville,463.5,265
-Arkansas,Jonesboro,Arkansas,Little Rock,210.8,119
-Arkansas,Jonesboro,Arkansas,Conway,209.2,124
-Arkansas,Jonesboro,Arkansas,Texarkana,436.1,247
-Arkansas,Jonesboro,Arkansas,Jacksonville,186.9,105
-Arkansas,Jonesboro,Arkansas,Fort Smith,413.6,238
-Arkansas,Jonesboro,Mississippi,Southaven,133,75
-Arkansas,West Memphis,Arkansas,Hot Springs,289.7,170
-Arkansas,West Memphis,Arkansas,Pine Bluff,223.7,146
-Arkansas,West Memphis,Arkansas,Jonesboro,102.2,61
-Arkansas,West Memphis,Arkansas,Fayetteville,497.1,264
-Arkansas,West Memphis,Arkansas,Little Rock,207.8,119
-Arkansas,West Memphis,Arkansas,Conway,243.4,138
-Arkansas,West Memphis,Arkansas,Texarkana,433.4,247
-Arkansas,West Memphis,Arkansas,Jacksonville,201.2,113
-Arkansas,West Memphis,Arkansas,Fort Smith,447.5,252
-Arkansas,West Memphis,Mississippi,Southaven,30.9,22
-Arkansas,Fayetteville,Arkansas,Hot Springs,301,204
-Arkansas,Fayetteville,Arkansas,Pine Bluff,376,216
-Arkansas,Fayetteville,Arkansas,Jonesboro,463,265
-Arkansas,Fayetteville,Arkansas,West Memphis,497,269
-Arkansas,Fayetteville,Arkansas,Little Rock,309,170
-Arkansas,Fayetteville,Arkansas,Conway,254,142
-Arkansas,Fayetteville,Arkansas,Texarkana,389,262
-Arkansas,Fayetteville,Arkansas,Jacksonville,316,173
-Arkansas,Fayetteville,Arkansas,Fort Smith,93,58
-Arkansas,Little Rock,Arkansas,Hot Springs,87.7,55
-Arkansas,Little Rock,Arkansas,Pine Bluff,71.3,44
-Arkansas,Little Rock,Arkansas,Jonesboro,210.8,119
-Arkansas,Little Rock,Arkansas,West Memphis,207.8,119
-Arkansas,Little Rock,Arkansas,Fayetteville,309,170
-Arkansas,Little Rock,Arkansas,Conway,52.3,31
-Arkansas,Little Rock,Arkansas,Texarkana,232.2,142
-Arkansas,Little Rock,Arkansas,Jacksonville,24.9,16
-Arkansas,Little Rock,Arkansas,Fort Smith,257.5,144
-Arkansas,Conway,Arkansas,Hot Springs,123.3,75
-Arkansas,Conway,Arkansas,Pine Bluff,117.8,68
-Arkansas,Conway,Arkansas,Jonesboro,207.8,121
-Arkansas,Conway,Arkansas,West Memphis,245.1,136
-Arkansas,Conway,Arkansas,Fayetteville,257.5,144
-Arkansas,Conway,Arkansas,Little Rock,53.9,31
-Arkansas,Conway,Arkansas,Texarkana,268.8,162
-Arkansas,Conway,Arkansas,Jacksonville,60.8,35
-Arkansas,Conway,Arkansas,Fort Smith,207.8,117
-Arkansas,Texarkana,Arkansas,Hot Springs,177,115
-Arkansas,Texarkana,Arkansas,Pine Bluff,246,154
-Arkansas,Texarkana,Arkansas,Jonesboro,433,244
-Arkansas,Texarkana,Arkansas,West Memphis,431,242
-Arkansas,Texarkana,Arkansas,Fayetteville,388,266
-Arkansas,Texarkana,Arkansas,Little Rock,230,130
-Arkansas,Texarkana,Arkansas,Conway,267,151
-Arkansas,Texarkana,Arkansas,Jacksonville,250,141
-Arkansas,Texarkana,Arkansas,Fort Smith,296,215
-Arkansas,Jacksonville,Arkansas,Hot Springs,1014,592
-Arkansas,Jacksonville,Arkansas,Pine Bluff,90.6,54
-Arkansas,Jacksonville,Arkansas,Jonesboro,185,102
-Arkansas,Jacksonville,,West Memphis,204,112
-Arkansas,Jacksonville,,Fayetteville,1435,783
-Arkansas,Jacksonville,,Little Rock,24.6,17
-Arkansas,Jacksonville,,Conway,1391,775
-Arkansas,Jacksonville,,Texarkana,253,156
-Arkansas,Jacksonville,,Fort Smith,266,147
-Arkansas,Fort Smith,,Hot Springs,206,158
-Arkansas,Fort Smith,,Pine Bluff,322,207
-Arkansas,Fort Smith,,Jonesboro,414,239
-Arkansas,Fort Smith,,West Memphis,449,253
-Arkansas,Fort Smith,,Fayetteville,93,58
-Arkansas,Fort Smith,,Little Rock,259,144
-Arkansas,Fort Smith,,Conway,206,117
-Arkansas,Fort Smith,,Texarkana,296,215
-Arkansas,Fort Smith,,Jacksonville,266,147
+Tennessee,Collierville,Mississippi,Oxford,91,70
+Tennessee,Collierville,Mississippi,Columbus,250,160
+Tennessee,Columbia,Mississippi,Oxford,326,200

@@ -1,6 +1,8 @@
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
 import java.time.Year;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -98,6 +100,17 @@ public class WeatherParse {
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd MMMM hh a");
         Date date = dateFormat.parse(weatherDateTime);
         date.setYear(Year.now().getValue() - 1900);
+        return date;
+    }
+
+        public static Date parseWeatherDateTimeNew(String weatherDateTime) throws ParseException {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd MMMM hh a");
+        LocalDateTime localDateTime = LocalDateTime.parse(weatherDateTime, formatter);
+        
+        localDateTime = localDateTime.withYear(java.time.Year.now().getValue());
+
+        Date date = java.util.Date.from(localDateTime.atZone(java.time.ZoneId.systemDefault()).toInstant());
+
         return date;
     }
 }

@@ -1,13 +1,9 @@
 import java.util.Map;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.TreeMap;
 import java.util.logging.FileHandler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.HashMap;
 
 
@@ -100,7 +96,7 @@ public class BuildCityObjects {
             if (city != null){
 
                 String state = connectionCity[2];
-                if (StringStandardize.standardizeString(state).equals(""))
+                if (utils.standardizeString(state).equals(""))
                     state = city.state;
                 city.connections.add(new CityConnectionStruct(connectionCity[3], state,
                  Float.parseFloat(connectionCity[4]), Integer.parseInt(connectionCity[5])));
@@ -117,12 +113,14 @@ public class BuildCityObjects {
                 String key = cityEntry.getKey();
                 City city = cityEntry.getValue();
                 for (CityConnectionStruct c: city.connections){
-                    String connkey = StringStandardize.standardizeString(c.state) + "__" + StringStandardize.standardizeString(c.name);
+                    String connkey = utils.standardizeCityKey(c.state, c.name);
+                    // String connkey = StringStandardize.standardizeString(c.state) + "__" + StringStandardize.standardizeString(c.name);
                     City connCity = cities.get(connkey);
                     if (connCity != null){
                         boolean isPresent = false;
                         for (CityConnectionStruct backConnC : connCity.connections){
-                            String backConnCKey = StringStandardize.standardizeString(backConnC.state) + "__" + StringStandardize.standardizeString(backConnC.name);
+                            String backConnCKey = utils.standardizeCityKey(backConnC.state, backConnC.name);
+                            // String backConnCKey = StringStandardize.standardizeString(backConnC.state) + "__" + StringStandardize.standardizeString(backConnC.name);
                             if (backConnCKey.equals(key)) isPresent = true;
                         }
                         if (!isPresent){
@@ -135,6 +133,33 @@ public class BuildCityObjects {
         return cities;
 
     }
+
+    public static HashMap<String, City> makeDistancesEqual(HashMap<String, City> citiesDS){
+        for (Map.Entry<String, City> cityEntry : citiesDS.entrySet()) {
+                String key = cityEntry.getKey();
+                City city = cityEntry.getValue();
+                for (CityConnectionStruct c: city.connections){
+                    String connkey = utils.standardizeCityKey(c.state, c.name);
+                    // String connkey = StringStandardize.standardizeString(c.state) + "__" + StringStandardize.standardizeString(c.name);
+                    City connCity = citiesDS.get(connkey);
+                    if (connCity != null){
+                        for (CityConnectionStruct backConnC : connCity.connections){
+                            String backConnCKey = utils.standardizeCityKey(backConnC.state, backConnC.name);
+                            // String backConnCKey = StringStandardize.standardizeString(backConnC.state) + "__" + StringStandardize.standardizeString(backConnC.name);
+                            if (backConnCKey.equals(key)) c.distance = backConnC.distance;
+
+                        }
+
+                    }
+                }
+            }
+
+        return citiesDS;
+
+    }
+
+
+
 
     // Verification check that all cities have a path from one to another
     // cities must not be of size 0
@@ -152,7 +177,8 @@ public class BuildCityObjects {
                 cityNames.add(dequeueKey);
                 // System.out.println(dequeueKey);
                 for (CityConnectionStruct connectCity : city.connections) {
-                    String connkey = StringStandardize.standardizeString(connectCity.state) + "__" + StringStandardize.standardizeString(connectCity.name);
+                    String connkey = utils.standardizeCityKey(connectCity.state, connectCity.name);
+                    // String connkey = StringStandardize.standardizeString(connectCity.state) + "__" + StringStandardize.standardizeString(connectCity.name);
                     if (!cityNames.contains(connkey) && !queue.contains(connkey)){
                         queue.add(connkey);
                     }
@@ -192,6 +218,7 @@ public class BuildCityObjects {
     
     public static void printAdjacencyList(HashMap<String, City> cityMap){
         int totalCities = 0;
+        float totalDistance = 0;
         int totalConnections = 0;
         for (Map.Entry<String, City> cityEntry: cityMap.entrySet()){
             City city = cityEntry.getValue();
@@ -200,11 +227,13 @@ public class BuildCityObjects {
             System.out.println("####");
             System.out.print(city.name + " ( " + city.state + " ) :");
             for (CityConnectionStruct cityConnectionStruct : city.connections){
-                String connkey = StringStandardize.standardizeString(cityConnectionStruct.state) + "__" + StringStandardize.standardizeString(cityConnectionStruct.name);
+                String connkey = utils.standardizeCityKey(cityConnectionStruct.state, cityConnectionStruct.name);
+                // String connkey = StringStandardize.standardizeString(cityConnectionStruct.state) + "__" + StringStandardize.standardizeString(cityConnectionStruct.name);
                 if (cityMap.get(connkey)!= null){
                     String connCityState = cityMap.get(connkey).state ;
                     if (connCityState.equals(city.state)) System.out.print(" --- " + cityConnectionStruct.distance   + " km ---> " + cityConnectionStruct.name + " ,");
                     else System.out.print(" --- " + cityConnectionStruct.distance   + " km ---> " + cityConnectionStruct.name + "(" + connCityState + ") ," );
+                    totalDistance += cityConnectionStruct.distance;
                 }
             }
             totalConnections += city.connections.size();
@@ -214,6 +243,8 @@ public class BuildCityObjects {
         System.out.println("Total Cities are : " + totalCities);
         System.out.println("Total Connections are : " + totalConnections + " Theoretical max (directed) are " + (totalCities * totalCities - totalCities));
         System.out.println("Avg connections per city are : " + (totalConnections * 1.0f/totalCities));
+        System.out.println("Total Cumulative Distance is : " + totalDistance + " km");
+
 
     }
 
@@ -222,117 +253,5 @@ public class BuildCityObjects {
         HashMap<String, City> newCityMap = new HashMap<>();
         for (Map.Entry<String,City> me: cityMap.entrySet()) newCityMap.put(me.getKey(), new City(me.getValue()));
         return newCityMap;
-    }
-}
-
-class CityConnectionStruct {
-    final String name;
-    final String state;
-    final float distance;
-    final int timeTaken;
-    String meta;
-    CityConnectionStruct(String name, String state, float distance, int timeTaken){
-        this.name = name;
-        this.state = state;
-        this.distance = distance;
-        this.timeTaken = timeTaken;
-
-    }
-    // copy cosntructor
-    CityConnectionStruct(CityConnectionStruct c){
-        this.name = c.name;
-        this.state = c.state;
-        this.distance = c.distance;
-        this.timeTaken = c.timeTaken;
-        this.meta = c.meta;
-    }
-
-    public void printString(String message, Logger logger){
-        if (logger == null) System.out.println(message);
-        else logger.info(message);
-    }
-
-    public void printObject(Logger logger){
-        printString("---Connection Info---", logger);
-        printString("Connected City Name : "+ name + " in state of "+ state, logger);
-
-        printString("Distance (forward) in km :" + String.valueOf(distance), logger);
-        printString("Avg time taken (forward) in min :" + timeTaken, logger);
-    }
-}
-
-class City {
-    final String name;
-    final String state;
-    final int seaLevel;
-    final String postCode;
-    final float lat;
-    final float lngt;
-    final TreeMap<Long, List<String>> weatherData;
-    LinkedList<CityConnectionStruct> connections;
-
-
-    City(String name, String state, String postCode, int seaLevel, String weatherDataString, float lat, float lngt){
-        this.name = name;
-        this.state = state;
-        this.seaLevel = seaLevel;
-        this.postCode = postCode;
-        this.lat = lat;
-        this.lngt = lngt;
-        this.weatherData = WeatherParse.parseWeatherData(weatherDataString);
-        this.connections = new LinkedList<>();
-    }
-    City(String name, String state, String postCode, int seaLevel, String weatherDataString){
-        this(name, state, postCode, seaLevel, weatherDataString,-400, -400);
-    }
-
-    // copy constructor
-    City(City city){
-        this.name = city.name;
-        this.state = city.state;
-        this.seaLevel = city.seaLevel;
-        this.postCode = city.postCode;
-        this.lat = city.lat;
-        this.lngt = city.lngt;
-        this.weatherData = city.weatherData;
-        this.connections = new LinkedList<>();
-        for (CityConnectionStruct c: city.connections){
-            this.connections.add(new CityConnectionStruct(c));
-        }
-    }
-
-    public void printString(String message, Logger logger){
-        if (logger == null) System.out.println(message);
-        else logger.info(message);
-    }
-
-
-    public void printObject(Logger logger){
-        printString("----CITY INFO ----", logger);
-        printString("Name : "+ this.name, logger);
-        printString("State : "+ this.state, logger);
-        printString("Post Code : " + this.postCode, logger);
-        printString("Sea Level in m: " + String.valueOf(this.seaLevel), logger);
-        printString("Weather Conditions", logger);
-        printString("--Weather Conditions --", logger);
-        for (Map.Entry<Long, List<String>> entry : weatherData.entrySet()) {
-            long timestamp = entry.getKey();
-            List<String> conditions = entry.getValue();
-            printString("Date : " + new Date(timestamp), logger);
-            printString("Weather Conditions: " + conditions, logger);
-        }
-        printString("--End Weather Conditions--", logger);
-        printString("City Connections", logger);
-        for (CityConnectionStruct connection: connections){
-            connection.printObject(logger);
-        }
-        printString("----END-----", logger);
-        printString("", logger);
-        printString("", logger);
-        printString("", logger);
-    }
-
-    public void printObject(){
-        printObject(null);
     }
 }

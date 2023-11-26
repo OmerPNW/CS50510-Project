@@ -1,6 +1,6 @@
 import java.text.Normalizer;
 
-public class StringStandardize {
+public class utils {
 
     public static String standardizeString(String input) {
         // Remove accents
@@ -17,12 +17,23 @@ public class StringStandardize {
         return normalizedString;
     }
 
-    public static void main(String[] args) {
-        String inputString = "Héllõ Wörld! This_is-a_Test-String.";
+    public static String standardizeCityKey(String state, String city){
+        return standardizeString(state) + "__" + standardizeString(city);
+    }
+    
+    public static boolean isNumber(String s) {
 
-        String standardizedString = standardizeString(inputString);
+        try { 
 
-        System.out.println("Original String: " + inputString);
-        System.out.println("Standardized String: " + standardizedString);
+            Float.parseFloat(s); 
+        } catch(NumberFormatException e) { 
+
+            return false; 
+        } catch(NullPointerException e) {
+
+            return false;
+        }
+
+        return true;
     }
 }

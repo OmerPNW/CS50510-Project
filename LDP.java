@@ -9,7 +9,6 @@ import java.util.Scanner;
 import java.util.logging.FileHandler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
 public class LDP {
     
     static Logger logger = Logger.getLogger(LDP.class.getName());
@@ -27,7 +26,7 @@ public class LDP {
 
             String[] headers = scanner.nextLine().split(","); // no need to have header data itself
             for( int i=0; i< inorderCityHeaders.length; i++){
-                if (!StringStandardize.standardizeString(headers[i]).equals(StringStandardize.standardizeString(inorderCityHeaders[i]))){
+                if (!utils.standardizeString(headers[i]).equals(utils.standardizeString(inorderCityHeaders[i]))){
                     System.out.println("CITY CSV headers not as expected");
                     logger.severe("-----CITY CSV ISSUE----");
                     logger.severe("CSV headers not as expected . Got "+ headers[i] + " Expected :" + inorderCityHeaders[i]);
@@ -68,13 +67,13 @@ public class LDP {
                     else index += 1;
                     if (index > inorderCityHeaders.length - 1) break;
                 }
-
-                String key = StringStandardize.standardizeString(weatherFields[0]) + "__" + StringStandardize.standardizeString(weatherFields[1]); // City
+                String key = utils.standardizeCityKey(weatherFields[0], weatherFields[1]);
+                //String key = StringStandardize.standardizeString(weatherFields[0]) + "__" + StringStandardize.standardizeString(weatherFields[1]); // City
                 if (key.equals("")){
                     logger.warning("Empty .Found row with no city name in row "+ String.valueOf(rowNum + 1) + ". Skipping row");
                     continue ; // skip empty row
                 }
-                if (!isNumber(weatherFields[2]) || !isNumber(weatherFields[4])){
+                if (!utils.isNumber(weatherFields[2]) || !utils.isNumber(weatherFields[4])){
 
                     logger.severe("Encountered non numeric data in a numeric column in City Data at row " + String.valueOf(rowNum + 1));
                     logger.severe(weatherFields[2] + " "+ weatherFields[4]+ " "+  weatherFields[5] + " "+ weatherFields[6]);
@@ -102,6 +101,66 @@ public class LDP {
         return weatherData;
     }
 
+    public static Map<String, String[]> loadCityConnectionData(String csvPath) throws IOException, Exception{
+        Map<String, String[]> connectionData = new HashMap<>();
+        try {
+
+            Scanner scanner = new Scanner(new File(csvPath));
+            String line = scanner.nextLine();
+            String[] headers = line.split(",");
+
+
+            for( int i=0; i< inorderConnectionsHeaders.length; i++){
+                if (!utils.standardizeString(headers[i]).equals(utils.standardizeString(inorderConnectionsHeaders[i]))){
+                    System.out.println("CSV headers not as expected: Found " + headers[i] + "   Expected : " + inorderConnectionsHeaders[i]);
+                    logger.severe("-----CONNECTIONS CSV ISSUE----");
+                    logger.severe("CSV headers not as expected . Got "+ headers[i] + " Expected :" + inorderConnectionsHeaders[i]); 
+                    return null;
+                }
+            }
+
+            logger.info("---- CONNECTIONS CSV INFO -----");
+            logger.info("CONNECTIONS CSV Headers are correct");
+            // Parse weather CSV and store in a map
+            int rowNum = 0;
+            while( scanner.hasNextLine()){
+                rowNum += 1;
+                String[] connectionFields = scanner.nextLine().split(",");
+                if (connectionFields.length < 2){
+                    logger.warning("Empty .Found row with missing data . Row num "+ String.valueOf(rowNum + 1) + ". Skipping");
+                    continue ; // skip empty row
+                }
+                String key = utils.standardizeCityKey(connectionFields[0], connectionFields[1]) + "," + utils.standardizeCityKey(connectionFields[2], connectionFields[3]);
+                // String key = StringStandardize.standardizeString(connectionFields[0]) + "__" +
+                //  StringStandardize.standardizeString(connectionFields[1]) + "," + StringStandardize.standardizeString(connectionFields[2]) + "__" +
+                // StringStandardize.standardizeString(connectionFields[3]); // City + Destination City
+                if (key.equals(",")){
+                    logger.warning("Empty .Found row with no city name in row "+ String.valueOf(rowNum + 1) + ". Skipping");
+                    continue ; // skip empty row
+                }
+                if (!utils.isNumber(connectionFields[4]) || !utils.isNumber(connectionFields[5])){
+                    logger.severe("Encountered non numeric data in a numeric column in City Data at row " + String.valueOf(rowNum + 1));
+                    return null;
+                }
+                connectionData.put(key, connectionFields);
+            }
+
+            scanner.close();
+
+            if (connectionData.size() == 0){
+                logger.severe("-----CONNECTIONS CSV ISSUE----");
+                logger.severe("No data in CSV");
+                logger.severe("-----END------");
+                return null;
+            }
+            logger.info("CSV Reading Completed");
+            logger.info("----END----\n");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return connectionData;
+    }
+
     public static Map<String, ArrayList<String>> loadContributions(String csvPath) throws IOException{
 
         try {
@@ -113,7 +172,7 @@ public class LDP {
             final String[] expectedHeaders = {"State", "City","Student ID"};
 
             for( int i=0; i< headers.length; i++){
-                if (!StringStandardize.standardizeString(headers[i]).equals(StringStandardize.standardizeString(expectedHeaders[i]))){
+                if (!utils.standardizeString(headers[i]).equals(utils.standardizeString(expectedHeaders[i]))){
                     System.out.println("CSV headers not as expected: Found " + headers[i] + "   Expected : " + expectedHeaders[i]);
                     logger.severe("-----Contributibutions CSV ISSUE----");
                     logger.severe("CSV headers not as expected . Got "+ headers[i] + " Expected :" + inorderConnectionsHeaders[i]); 
@@ -130,12 +189,13 @@ public class LDP {
                     logger.warning("Empty .Found row with missing data . Row num "+ String.valueOf(rowNum + 1) +". Skipping");
                     continue ; // skip empty row
                 }
-                String key = StringStandardize.standardizeString(fields[0]) + "__" + StringStandardize.standardizeString(fields[1]);
+                String key = utils.standardizeCityKey(fields[0], fields[1]);
+                // String key = StringStandardize.standardizeString(fields[0]) + "__" + StringStandardize.standardizeString(fields[1]);
                 if (key.equals("__")){
                     logger.warning("Empty . Found row with no city or state name in row "+ String.valueOf(rowNum + 1) + ". Skipping");
                     continue ; // skip empty row
                 }
-                final String stndName = StringStandardize.standardizeString(fields[2]);
+                final String stndName = utils.standardizeString(fields[2]);
                 if (studentToCity.get(stndName)==null){
                     studentToCity.put(stndName, new ArrayList<>());
                 }
@@ -158,7 +218,6 @@ public class LDP {
 
     }
 
-
     public static Map<String, String> loadInverseContributions(String csvPath) throws IOException{
 
         try {
@@ -170,7 +229,7 @@ public class LDP {
             final String[] expectedHeaders = {"State", "City","Student ID"};
 
             for( int i=0; i< headers.length; i++){
-                if (!StringStandardize.standardizeString(headers[i]).equals(StringStandardize.standardizeString(expectedHeaders[i]))){
+                if (!utils.standardizeString(headers[i]).equals(utils.standardizeString(expectedHeaders[i]))){
                     System.out.println("CSV headers not as expected: Found " + headers[i] + "   Expected : " + expectedHeaders[i]);
                     logger.severe("-----Contributibutions CSV ISSUE----");
                     logger.severe("CSV headers not as expected . Got "+ headers[i] + " Expected :" + inorderConnectionsHeaders[i]); 
@@ -187,12 +246,13 @@ public class LDP {
                     logger.warning("Empty .Found row with missing data . Row num "+ String.valueOf(rowNum + 1) + ". Skipping");
                     continue ; // skip empty row
                 }
-                String key = StringStandardize.standardizeString(fields[0]) + "__" + StringStandardize.standardizeString(fields[1]);
+                String key = utils.standardizeCityKey(fields[0], fields[1]);
+                // String key = StringStandardize.standardizeString(fields[0]) + "__" + StringStandardize.standardizeString(fields[1]);
                 if (key.equals("__")){
                     logger.warning("Empty .Found row with no state / city name in row "+ String.valueOf(rowNum + 1) + ". Skipping");
                     continue ; // skip empty row
                 }
-                final String studentName = StringStandardize.standardizeString(fields[2]);
+                final String studentName = utils.standardizeString(fields[2]);
                 cityToStudent.put(key, studentName);
             }
             return cityToStudent;
@@ -205,65 +265,6 @@ public class LDP {
 
             
 
-    }
-
-    public static Map<String, String[]> loadCityConnectionData(String csvPath) throws IOException, Exception{
-        Map<String, String[]> connectionData = new HashMap<>();
-        try {
-
-            Scanner scanner = new Scanner(new File(csvPath));
-            String line = scanner.nextLine();
-            String[] headers = line.split(",");
-
-
-            for( int i=0; i< inorderConnectionsHeaders.length; i++){
-                if (!StringStandardize.standardizeString(headers[i]).equals(StringStandardize.standardizeString(inorderConnectionsHeaders[i]))){
-                    System.out.println("CSV headers not as expected: Found " + headers[i] + "   Expected : " + inorderConnectionsHeaders[i]);
-                    logger.severe("-----CONNECTIONS CSV ISSUE----");
-                    logger.severe("CSV headers not as expected . Got "+ headers[i] + " Expected :" + inorderConnectionsHeaders[i]); 
-                    return null;
-                }
-            }
-
-            logger.info("---- CONNECTIONS CSV INFO -----");
-            logger.info("CONNECTIONS CSV Headers are correct");
-            // Parse weather CSV and store in a map
-            int rowNum = 0;
-            while( scanner.hasNextLine()){
-                rowNum += 1;
-                String[] connectionFields = scanner.nextLine().split(",");
-                if (connectionFields.length < 2){
-                    logger.warning("Empty .Found row with missing data . Row num "+ String.valueOf(rowNum + 1) + ". Skipping");
-                    continue ; // skip empty row
-                }
-                String key = StringStandardize.standardizeString(connectionFields[0]) + "__" +
-                 StringStandardize.standardizeString(connectionFields[1]) + "," + StringStandardize.standardizeString(connectionFields[2]) + "__" +
-                StringStandardize.standardizeString(connectionFields[3]); // City + Destination City
-                if (key.equals(",")){
-                    logger.warning("Empty .Found row with no city name in row "+ String.valueOf(rowNum + 1) + ". Skipping");
-                    continue ; // skip empty row
-                }
-                if (!isNumber(connectionFields[4]) || !isNumber(connectionFields[5])){
-                    logger.severe("Encountered non numeric data in a numeric column in City Data at row " + String.valueOf(rowNum + 1));
-                    return null;
-                }
-                connectionData.put(key, connectionFields);
-            }
-
-            scanner.close();
-
-            if (connectionData.size() == 0){
-                logger.severe("-----CONNECTIONS CSV ISSUE----");
-                logger.severe("No data in CSV");
-                logger.severe("-----END------");
-                return null;
-            }
-            logger.info("CSV Reading Completed");
-            logger.info("----END----\n");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return connectionData;
     }
 
     public static void verifyContributors(String contributorsName ,Map<String, String[]> weatherData, Map<String, ArrayList<String>> studentMap, 
@@ -298,7 +299,7 @@ public class LDP {
         }
         else{
             logger.info("------ Data contribution check ------");
-            ArrayList<String> contributedCitiesExpected = studentMap.get(StringStandardize.standardizeString(contributorsName));
+            ArrayList<String> contributedCitiesExpected = studentMap.get(utils.standardizeString(contributorsName));
             if (contributedCitiesExpected == null){
                 logger.severe(contributorsName + " name is not found among the contributors. Please recheck your input");
                 throw new Exception(" name is not found among the contributors. Please recheck your input");
@@ -321,10 +322,7 @@ public class LDP {
             logger.info("------ END ------");
         }
 
-
-
     }
-
 
     public static void saveInnerJoinCsv(String outputCsvPath, Map<String, String[]> weatherData, Map<String, String[]> connectionData){
                 // inner join and create csv for display purposes
@@ -366,37 +364,15 @@ public class LDP {
         }
     }
 
-
-    public static boolean isNumber(String s) {
-
-        try { 
-
-            Float.parseFloat(s); 
-        } catch(NumberFormatException e) { 
-
-            return false; 
-        } catch(NullPointerException e) {
-
-            return false;
-        }
-
-        return true;
-    }
-
-
-
-
-
-
     public static void main(String[] args) throws IOException{
 
 
 
         /*
-         * Data files, input * output
+         * Data files, input & output
          */
-        String citiesCsvPath = "Cities_2.txt" ;
-        String connectionCsvPath = "Connections_test.txt" ;
+        String citiesCsvPath = "Cities_3.txt" ;
+        String connectionCsvPath = "Connections_4.txt" ;
         String contributionsCsvPath = "contributions.txt" ;
 
         // output inner join csv. Only vaild if createInnerJoin is true
@@ -412,16 +388,10 @@ public class LDP {
         person from the list contributors.csv to see whether individual has provided all the data.
         e.g "Muhammad Omer Raza" lower cases and upper case and spaces dont matter here */
         final String contributorsName = "ALL"; 
-        final boolean showDetailedLogs = true;
+        final boolean showDetailedLogs = false;
         final boolean createInnerJoin = true;
         // recommend to turn it off so that error logs either in file or console can be easily found. Check info.log for detailed logs
         final boolean getScreenLogs = true; 
-
-
-
-
-
-
 
 
 
