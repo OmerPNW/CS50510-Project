@@ -22,10 +22,10 @@ The program is used for parsing the input data and creating structure. Finally, 
         Q: Please Enter Start time in format : MM/dd/yyyy HH:mm (Enter any time range but preferably enter one within 8 to 8 Nove)
         A: 12/23/2023 12:34
 - For seeing a rudiementary map, please run [MapVisualization.java](MapVisualization.java).
-    
+- For visualizing MST, either as adjacency list or graphs, please [OptimalPath.java](OptimalPath.java) with the appropriate commands , e.g mst. For traversing random or selected paths, please run the same file
 
 The LDP program should provide logs if it correctly parses and data. It will provide detailed logs in a log file in case of erroneous formatting or invalid data
-The Optimal Path program implements A* efficiently by using Priority queues with ranks being determined by heuristic costs of the connections.
+The Optimal Path program implements A* efficiently by using Priority queues with ranks being determined by heuristic costs of the connections. It traverses by random path search and uses optimal paths in selected traversal. It also runs the MST algorithm using either prim or kruskal methodology and displays the corresponding map
 The MapVisualization is very rudimentary!
 ## Contributing
 
