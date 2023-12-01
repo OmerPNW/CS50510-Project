@@ -1,3 +1,4 @@
+package src;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
@@ -371,9 +372,9 @@ public class LDP {
         /*
          * Data files, input & output
          */
-        String citiesCsvPath = "Cities_3.txt" ;
-        String connectionCsvPath = "Connections_4.txt" ;
-        String contributionsCsvPath = "contributions.txt" ;
+        String citiesCsvPath = "data/Cities_3.txt" ;
+        String connectionCsvPath = "data/Connections_4.txt" ;
+        String contributionsCsvPath = "data/contributions.txt" ;
 
         // output inner join csv. Only vaild if createInnerJoin is true
         String outputCsvPath = "output.txt";

@@ -1,3 +1,4 @@
+package src;
 import java.util.Map;
 import java.util.logging.FileHandler;
 import java.util.logging.Level;
@@ -15,8 +16,8 @@ public class BuildCityObjects {
 
 
     public static void main(String[] args) throws IOException{
-        String citiesCsvPath = "Cities.txt";
-        String connectionCsvPath = "Connections_test.txt";
+        String citiesCsvPath = "data/Cities.txt";
+        String connectionCsvPath = "data/Connections_test.txt";
 
         // Create a FileHandler that writes log messages to a file
         FileHandler fileHandlerInfo = new FileHandler("info.log");

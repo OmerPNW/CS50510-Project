@@ -1,3 +1,4 @@
+package src;
 import java.util.logging.Logger;
 
 public class CityConnectionStruct {

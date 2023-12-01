@@ -1,3 +1,4 @@
+package src;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -35,7 +36,7 @@ public class OptimalPath {
     private static float timeToDistanceRatio = 7f/6;
 
 
-    private static Map<String, ArrayList<Integer>> loadWeatherRiskFactor(String csvPath){
+    public static Map<String, ArrayList<Integer>> loadWeatherRiskFactor(String csvPath){
 
         try {
             Scanner scanner = new Scanner(new File(csvPath));
@@ -57,7 +58,7 @@ public class OptimalPath {
         return null;
     }
 
-    private static WrapperOutput findOptimalPath(Map<String, City> cityMap, Map<String, ArrayList<Integer>> weatherRiskMap, String startState,String startCity,
+    private static WrapperOutput findOptimalPathDjikstra(Map<String, City> cityMap, Map<String, ArrayList<Integer>> weatherRiskMap, String startState,String startCity,
     String goalState, String goalCity, long startTime, boolean debug) {
         Map<String, String> cameFrom = new HashMap<>();
         Map<String, CostStruct> gScore = new HashMap<>();
@@ -107,7 +108,63 @@ public class OptimalPath {
         return null;
     }
 
-    private static CostStruct costBetweenCities(String cityKey, String connectedCityKey, Map<String , City> cityMap, Map<String, ArrayList<Integer>> weatherRiskMap, long startTime) {
+
+    private static WrapperOutput findOptimalPathBellmanFord(Map<String, City> cityMap, Map<String, ArrayList<Integer>> weatherRiskMap, String startState, String startCity,
+                                                         String goalState, String goalCity, long startTime, boolean debug) {
+        Map<String, String> cameFrom = new HashMap<>();
+        Map<String, CostStruct> gScore = new HashMap<>();
+
+        for (String city : cityMap.keySet()) {
+            gScore.put(city, new CostStruct(Float.MAX_VALUE, Integer.MAX_VALUE));
+        }
+
+        String startKey = utils.standardizeCityKey(startState, startCity);
+        String goalKey = utils.standardizeCityKey(goalState, goalCity);
+
+        gScore.put(startKey, new CostStruct(0, 0, startTime));
+
+        // V-1 iterations
+        for (int i = 0; i < cityMap.size() - 1; i++) {
+            for (String currentCityKey : cityMap.keySet()) {
+                CostStruct currentCityGScore = gScore.get(currentCityKey);
+
+                for (CityConnectionStruct neighbor : cityMap.get(currentCityKey).connections) {
+                    String neighborKey = utils.standardizeCityKey(neighbor.state, neighbor.name);
+
+                    if (cityMap.get(neighborKey) != null) {
+                        CostStruct tentativeGScore = currentCityGScore.add(costBetweenCities(currentCityKey, neighborKey, cityMap, weatherRiskMap, currentCityGScore.startTime));
+                        if (tentativeGScore.getCostStructValue(riskThreshold) < gScore.get(neighborKey).getCostStructValue(riskThreshold)) {
+                            cameFrom.put(neighborKey, currentCityKey);
+                            gScore.put(neighborKey, tentativeGScore);
+                        }
+                    } else if (debug) {
+                        System.out.println(neighborKey + " not found");
+                    }
+                }
+            }
+        }
+
+        // Check for negative cycles and throw an error if so
+        for (String currentCityKey : cityMap.keySet()) {
+            CostStruct currentCityGScore = gScore.get(currentCityKey);
+
+            for (CityConnectionStruct neighbor : cityMap.get(currentCityKey).connections) {
+                String neighborKey = utils.standardizeCityKey(neighbor.state, neighbor.name);
+                if (cityMap.get(neighborKey) != null) {
+                    CostStruct tentativeGScore = currentCityGScore.add(costBetweenCities(currentCityKey, neighborKey, cityMap, weatherRiskMap, currentCityGScore.startTime));
+                    if (tentativeGScore.getCostStructValue(riskThreshold) < gScore.get(neighborKey).getCostStructValue(riskThreshold)) {
+                        // Negative cycle detected
+                        throw new RuntimeException("Negative cycle detected");
+                    }
+                }
+            }
+        }
+
+        return new WrapperOutput(reconstructPath(cameFrom, goalKey), gScore);
+    }
+
+
+    public static CostStruct costBetweenCities(String cityKey, String connectedCityKey, Map<String , City> cityMap, Map<String, ArrayList<Integer>> weatherRiskMap, long startTime) {
         City cityObject = cityMap.get(cityKey);
         CityConnectionStruct ccs = null;
         for (CityConnectionStruct c : cityObject.connections){
@@ -260,14 +317,15 @@ public class OptimalPath {
                     float timeTaken = (gScore.get(destinationCityKey).startTime - currentTime)/(1000 * 60f);
                     if (details){
                         System.out.print("Distance is ");
-                        System.out.print(c.distance);
-                        System.out.println( " km");
+                        System.out.print(c.distance / 1.6);
+                        System.out.println( " miles");
                         System.out.println("Time start is " + new Date(currentTime));
                         System.out.println("Expected Time taken is " + timeTaken + " min");
                         System.out.println("ETA is " + new Date(gScore.get(destinationCityKey).startTime));
                         System.out.println("Perceived risk due to weather" + WeatherParse.getNearestWeather(startTime, sourceCity.weatherData) 
                         + " is " + riskVal);
                         System.out.println("Expected Gas Mileage in miles/gallon is : " + gScore.get(destinationCityKey).mileage * 3.78541 / 1.6);
+                        System.out.println("Expected Gas Consumption is : " + ((c.distance / 1.6)/(gScore.get(destinationCityKey).mileage * 3.78541 / 1.6)) + " gallons");
                         System.out.println("Sea level diff " + (citiesDS.get(destinationCityKey).seaLevel - citiesDS.get(sourceCityKey).seaLevel) + " m");
                         System.out.println();
                     }
@@ -293,10 +351,12 @@ public class OptimalPath {
             else System.out.print("(" + city.state + ")"  + city.name);
         }
         System.out.println();
-        System.out.println("Total Distance is " + totalDistance + " km");
+        System.out.println("Total Distance is " + totalDistance/1.6 + " miles");
         System.out.println("Total Time taken is " + totalTimeTaken + " min");
         System.out.println("Total Perceived risk is " + totalPerceivedRisk);
         System.out.println("Expected Gas Mileage is : " + expectedGasMileage * 1000/ totalDistance * 3.78541 / 1.6 +  " miles /  gallon");
+        System.out.println("Expected Gas Consumption is : " + totalDistance/1.6 / (expectedGasMileage * 1000/ totalDistance * 3.78541 / 1.6) +  " gallons");
+
 
 
     } 
@@ -318,7 +378,7 @@ public class OptimalPath {
             String startCity = cityKeyNames.get(i).split("__")[1];
             String endState = cityKeyNames.get(i+1).split("__")[0];
             String endCity = cityKeyNames.get(i+1).split("__")[1];
-            WrapperOutput wo = findOptimalPath(cities, weatherRiskMap, startState, startCity, endState, endCity, time, false);
+            WrapperOutput wo = findOptimalPathDjikstra(cities, weatherRiskMap, startState, startCity, endState, endCity, time, false);
             printPathInfo(wo , cities, weatherRiskMap, false);
             System.out.println();
             System.out.println("--------");
@@ -335,9 +395,9 @@ public class OptimalPath {
         /*
          * Parameters to change
          */
-        String citiesCsvPath = "Cities_3.txt" ;
-        String connectionCsvPath = "Connections_4.txt" ;
-        String weatherRiskCsvPath = "Weather Risk Factor.txt";
+        String citiesCsvPath = "data/Cities_3.txt" ;
+        String connectionCsvPath = "data/Connections_4.txt" ;
+        String weatherRiskCsvPath = "data/Weather Risk Factor.txt";
 
         try{
             Map<String, String[]> weatherData = LDP.loadIndividualCityData(citiesCsvPath);
@@ -355,36 +415,74 @@ public class OptimalPath {
 
 
                 if (inputCommand.equals("path")){
-                    System.out.println("Please Enter source city");
-                    String sourceCity = utils.standardizeString(myObj.nextLine());
-                    System.out.println("Please Enter the state of "+ sourceCity);
-                    String sourceState = utils.standardizeString(myObj.nextLine());
-                    String sourceCityKey = utils.standardizeCityKey(sourceState, sourceCity);
-                    // String sourceCityKey = StringStandardize.standardizeString(sourceState) + "__" + StringStandardize.standardizeString(sourceCity);
-                    if (citiesDS.get(sourceCityKey) == null){
-                        System.out.println(sourceCity + " in the state of "+ sourceState + " is not in our repertoire. Rewinding!!!" );
-                        continue;
-                    }
-                    System.out.println("Please Enter destination city");
-                    String destinationCity = utils.standardizeString(myObj.nextLine());
-                    System.out.println("Please Enter the state of "+ destinationCity);
-                    String destinationState = utils.standardizeString(myObj.nextLine());
-                    String destinationCityKey = utils.standardizeCityKey(destinationState, destinationCity);
-                    // String destinationCityKey = StringStandardize.standardizeString(destinationState) + "__" + StringStandardize.standardizeString(destinationCity);
-                    if (citiesDS.get(destinationCityKey) == null){
-                        System.out.println(destinationCity + " in the state "+ destinationState + " is not in our repertoire. Rewinding!!!" );
-                        continue;
-                    }
-                    System.out.println("Please Enter Start time in format : MM/dd/yyyy HH:mm"); // e.g 11/08/2023 12:00 any other date in this format is fine but we collected weather data for 8-9 Nov inclusive
-                    long startTime = 0;
-                    try {
-                        startTime = df.parse(myObj.nextLine()).getTime();
-                    }
-                    catch(ParseException pe){
-                        System.out.println("Date Format not adhering to specified format. E.g is 11/08/2023 23:44. Rewinding !!!");
-                    }
-                    WrapperOutput path = findOptimalPath( citiesDS, weatherRiskMap, sourceState, sourceCity, destinationState, destinationCity, startTime, true);
-                    printPathInfo(path, citiesDS, weatherRiskMap, true);
+
+                        System.out.println("Please Enter source city");
+                        String sourceCity = utils.standardizeString(myObj.nextLine());
+                        System.out.println("Please Enter the state of "+ sourceCity);
+                        String sourceState = utils.standardizeString(myObj.nextLine());
+                        String sourceCityKey = utils.standardizeCityKey(sourceState, sourceCity);
+                        // String sourceCityKey = StringStandardize.standardizeString(sourceState) + "__" + StringStandardize.standardizeString(sourceCity);
+                        if (citiesDS.get(sourceCityKey) == null){
+                            System.out.println(sourceCity + " in the state of "+ sourceState + " is not in our repertoire. Rewinding!!!" );
+                            continue;
+                        }
+                        System.out.println("Please Enter destination city");
+                        String destinationCity = utils.standardizeString(myObj.nextLine());
+                        System.out.println("Please Enter the state of "+ destinationCity);
+                        String destinationState = utils.standardizeString(myObj.nextLine());
+                        String destinationCityKey = utils.standardizeCityKey(destinationState, destinationCity);
+                        // String destinationCityKey = StringStandardize.standardizeString(destinationState) + "__" + StringStandardize.standardizeString(destinationCity);
+                        if (citiesDS.get(destinationCityKey) == null){
+                            System.out.println(destinationCity + " in the state "+ destinationState + " is not in our repertoire. Rewinding!!!" );
+                            continue;
+                        }
+                        System.out.println("Please Enter Start time in format : MM/dd/yyyy HH:mm"); // e.g 11/08/2023 12:00 any other date in this format is fine but we collected weather data for 8-9 Nov inclusive
+                        long startTime = 0;
+                        try {
+                            startTime = df.parse(myObj.nextLine()).getTime();
+                        }
+                        catch(ParseException pe){
+                            System.out.println("Date Format not adhering to specified format. E.g is 11/08/2023 23:44. Rewinding !!!");
+                        }
+                        
+                        System.out.println("Please enter shortest path algorithm to use : djikstra / bellman ford");
+                        String type = utils.standardizeString(myObj.nextLine());
+                        if (type.equals("djikstra")){
+                            WrapperOutput path = findOptimalPathDjikstra( citiesDS, weatherRiskMap, sourceState, sourceCity, destinationState, destinationCity, startTime, true);
+                            printPathInfo(path, citiesDS, weatherRiskMap, true);
+                            System.out.println("visualize paths: (y) ?");
+                            String response = utils.standardizeString(myObj.nextLine());
+                            if (response.equals("y")) {
+                                HashMap<String, City> copyCMap = BuildCityObjects.copyCityMap(citiesDS);
+                                String[] keys = copyCMap.keySet().toArray(new String[citiesDS.size()]);
+                                for (String cityKey : keys){
+                                    if (!path.cityKeys.contains(cityKey)){
+                                        copyCMap.remove(cityKey);
+                                    }
+                                }
+                                long c = startTime;
+                                SwingUtilities.invokeAndWait(() -> new MapVisualizeDetails(copyCMap, weatherRiskMap, c));
+                            }
+                        }
+                        else if (type.equals("bellmanford")){
+                            WrapperOutput path = findOptimalPathBellmanFord( citiesDS, weatherRiskMap, sourceState, sourceCity, destinationState, destinationCity, startTime, false);
+                            printPathInfo(path, citiesDS, weatherRiskMap, true);
+                            System.out.println("visualize paths: (y) ?");
+                            String response = utils.standardizeString(myObj.nextLine());
+                            if (response.equals("y")) {
+                                HashMap<String, City> copyCMap = BuildCityObjects.copyCityMap(citiesDS);
+                                String[] keys = copyCMap.keySet().toArray(new String[citiesDS.size()]);
+                                for (String cityKey : keys){
+                                    if (!path.cityKeys.contains(cityKey)){
+                                        copyCMap.remove(cityKey);
+                                    }
+                                }
+                                long c = startTime;
+                                SwingUtilities.invokeAndWait(() -> new MapVisualizeDetails(copyCMap, weatherRiskMap, c));
+                            }
+                        }
+                        else System.out.println("Invalid type specified. Rewinding!!!");
+
                 }
 
 
@@ -413,7 +511,8 @@ public class OptimalPath {
                         System.out.println("visualize mst: (y) ?");
                         String response = utils.standardizeString(myObj.nextLine());
                         if (response.equals("y")) {
-                            SwingUtilities.invokeAndWait(() -> new MapVisualize(mst));
+                            long startTime = new SimpleDateFormat("MM/dd/yyyy HH:mm").parse("11/08/2023 12:00").getTime();
+                            SwingUtilities.invokeAndWait(() -> new MapVisualizeDetails(mst, weatherRiskMap, startTime));
                         }
                     }
                     else if (type.equals("prim")){
@@ -423,7 +522,8 @@ public class OptimalPath {
                         System.out.println("visualize mst: (y) ?");
                         String response = utils.standardizeString(myObj.nextLine());
                         if (response.equals("y")) {
-                            SwingUtilities.invokeAndWait(() -> new MapVisualize(mst));
+                            long startTime = new SimpleDateFormat("MM/dd/yyyy HH:mm").parse("11/08/2023 12:00").getTime();
+                            SwingUtilities.invokeAndWait(() -> new MapVisualizeDetails(mst, weatherRiskMap, startTime));
                         }
                     }
                     else System.out.println("Invalid type specified. Rewinding!!!");

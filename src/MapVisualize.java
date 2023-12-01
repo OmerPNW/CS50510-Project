@@ -1,3 +1,4 @@
+package src;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseEvent;
@@ -209,8 +210,8 @@ public class MapVisualize extends JFrame {
     public static void main(String[] args) {
 
 
-        String citiesCsvPath = "Cities_3.txt" ;
-        String connectionCsvPath = "Connections_4.txt" ;
+        String citiesCsvPath = "data/Cities_3.txt" ;
+        String connectionCsvPath = "data/Connections_4.txt" ;
 
         try{
             Map<String, String[]> weatherData = LDP.loadIndividualCityData(citiesCsvPath);
