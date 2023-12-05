@@ -232,8 +232,8 @@ public class BuildCityObjects {
                 // String connkey = StringStandardize.standardizeString(cityConnectionStruct.state) + "__" + StringStandardize.standardizeString(cityConnectionStruct.name);
                 if (cityMap.get(connkey)!= null){
                     String connCityState = cityMap.get(connkey).state ;
-                    if (connCityState.equals(city.state)) System.out.print(" --- " + cityConnectionStruct.distance   + " km ---> " + cityConnectionStruct.name + " ,");
-                    else System.out.print(" --- " + cityConnectionStruct.distance   + " km ---> " + cityConnectionStruct.name + "(" + connCityState + ") ," );
+                    if (connCityState.equals(city.state)) System.out.print(" --- " + cityConnectionStruct.distance/1.6   + " miles ---> " + cityConnectionStruct.name + " ,");
+                    else System.out.print(" --- " + cityConnectionStruct.distance/1.6   + " miles ---> " + cityConnectionStruct.name + "(" + connCityState + ") ," );
                     totalDistance += cityConnectionStruct.distance;
                 }
             }
@@ -244,7 +244,7 @@ public class BuildCityObjects {
         System.out.println("Total Cities are : " + totalCities);
         System.out.println("Total Connections are : " + totalConnections + " Theoretical max (directed) are " + (totalCities * totalCities - totalCities));
         System.out.println("Avg connections per city are : " + (totalConnections * 1.0f/totalCities));
-        System.out.println("Total Cumulative Distance is : " + totalDistance + " km");
+        System.out.println("Total Cumulative Distance is : " + totalDistance/1.6 + " miles");
 
 
     }

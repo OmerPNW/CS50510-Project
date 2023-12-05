@@ -80,7 +80,7 @@ public class MapVisualize extends JFrame {
 
                                     Point point2 = new Point((int)conn_x, (int)conn_y) ;
                                     if (isPointOnLine(e.getPoint(), point1, point2)) {
-                                        double distance = ccs.distance;
+                                        double distance = ccs.distance/1.6;
                                         mapPanel.setToolTipText(String.format("Distance: %.2f", distance));
 
                                         return;
@@ -185,7 +185,7 @@ public class MapVisualize extends JFrame {
                             float conn_x = convertCoords(connCity.lngt, "lngt") ;
                             float conn_y  = convertCoords(connCity.lat, "lat");
 
-                            double distance = ccs.distance;
+                            double distance = ccs.distance/1.6;
                             g2d.setColor(Color.RED);
                             g2d.drawLine((int)x, (int)y, (int)conn_x, (int)conn_y);
                             g2d.setColor(Color.BLACK);
