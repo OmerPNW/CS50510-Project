@@ -232,6 +232,10 @@ public class OptimalPath {
             return new CostStruct(ccs.distance / adjustedGasMileage, totalSafetyRisk, startTime + timeTaken, adjustedGasMileage);
         }
 
+        else if (costCalculationCriteria == 7){
+            // in optimal
+            return new CostStruct((float)(Math.random()), totalSafetyRisk, startTime + timeTaken, adjustedGasMileage);
+        }
         // if no criteria then just return max cost
         return new CostStruct();
     }
@@ -448,7 +452,7 @@ public class OptimalPath {
                         catch(ParseException pe){
                             System.out.println("Date Format not adhering to specified format. E.g is 11/08/2023 23:44. Rewinding !!!");
                         }
-                        System.out.println("Please Enter path criterion : (1) shortest distance, (2) Lowest gas consumption (3) Saftest (4) Time");
+                        System.out.println("Please Enter path criterion : (1) shortest distance, (2) Lowest gas consumption (3) Safest (4) Time");
                         String criteria = utils.standardizeString(myObj.nextLine());
                         int criteriaInt = Integer.parseInt(criteria);
                         
@@ -466,6 +470,7 @@ public class OptimalPath {
                         if (type.equals("djikstra")){
                             WrapperOutput path = findOptimalPathDjikstra( citiesDS, weatherRiskMap, sourceState, sourceCity, destinationState, destinationCity, startTime, true);
                             printPathInfo(path, citiesDS, weatherRiskMap, true);
+
                             System.out.println("visualize paths: (y) ?");
                             String response = utils.standardizeString(myObj.nextLine());
                             if (response.equals("y")) {
@@ -477,6 +482,35 @@ public class OptimalPath {
                                     }
                                 }
                                 SwingUtilities.invokeAndWait(() -> new MapVisualizeDetailsETA(copyCMap, weatherRiskMap, path));
+                            }
+                            if (costCalculationCriteria == 4){
+                                int totalRiskScore = 0;
+                                for (CostStruct cs : path.gScore.values()) totalRiskScore += cs.risk;
+                                for (int i =0;i< 12 ; i++){
+                                    WrapperOutput wo = findOptimalPathDjikstra( citiesDS, weatherRiskMap, sourceState, sourceCity, destinationState, destinationCity, startTime + i * 60 * 60 *1000 , false);
+                                    int otherRiskScore = 0;
+                                    for (CostStruct cs : wo.gScore.values()) otherRiskScore += cs.risk;
+                                    if (totalRiskScore > otherRiskScore){
+                                        System.out.println("Suggesting alternate route START : \n\n");
+                                        printPathInfo(wo, citiesDS, weatherRiskMap, true);
+                                        System.out.println("Suggesting alternate route END : \n\n");
+                                        break;
+                                    }
+                                }
+                            }
+                            System.out.println("suggest two other non-optimal alts (y)?");
+                            response = utils.standardizeString(myObj.nextLine());
+                            if (response.equals("y")){
+                                int ogccc = costCalculationCriteria;
+                                costCalculationCriteria = 7;
+                                WrapperOutput wo = findOptimalPathDjikstra( citiesDS, weatherRiskMap, sourceState, sourceCity, destinationState, destinationCity, startTime, false);
+                                System.out.println(wo.cityKeys);
+                                printPathInfo( wo,
+                                citiesDS, weatherRiskMap, true);
+                                wo = findOptimalPathDjikstra( citiesDS, weatherRiskMap, sourceState, sourceCity, destinationState, destinationCity, startTime, false);
+                                printPathInfo(wo, 
+                                citiesDS, weatherRiskMap, true);
+                                costCalculationCriteria = ogccc;
                             }
                         }
                         else if (type.equals("bellmanford")){
@@ -493,6 +527,35 @@ public class OptimalPath {
                                     }
                                 }
                                 SwingUtilities.invokeAndWait(() -> new MapVisualizeDetailsETA(copyCMap, weatherRiskMap, path));
+                            }
+                            if (costCalculationCriteria == 4){
+                                int totalRiskScore = 0;
+                                for (CostStruct cs : path.gScore.values()) totalRiskScore += cs.risk;
+                                for (int i =0;i< 12 ; i++){
+                                    WrapperOutput wo = findOptimalPathDjikstra( citiesDS, weatherRiskMap, sourceState, sourceCity, destinationState, destinationCity, startTime + i * 60 * 60 *1000 , false);
+                                    int otherRiskScore = 0;
+                                    for (CostStruct cs : wo.gScore.values()) otherRiskScore += cs.risk;
+                                    if (totalRiskScore > otherRiskScore){
+                                        System.out.println("Suggesting alternate route START : \n\n");
+                                        printPathInfo(wo, citiesDS, weatherRiskMap, true);
+                                        System.out.println("Suggesting alternate route END : \n\n");
+                                        break;
+                                    }
+                                }
+                            }
+                            System.out.println("suggest two other non-optimal alts (y)?");
+                            response = utils.standardizeString(myObj.nextLine());
+                            if (response.equals("y")){
+                                int ogccc = costCalculationCriteria;
+                                costCalculationCriteria = 7;
+                                WrapperOutput wo = findOptimalPathDjikstra( citiesDS, weatherRiskMap, sourceState, sourceCity, destinationState, destinationCity, startTime, false);
+                                System.out.println(wo.cityKeys);
+                                printPathInfo( wo,
+                                citiesDS, weatherRiskMap, true);
+                                wo = findOptimalPathDjikstra( citiesDS, weatherRiskMap, sourceState, sourceCity, destinationState, destinationCity, startTime, false);
+                                printPathInfo(wo, 
+                                citiesDS, weatherRiskMap, true);
+                                costCalculationCriteria = ogccc;
                             }
                         }
                         else System.out.println("Invalid type specified. Rewinding!!!");
