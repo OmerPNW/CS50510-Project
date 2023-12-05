@@ -213,20 +213,23 @@ public class OptimalPath {
             float distance = ccs.distance * (1 + distanceGradient * Math.abs(seaLevelDiff) * 0.05f);
             return new CostStruct(distance + timeToDistanceRatio * ccs.timeTaken, totalSafetyRisk, startTime + timeTaken, adjustedGasMileage);
         }
-        // just weather based
         else if (costCalculationCriteria == 3){
             return new CostStruct(0, totalSafetyRisk, startTime + timeTaken, adjustedGasMileage);
         }
 
-        // weather & distance
+        // weather (with distance as break tie factor)
         else if (costCalculationCriteria == 4){
             float distance = ccs.distance * (1 + distanceGradient * Math.abs(seaLevelDiff) * 0.05f);
-            return new CostStruct(distance, totalSafetyRisk, startTime + timeTaken, adjustedGasMileage);
+            return new CostStruct(distance + totalSafetyRisk * 15000, totalSafetyRisk, startTime + timeTaken, adjustedGasMileage);
         }
         // weather, distance & time based - full hybrid
         else if (costCalculationCriteria == 5){
             float distance = ccs.distance * (1 + distanceGradient * Math.abs(seaLevelDiff) * 0.05f);
             return new CostStruct(distance + timeToDistanceRatio * timeTaken /(60 * 1000), totalSafetyRisk, startTime + timeTaken, adjustedGasMileage);
+        }
+        // lowest gas consumption
+        else if (costCalculationCriteria == 6){
+            return new CostStruct(ccs.distance / adjustedGasMileage, totalSafetyRisk, startTime + timeTaken, adjustedGasMileage);
         }
 
         // if no criteria then just return max cost
@@ -444,6 +447,18 @@ public class OptimalPath {
                         catch(ParseException pe){
                             System.out.println("Date Format not adhering to specified format. E.g is 11/08/2023 23:44. Rewinding !!!");
                         }
+                        System.out.println("Please Enter path criterion : (1) shortest distance, (2) Lowest gas consumption (3) Saftest (4) Time");
+                        String criteria = utils.standardizeString(myObj.nextLine());
+                        int criteriaInt = Integer.parseInt(criteria);
+                        
+                        if (criteriaInt == 1) costCalculationCriteria = 0;
+                        else if (criteriaInt == 2) costCalculationCriteria = 6;
+                        else if (criteriaInt == 3) costCalculationCriteria = 4;
+                        else if (criteriaInt == 4) costCalculationCriteria = 1;
+                        else {
+                            System.out.println("Criteria not found. Rewinding!!!");
+                            continue;
+                        }
                         
                         System.out.println("Please enter shortest path algorithm to use : djikstra / bellman ford");
                         String type = utils.standardizeString(myObj.nextLine());
@@ -460,8 +475,7 @@ public class OptimalPath {
                                         copyCMap.remove(cityKey);
                                     }
                                 }
-                                long c = startTime;
-                                SwingUtilities.invokeAndWait(() -> new MapVisualizeDetails(copyCMap, weatherRiskMap, c));
+                                SwingUtilities.invokeAndWait(() -> new MapVisualizeDetailsETA(copyCMap, weatherRiskMap, path));
                             }
                         }
                         else if (type.equals("bellmanford")){
@@ -477,8 +491,7 @@ public class OptimalPath {
                                         copyCMap.remove(cityKey);
                                     }
                                 }
-                                long c = startTime;
-                                SwingUtilities.invokeAndWait(() -> new MapVisualizeDetails(copyCMap, weatherRiskMap, c));
+                                SwingUtilities.invokeAndWait(() -> new MapVisualizeDetailsETA(copyCMap, weatherRiskMap, path));
                             }
                         }
                         else System.out.println("Invalid type specified. Rewinding!!!");
