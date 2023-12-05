@@ -24,7 +24,7 @@ public class OptimalPath {
     private static int costCalculationCriteria = 0 ;
 
 
-    private static int riskThreshold = Integer.MAX_VALUE ;
+    private static int riskThreshold = 1000 ;
     private static int riskFactorScale = 20;
     // km per litre of an average US car (Sorry Matt XD) even tho the name literally says "mile"age
     private static float gasMileage = 16.061f; // 38 miles per gallon
@@ -205,7 +205,7 @@ public class OptimalPath {
         }
         // just time based
         else if (costCalculationCriteria == 1){
-            return new CostStruct(-1 * ccs.timeTaken);
+            return new CostStruct(ccs.timeTaken,  totalSafetyRisk, startTime + timeTaken, adjustedGasMileage);
         }
         // distance & time 
         else if (costCalculationCriteria == 2)
@@ -327,8 +327,8 @@ public class OptimalPath {
                         System.out.println("ETA is " + new Date(gScore.get(destinationCityKey).startTime));
                         System.out.println("Perceived risk due to weather" + WeatherParse.getNearestWeather(startTime, sourceCity.weatherData) 
                         + " is " + riskVal);
-                        System.out.println("Expected Gas Mileage in miles/gallon is : " + gScore.get(destinationCityKey).mileage * 3.78541 / 1.6);
-                        System.out.println("Expected Gas Consumption is : " + ((c.distance / 1.6)/(gScore.get(destinationCityKey).mileage * 3.78541 / 1.6)) + " gallons");
+                        System.out.println("Expected Gas Mileage in miles/gallon is : " + String.format("%.2f", gScore.get(destinationCityKey).mileage * 3.78541 / 1.6));
+                        System.out.println("Expected Gas Consumption is : " + String.format("%.2f",((c.distance / 1.6)/(gScore.get(destinationCityKey).mileage * 3.78541 / 1.6))) + " gallons");
                         System.out.println("Sea level diff " + (citiesDS.get(destinationCityKey).seaLevel - citiesDS.get(sourceCityKey).seaLevel) + " m");
                         System.out.println();
                     }
@@ -356,9 +356,10 @@ public class OptimalPath {
         System.out.println();
         System.out.println("Total Distance is " + totalDistance/1.6 + " miles");
         System.out.println("Total Time taken is " + totalTimeTaken + " min");
-        System.out.println("Total Perceived risk is " + totalPerceivedRisk);
-        System.out.println("Expected Gas Mileage is : " + expectedGasMileage * 1000/ totalDistance * 3.78541 / 1.6 +  " miles /  gallon");
-        System.out.println("Expected Gas Consumption is : " + totalDistance/1.6 / (expectedGasMileage * 1000/ totalDistance * 3.78541 / 1.6) +  " gallons");
+        System.out.println("Total Perceived risk is (scale "+ riskFactorScale +") " + totalPerceivedRisk + ". Max allowed risk is " + riskThreshold);
+
+        System.out.println("Expected Gas Mileage is : " + String.format("%.2f",expectedGasMileage * 1000/ totalDistance * 3.78541 / 1.6) +  " miles /  gallon");
+        System.out.println("Expected Gas Consumption is : " + String.format("%.2f",totalDistance/1.6 / (expectedGasMileage * 1000/ totalDistance * 3.78541 / 1.6)) +  " gallons");
 
 
 

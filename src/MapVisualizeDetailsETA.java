@@ -94,7 +94,8 @@ public class MapVisualizeDetailsETA extends JFrame {
                                         "Start time = " + dateText + " <br>" +
                                         " Expected time taken = " + ((c.startTime - startTime) * 1.0 /60000) + " min <br>" +
                                         " Weather : " + WeatherParse.getNearestWeather(startTime, city.weatherData) + " <br>" +
-                                        " Gas Consumption : " + (distance / (c.mileage * 3.78541/1.6)) + " gallons <br> </html>" ); 
+                                        " Weather risk " + c.risk + " <br>" +
+                                        " Gas Consumption : " + String.format("%.2f",(distance / (c.mileage * 3.78541/1.6))) + " gallons <br> </html>" ); 
                                         mapPanel.setToolTipText(b);
                                         System.out.println(b);
                                         return;
