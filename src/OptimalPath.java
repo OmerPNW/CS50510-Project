@@ -485,15 +485,13 @@ public class OptimalPath {
                             }
                             if (costCalculationCriteria == 4){
                                 int totalRiskScore = path.gScore.get(path.cityKeys.get(path.cityKeys.size() - 1)).risk;
-                                for (CostStruct cs : path.gScore.values()) totalRiskScore += cs.risk;
                                 for (int i =0;i< 12 ; i++){
                                     WrapperOutput wo = findOptimalPathDjikstra( citiesDS, weatherRiskMap, sourceState, sourceCity, destinationState, destinationCity, startTime + i * 60 * 60 *1000 , false);
                                     int otherRiskScore = wo.gScore.get(wo.cityKeys.get(wo.cityKeys.size() - 1)).risk;
-                                    for (CostStruct cs : wo.gScore.values()) otherRiskScore += cs.risk;
                                     if (totalRiskScore > otherRiskScore){
-                                        System.out.println("Suggesting alternate route START : \n\n");
+                                        System.out.println("Suggesting alternate safer route START : \n\n");
                                         printPathInfo(wo, citiesDS, weatherRiskMap, true);
-                                        System.out.println("Suggesting alternate route END : \n\n");
+                                        System.out.println("Suggesting alternate safer route END : \n\n");
                                         break;
                                     }
                                 }
@@ -533,11 +531,11 @@ public class OptimalPath {
                                 int totalRiskScore = path.gScore.get(path.cityKeys.get(path.cityKeys.size() - 1)).risk;
                                 for (int i =0;i< 12 ; i++){
                                     WrapperOutput wo = findOptimalPathDjikstra( citiesDS, weatherRiskMap, sourceState, sourceCity, destinationState, destinationCity, startTime + i * 60 * 60 *1000 , false);
-                                    int otherRiskScore = wo.gScore.get(wo.cityKeys.get(wo.cityKeys.size() - 1)).risk;;
+                                    int otherRiskScore = wo.gScore.get(wo.cityKeys.get(wo.cityKeys.size() - 1)).risk;
                                     if (totalRiskScore > otherRiskScore){
-                                        System.out.println("Suggesting alternate route START : \n\n");
+                                        System.out.println("Suggesting alternate safer route START : \n\n");
                                         printPathInfo(wo, citiesDS, weatherRiskMap, true);
-                                        System.out.println("Suggesting alternate route END : \n\n");
+                                        System.out.println("Suggesting alternate safer route END : \n\n");
                                         break;
                                     }
                                 }
