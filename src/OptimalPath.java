@@ -484,11 +484,11 @@ public class OptimalPath {
                                 SwingUtilities.invokeAndWait(() -> new MapVisualizeDetailsETA(copyCMap, weatherRiskMap, path));
                             }
                             if (costCalculationCriteria == 4){
-                                int totalRiskScore = 0;
+                                int totalRiskScore = path.gScore.get(path.cityKeys.get(path.cityKeys.size() - 1)).risk;
                                 for (CostStruct cs : path.gScore.values()) totalRiskScore += cs.risk;
                                 for (int i =0;i< 12 ; i++){
                                     WrapperOutput wo = findOptimalPathDjikstra( citiesDS, weatherRiskMap, sourceState, sourceCity, destinationState, destinationCity, startTime + i * 60 * 60 *1000 , false);
-                                    int otherRiskScore = 0;
+                                    int otherRiskScore = wo.gScore.get(wo.cityKeys.get(wo.cityKeys.size() - 1)).risk;
                                     for (CostStruct cs : wo.gScore.values()) otherRiskScore += cs.risk;
                                     if (totalRiskScore > otherRiskScore){
                                         System.out.println("Suggesting alternate route START : \n\n");
@@ -504,10 +504,11 @@ public class OptimalPath {
                                 int ogccc = costCalculationCriteria;
                                 costCalculationCriteria = 7;
                                 WrapperOutput wo = findOptimalPathDjikstra( citiesDS, weatherRiskMap, sourceState, sourceCity, destinationState, destinationCity, startTime, false);
-                                System.out.println(wo.cityKeys);
+                                System.out.println("#### ALT PATH 1");
                                 printPathInfo( wo,
                                 citiesDS, weatherRiskMap, true);
                                 wo = findOptimalPathDjikstra( citiesDS, weatherRiskMap, sourceState, sourceCity, destinationState, destinationCity, startTime, false);
+                                System.out.println("#### ALT PATH 2");
                                 printPathInfo(wo, 
                                 citiesDS, weatherRiskMap, true);
                                 costCalculationCriteria = ogccc;
@@ -529,12 +530,10 @@ public class OptimalPath {
                                 SwingUtilities.invokeAndWait(() -> new MapVisualizeDetailsETA(copyCMap, weatherRiskMap, path));
                             }
                             if (costCalculationCriteria == 4){
-                                int totalRiskScore = 0;
-                                for (CostStruct cs : path.gScore.values()) totalRiskScore += cs.risk;
+                                int totalRiskScore = path.gScore.get(path.cityKeys.get(path.cityKeys.size() - 1)).risk;
                                 for (int i =0;i< 12 ; i++){
                                     WrapperOutput wo = findOptimalPathDjikstra( citiesDS, weatherRiskMap, sourceState, sourceCity, destinationState, destinationCity, startTime + i * 60 * 60 *1000 , false);
-                                    int otherRiskScore = 0;
-                                    for (CostStruct cs : wo.gScore.values()) otherRiskScore += cs.risk;
+                                    int otherRiskScore = wo.gScore.get(wo.cityKeys.get(wo.cityKeys.size() - 1)).risk;;
                                     if (totalRiskScore > otherRiskScore){
                                         System.out.println("Suggesting alternate route START : \n\n");
                                         printPathInfo(wo, citiesDS, weatherRiskMap, true);
@@ -549,10 +548,11 @@ public class OptimalPath {
                                 int ogccc = costCalculationCriteria;
                                 costCalculationCriteria = 7;
                                 WrapperOutput wo = findOptimalPathDjikstra( citiesDS, weatherRiskMap, sourceState, sourceCity, destinationState, destinationCity, startTime, false);
-                                System.out.println(wo.cityKeys);
+                                System.out.println("#### ALT PATH 1");
                                 printPathInfo( wo,
                                 citiesDS, weatherRiskMap, true);
                                 wo = findOptimalPathDjikstra( citiesDS, weatherRiskMap, sourceState, sourceCity, destinationState, destinationCity, startTime, false);
+                                System.out.println("#### ALT PATH 2"); 
                                 printPathInfo(wo, 
                                 citiesDS, weatherRiskMap, true);
                                 costCalculationCriteria = ogccc;
